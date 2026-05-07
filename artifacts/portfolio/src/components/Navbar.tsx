@@ -3,25 +3,47 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLang } from "@/lib/i18n";
 
+const SECTION_IDS = ["about", "experience", "skills", "highlights", "showcase", "education", "contact"];
+
 export function Navbar() {
   const { lang, setLang, t } = useLang();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
 
   const navItems = [
-    { href: "#about", label: t.nav.about },
-    { href: "#experience", label: t.nav.experience },
-    { href: "#skills", label: t.nav.skills },
-    { href: "#highlights", label: t.nav.highlights },
-    { href: "#showcase", label: t.nav.showcase },
-    { href: "#education", label: t.nav.education },
-    { href: "#contact", label: t.nav.contact },
+    { href: "#about", id: "about", label: t.nav.about },
+    { href: "#experience", id: "experience", label: t.nav.experience },
+    { href: "#skills", id: "skills", label: t.nav.skills },
+    { href: "#highlights", id: "highlights", label: t.nav.highlights },
+    { href: "#showcase", id: "showcase", label: t.nav.showcase },
+    { href: "#education", id: "education", label: t.nav.education },
+    { href: "#contact", id: "contact", label: t.nav.contact },
   ];
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const observers: IntersectionObserver[] = [];
+
+    SECTION_IDS.forEach((id) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const obs = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) setActiveSection(id);
+        },
+        { rootMargin: "-40% 0px -50% 0px", threshold: 0 }
+      );
+      obs.observe(el);
+      observers.push(obs);
+    });
+
+    return () => observers.forEach((o) => o.disconnect());
   }, []);
 
   const scrollTo = (id: string) => {
@@ -48,15 +70,29 @@ export function Navbar() {
 
         {/* Desktop Nav */}
         <div className="hidden lg:flex items-center gap-1 flex-1">
-          {navItems.map((item) => (
-            <button
-              key={item.label}
-              onClick={() => scrollTo(item.href)}
-              className="text-xs font-medium text-muted-foreground hover:text-foreground transition-colors px-3 py-1.5 rounded-md hover:bg-card/60"
-            >
-              {item.label}
-            </button>
-          ))}
+          {navItems.map((item) => {
+            const isActive = activeSection === item.id;
+            return (
+              <button
+                key={item.id}
+                onClick={() => scrollTo(item.href)}
+                className={`relative text-xs font-medium transition-colors px-3 py-1.5 rounded-md group ${
+                  isActive
+                    ? "text-primary"
+                    : "text-muted-foreground hover:text-foreground hover:bg-card/60"
+                }`}
+              >
+                {item.label}
+                {isActive && (
+                  <motion.span
+                    layoutId="nav-underline"
+                    className="absolute bottom-0 left-3 right-3 h-px bg-primary rounded-full"
+                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                  />
+                )}
+              </button>
+            );
+          })}
         </div>
 
         {/* Language Toggle */}
@@ -103,9 +139,13 @@ export function Navbar() {
             <div className="flex flex-col p-4 gap-1">
               {navItems.map((item) => (
                 <button
-                  key={item.label}
+                  key={item.id}
                   onClick={() => scrollTo(item.href)}
-                  className="text-left text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-card/60 transition-colors px-3 py-2 rounded-md"
+                  className={`text-left text-sm font-medium transition-colors px-3 py-2 rounded-md ${
+                    activeSection === item.id
+                      ? "text-primary bg-primary/10"
+                      : "text-muted-foreground hover:text-foreground hover:bg-card/60"
+                  }`}
                 >
                   {item.label}
                 </button>

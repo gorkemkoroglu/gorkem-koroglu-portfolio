@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Mail, MapPin, Linkedin, Download, ArrowRight } from "lucide-react";
 import { useLang } from "@/lib/i18n";
 import { useTypewriter } from "@/hooks/useTypewriter";
+import { ParticleCanvas } from "@/components/ParticleCanvas";
 
 const EN_WORDS = [
   "Core Banking Systems",
@@ -30,6 +31,7 @@ export function Hero() {
     <section className="relative min-h-[100dvh] flex items-center pt-20 overflow-hidden">
       {/* Animated aurora background */}
       <div className="absolute inset-0 pointer-events-none">
+        <ParticleCanvas />
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808010_1px,transparent_1px),linear-gradient(to_bottom,#80808010_1px,transparent_1px)] bg-[size:32px_32px]" />
         <motion.div
           className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full bg-primary/10 blur-[130px]"

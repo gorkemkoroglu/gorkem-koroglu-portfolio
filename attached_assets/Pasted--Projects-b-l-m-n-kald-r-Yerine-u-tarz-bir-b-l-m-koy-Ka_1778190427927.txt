@@ -1,0 +1,47 @@
+“Projects” bölümünü kaldır.
+Yerine şu tarz bir bölüm koy:
+
+Katkı Sağladığım Çalışmalar
+
+veya İngilizce
+
+Work Highlights
+
+Bu, senin profilin için çok daha doğru. Çünkü:
+
+daha dürüst
+daha profesyonel
+daha gerçekçi
+abartı hissi vermiyor
+BA profiline daha çok uyuyor
+
+Aşağıya sana direkt koymalık metni tek parça bırakıyorum.
+
+TÜRKÇE VERSİYON
+Katkı Sağladığım Çalışmalar
+
+Profesyonel deneyimim boyunca, farklı sektörlerde iş ihtiyacının netleştirilmesi, sistem davranışlarının analiz edilmesi, veri doğrulama süreçlerinin yürütülmesi ve çözümün test edilebilir hale getirilmesi gibi alanlarda aktif rol aldım. Çalışmalarım çoğunlukla iş gereksinimi, sistem mantığı, veri akışı ve kullanıcı/operasyon etkisinin birlikte değerlendirilmesini gerektiren yapılarda yoğunlaştı.
+
+Uluslararası Ödeme Akışları ve Statü Davranışları
+
+Ödeme ve mesaj süreçlerinde statü bazlı davranışların, inquiry ekranlarındaki yansımalarının ve sistem çıktılarının fonksiyonel beklentiyle uyumunun değerlendirilmesi tarafında çalıştım. Bu alanda; beklenen davranış ile gerçekleşen sonuç arasındaki farkların analiz edilmesi, test senaryolarının netleştirilmesi ve iş kurallarının daha görünür hale getirilmesi konularına katkı sağladım.
+
+Cross-Border Core Banking Süreçleri
+
+Farklı ülke yapılarıyla ilişkili bankacılık süreçlerinde, iş gereksinimlerinin teknik akışlarla uyumlu şekilde ele alınması ve fonksiyonel netliğin artırılması üzerine çalıştım. Servis davranışları, veri doğrulama adımları ve operasyonel etkiler birlikte değerlendirilerek daha uygulanabilir analiz çıktıları oluşturulmasına destek verdim.
+
+Entegrasyon, Servis ve Veri Doğrulama Çalışmaları
+
+API ve web servis odaklı yapılarda, iş ihtiyacının teknik davranışa nasıl dönüştüğünü anlamaya ve bu dönüşümün doğruluğunu kontrol etmeye odaklandım. Veri akışı, alan eşleşmeleri, response mantığı ve sistem davranışları üzerinden ilerleyerek hem analiz hem de test süreçlerine katkıda bulundum.
+
+Fonksiyonel Test ve UAT Süreçleri
+
+Fonksiyonel beklentilerin test edilebilir hale getirilmesi, senaryoların yapılandırılması ve iş birimi doğrulama süreçlerinin daha düzenli yürütülmesi tarafında aktif görev aldım. Buradaki yaklaşımım, yalnızca test adımı yazmak değil; gerçekten neyin doğrulanması gerektiğini görünür hale getirmek oldu.
+
+Operasyonel Süreç ve Ekran Analizi
+
+Kullanıcıların karar verdiği, işlem takibi yaptığı veya operasyonel kontrol yürüttüğü ekranlarda; işlevsellik, sadelik ve süreç tutarlılığı dengesini gözeten analizler yaptım. Amaç, yalnızca ekranı incelemek değil; ekranın arkasındaki iş mantığını, kullanıcı ihtiyacını ve sistemsel karşılığını birlikte değerlendirmekti.
+
+Hata İnceleme ve Kök Neden Analizi
+
+Beklenen davranış ile gerçek sistem çıktısı arasındaki farkların incelenmesi, veri kontrolleriyle doğrulanması ve problemin kök neden seviyesinde ele alınması, çalışmalarımın önemli bir parçası oldu. Bu alanda en çok önem verdiğim şey, semptomu tarif etmekten çok, aksiyon alınabilir netlik üretmektir.

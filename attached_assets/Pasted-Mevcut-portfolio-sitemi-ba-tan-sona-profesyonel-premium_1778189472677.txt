@@ -1,0 +1,595 @@
+Mevcut portfolio sitemi baştan sona profesyonel, premium, modern ve özgün bir dijital CV / portfolio websitesine dönüştürmeni istiyorum.
+
+Çok önemli not:
+Bu site sıradan bir kişisel site gibi görünmemeli. Amaç yalnızca “hakkımda, deneyim, eğitim” göstermek değil; aynı zamanda benim analitik düşünce yapımı, iş analistliği yaklaşımımı, bankacılık-finans teknoloji projelerindeki çalışma biçimimi, teknik ve fonksiyonel köprü kurabilen profilimi güçlü şekilde yansıtmalı.
+
+Tasarım referansı olarak beğendiğim siteler:
+1) https://ankit-portfolio-mu.vercel.app/#works
+2) https://ekremssen.github.io/EkremSen_Interactive_CV/
+
+Ancak birebir kopya istemiyorum.
+Bu iki siteden şu yönlerde ilham al:
+- güçlü ilk izlenim
+- düzenli section yapısı
+- modern tipografi
+- koyu tema / premium hissiyat
+- etkileşimli bloklar
+- klasik CV’den daha etkileyici akış
+- kişisel marka duygusu
+
+Ama sonuç tamamen bana özgü olsun.
+Sitem, “Senior Business Analyst / Banking & Financial Technologies / Systems Analysis / Cross-Border Payments / Functional & Technical Bridge” çizgisini hissettirmeli.
+
+==================================================
+GENEL AMAÇ
+==================================================
+
+Bu siteyi LinkedIn profilimde, başvurularımda ve profesyonel tanıtım amaçlı kullanacağım.
+O yüzden site:
+- güven veren
+- profesyonel
+- temiz
+- okunabilir
+- premium
+- modern
+- masaüstünde çok etkileyici
+- mobilde de düzgün çalışan
+bir yapıda olmalı.
+
+Sitede iki dil desteği olacak:
+- Türkçe
+- İngilizce
+
+Dil değiştirici navbar’ın sağ üstünde olacak.
+TR / EN geçişinde tüm içerik gerçekten değişmeli.
+Sadece menü değil; başlıklar, açıklamalar, proje metinleri, deneyim detayları, case study yazıları, butonlar, footer metinleri dahil her şey iki dilde de tam desteklenmeli.
+
+==================================================
+TASARIM DİLİ VE GÖRSEL YAKLAŞIM
+==================================================
+
+İstediğim genel görünüm:
+- Dark / deep navy ağırlıklı premium bir tema
+- Vurgu renkleri: cyan / teal / neon blue tonları
+- Hafif grid, soft glow, glassmorphism ve tech hissi olabilir ama abartılı cyberpunk olmasın
+- Profesyonel bankacılık teknolojileri ve analitik dünyaya uygun olsun
+- Çok oyuncaklı ya da fazla genç işi görünmesin
+- Kurumsal ile modern arasında dengeli olsun
+- Fazla renk karmaşası istemiyorum
+- Sayfa nefes alsın, spacing iyi olsun
+- Section’lar çok iyi ayrışsın
+- Tipografi güçlü olsun
+- H1/H2 başlıklar premium dursun
+- Kartlar modern, hover’lar yumuşak, geçişler akıcı olsun
+- Gereksiz animasyon olmasın; sade ama etkili micro-interactions olsun
+
+Bana uygun his:
+- analitik
+- güvenilir
+- teknik farkındalığı olan
+- bankacılık/proje dünyasını bilen
+- sistematik düşünen
+- detaycı ama anlatımı düzenli olan bir profesyonel
+
+==================================================
+SİTENİN YAPISI
+==================================================
+
+Site aşağıdaki ana bölümlerden oluşsun:
+
+1. Hero / Landing
+2. Hakkımda
+3. Deneyim
+4. Uzmanlık Alanları / Skill Matrix
+5. Projeler
+6. Analist Vitrini / Case Showcase
+7. Eğitim & Sertifikalar
+8. İletişim / Footer
+
+Navbar sabit olabilir.
+Bölümler arası smooth scroll olsun.
+Aktif section hissi verilebilir.
+
+==================================================
+1) HERO / LANDING BÖLÜMÜ
+==================================================
+
+Hero section çok güçlü olmalı.
+İlk ekranda profesyonel değer önerim net anlaşılmalı.
+
+Hero’da şunlar olsun:
+- ad soyad
+- ana ünvan
+- kısa güçlü tagline
+- 2-3 satırlık özet
+- CTA butonları
+- küçük ama şık iletişim alanı
+- varsa sosyal linkler
+- dil seçici
+- opsiyonel olarak hafif animasyonlu bir arka plan / grid / parallax hissi
+
+Benim için uygun içerik mantığı:
+Ad: Görkem Köroğlu
+
+Türkçe ana ünvan örnekleri:
+- Kıdemli İş Analisti | Bankacılık & Finansal Teknolojiler
+- Senior Business Analyst | Bankacılık Sistemleri, Ödeme Akışları ve Analitik Çözümleme
+- Kıdemli İş Analisti | Sistem Analizi, Entegrasyon ve Sınır Ötesi Ödeme Süreçleri
+
+İngilizce ana ünvan örnekleri:
+- Senior Business Analyst | Banking & Financial Technologies
+- Senior Business Analyst | Systems Analysis, Integrations & Cross-Border Payments
+- Business Analyst | Functional Analysis, Data Validation & Banking Systems
+
+Tagline yaklaşımı:
+Türkçe:
+- Karmaşık sistemleri net kararlara dönüştürüyorum.
+- İş ihtiyacını teknik çözüme dönüştüren köprüyüm.
+- Bankacılık süreçlerinde analitik netlik ve uygulanabilir çözüm tasarlıyorum.
+
+İngilizce:
+- Turning complex systems into clear decisions.
+- Bridging business needs and technical execution.
+- Designing clarity across banking systems, integrations, and payment flows.
+
+Hero açıklaması şu çizgide olsun:
+Ben bankacılık ve sigorta teknolojilerinde deneyim kazanmış, sistem analizi, fonksiyonel analiz, API/web servis entegrasyonları, SQL tabanlı doğrulama, UAT koordinasyonu ve sınır ötesi ödeme akışlarında çalışan bir iş analistiyim. İş birimleri ile teknik ekipler arasında köprü kurarım; karmaşık süreçleri sadeleştirir, gereksinimleri netleştirir ve uygulanabilir çözüme dönüştürürüm.
+
+Hero CTA butonları:
+- CV İndir
+- Çalışmalarımı Gör
+- LinkedIn
+- İletişime Geç
+
+Hero içinde küçük bilgi chip’leri olabilir:
+- Cross-Border Payments
+- Core Banking
+- API / Web Services
+- SQL & Data Validation
+- UAT & Functional Testing
+- Agile Delivery
+
+==================================================
+2) HAKKIMDA
+==================================================
+
+Bu bölüm klasik ve zayıf bir “about me” olmasın.
+Benim profesyonel karakterimi anlatsın.
+
+İçerik katmanlı olsun:
+- kısa anlatım
+- ardından güçlü bullet point’ler
+- ardından “nasıl çalışırım?” gibi mini alan
+
+Burada vurgulamak istediğim şeyler:
+- bankacılık ve sigorta teknolojileri tecrübem var
+- sistem analizi yapıyorum
+- iş gereksinimi ile teknik uygulama arasında köprü kuruyorum
+- API / web servis / veri / test / süreç taraflarını birlikte düşünebiliyorum
+- SQL ile doğrulama ve kök neden analizi yapabiliyorum
+- UAT, fonksiyonel test ve iş birimi koordinasyonu yapabiliyorum
+- detaycıyım ama çıktıyı sadeleştirebiliyorum
+- yapay zekâ ve veri odaklı düşünceye açığım
+- öğrenmeye açık ve yapılandırılmış düşünen bir analistim
+
+Ek mini bloklar olabilir:
+- Nasıl değer üretirim?
+- Beni farklı yapan ne?
+- İş yapış biçimim
+- Teknik ve fonksiyonel bakışın birleşimi
+
+==================================================
+3) DENEYİM
+==================================================
+
+Bu bölüm çok güçlü tasarlansın.
+Timeline veya premium card layout olabilir.
+Ama çok uzun duvar yazısı gibi görünmesin.
+Okunaklı ve katmanlı olsun.
+
+Deneyimler:
+1) Yapı Kredi Teknoloji – NTT DATA Business Solutions bünyesinde
+Ünvan: Kıdemli İş Analisti
+Dönem: Ekim 2024 – Devam ediyor
+Konum: İstanbul
+
+Bu rol için detaylar:
+- Uluslararası çekirdek bankacılık projelerinde uçtan uca sistem analizi
+- Azerbaycan, Almanya, Hollanda gibi yapıların bulunduğu dış bankalar/core banking süreçlerine katkı
+- API ve web servis entegrasyon analizi (özellikle XML/JSON eşleştirme mantığı)
+- SQL tabanlı veri doğrulama ve hata kök neden analizi
+- Fonksiyonel test, servis testi, veritabanı testi ve UAT koordinasyonu
+- Agile/Scrum süreçlerinde aktif teslimat
+- Teknik ekip ve iş birimi arasında gereksinim netleştirme
+- Ödeme akışları, Swift/SEPA, sınır ötesi işlem mantıkları, core banking süreçlerine katkı
+- Fonksiyonel dokümantasyon, test senaryosu, Jira/Qmetry süreçleri
+
+Bu role ait “öne çıkan odak alanları” ayrı chip/tag formatında verilebilir:
+- Core Banking
+- International Payments
+- Swift / SEPA
+- API Integrations
+- SQL Validation
+- UAT Coordination
+- Functional Analysis
+
+2) HDI Fibaemeklilik
+Ünvan: Teknik İş Analisti
+Dönem: Eylül 2022 – Eylül 2024
+Konum: İstanbul
+
+Bu rol için detaylar:
+- Veri analizi, sistem güncellemeleri ve kök neden çözümü için PL/SQL kullanımı
+- İş birimlerinin ihtiyaçlarını fonksiyonel spesifikasyonlara ve UI tasarımlarına dönüştürme
+- Test senaryoları ve UAT yönetimi
+- Kritik sistem hatalarının analizi ve çözüm koordinasyonu
+- Fonksiyonel gereksinimler, fonksiyonel olmayan gereksinimler ve akış dokümanları hazırlama
+- Teknik geliştirme ekipleri ile iş tarafı arasında koordinasyon
+- Süreç iyileştirme ve sistemsel eksikliklerin analiz edilmesi
+
+3) Veri Bilimi & ML Bootcamp
+Bu bölüm “iş deneyimi” yerine “ek yetkinlik / analitik temel” gibi daha şık konumlandırılabilir.
+Dönem: 2022 civarı
+İçerik:
+- Python (pandas, numpy, matplotlib)
+- SQL
+- EDA
+- makine öğrenmesi temelleri
+- CRM analitiği
+- kohort, CLTV, RFM
+- öneri sistemleri mantığı
+
+Çok önemli:
+Her deneyim kartında sadece görev listesi olmasın.
+Şunları da hissettir:
+- ne tip problemler çözdüm
+- nasıl bir iş yapış biçimim var
+- hangi sistem sınıfında çalıştım
+- teknik ve iş tarafı arasında nasıl pozisyonlandım
+
+==================================================
+4) UZMANLIK ALANLARI / SKILL MATRIX
+==================================================
+
+Bunu sıradan progress bar şeklinde istemiyorum.
+Daha modern ve anlamlı olsun.
+
+Örnek başlıklar:
+- İş Analizi & Gereksinim Yönetimi
+- Sistem Analizi
+- Ödeme Sistemleri & Bankacılık Akışları
+- API / Web Servis Entegrasyonları
+- Veri Doğrulama & SQL
+- Test, UAT & Hata Analizi
+- Dokümantasyon & Süreç Modelleme
+- Paydaş İletişimi & Agile Teslimat
+
+Beceri grupları örneği:
+
+1. Analiz & Gereksinim
+- İş Analizi
+- Fonksiyonel Analiz
+- Sistem Analizi
+- Gereksinim Toplama
+- Akış Tasarımı
+- Süreç İyileştirme
+
+2. Teknik Entegrasyon & Veri
+- API / Web Services
+- XML / JSON Mapping
+- SQL
+- PL/SQL
+- Data Validation
+- Root Cause Analysis
+
+3. Test & Teslimat
+- Functional Testing
+- Service Testing
+- Database Testing
+- UAT Coordination
+- Regression Thinking
+- Defect Tracking
+
+4. Domain
+- Core Banking
+- Cross-Border Payments
+- SWIFT / SEPA
+- Financial Systems
+- Insurance Technologies
+
+5. Araçlar
+- Jira
+- Qmetry
+- Swagger
+- Postman
+- Confluence
+- VS Code
+- SQL tools
+
+6. Kişisel Güçlü Yönler
+- Analitik Düşünce
+- Yapılandırılmış İletişim
+- Detay Yönetimi
+- Problem Çözme
+- İş-Teknik Köprüsü
+- Öğrenme Çevikliği
+
+Bunu kartlı yapı, radar benzeri görsel, yetenek matrisi ya da etkileşimli skill board gibi sunabilirsin.
+Ama görsel olarak premium olmalı.
+
+==================================================
+5) PROJELER
+==================================================
+
+Bu bölüm güçlü olmalı çünkü LinkedIn’de dikkat çekecek alanlardan biri bu.
+Gerçekçi ama profesyonel anlatımla proje kartları oluştur.
+
+Kart mantığı şu olabilir:
+- proje adı
+- proje tipi / domain
+- kısa özet
+- benim rolüm
+- ana katkım
+- kullanılan yaklaşım / araçlar
+- öne çıkan analist bakışı
+
+Bana uygun proje örnekleri oluştur:
+
+PROJE 1:
+Uluslararası Ödeme Süreçleri / Swift – SEPA – Inquiry & Status Flows
+İçerik mantığı:
+- ödeme ve mesaj akışlarının durum geçişleri
+- inquiry ekranları
+- statü bazlı davranışlar
+- servis / DB / UI birlikte değerlendirme
+- test ve doğrulama süreçleri
+- iş kuralı ile teknik çıktının hizalanması
+
+PROJE 2:
+Cross-Border Core Banking Integrations
+- dış bankalarla ilişkili core banking süreç analizi
+- XML/JSON mapping
+- servis entegrasyonları
+- iş gereksinimlerinin teknik akışlara dönüştürülmesi
+- veri ve test odaklı kontrol
+
+PROJE 3:
+Insurance Systems Analysis & Functional Specification
+- sigorta iş akışları
+- PL/SQL destekli veri analizi
+- iş talebini fonksiyonel tasarıma dönüştürme
+- hata kök neden analizi
+- test senaryosu ve UAT
+
+PROJE 4:
+Overnight / Report / Operational Process Analysis
+- operasyonel ekran akışları
+- kullanıcı deneyimi ve fonksiyonel sadeleştirme
+- tek ekranda birleşen modüller
+- işlevsel ekran analizi
+- sistemsel tutarlılık
+
+PROJE 5:
+Analytical Validation & Defect Investigation
+- veri tutarsızlıklarının incelenmesi
+- SQL ile doğrulama
+- beklenen vs gerçekleşen davranış farkının analizi
+- kök neden kırılımı
+- aksiyon önerisi
+
+Her proje kartında “Ben burada ne kattım?” duygusu net olsun.
+Genel, boş, yapay cümleler kullanma.
+Spesifik ama şirket sırrı / hassas veri içermeyen profesyonel anlatım kullan.
+
+==================================================
+6) ANALİST VİTRİNİ / CASE SHOWCASE
+==================================================
+
+Bu bölüm benim için çok önemli.
+Sıradan portfolio’larda olmayan, beni farklılaştıracak kısım burası.
+Bu alan “analist gibi düşünme biçimimi” göstermeli.
+
+Burada 3 ila 5 adet örnek mini vaka / case block / analysis showcase olsun.
+
+Her vaka kartı şunları içerebilir:
+- vaka kodu / case id
+- başlık
+- problem tanımı
+- benim analiz yaklaşımım
+- kırılım / karar ağacı / akış
+- çözüm / aksiyon önerisi
+- sonuç / kazanım
+- kullanılan bakış açısı
+
+Bu bölümde gerçek iş geçmişimden ilham alan ama hassas veri içermeyen örnekler üret:
+
+VAKA 1:
+Ödeme Hatası Kök Neden Analizi
+İçerik:
+- beklenmeyen işlem başarısızlığı
+- UI, servis ve veritabanı katmanlarının birlikte incelenmesi
+- hata zinciri
+- root cause tree
+- geçici aksiyon ve kalıcı aksiyon
+
+VAKA 2:
+Uluslararası Havale Süreci Karar Akışı
+İçerik:
+- doğrulama
+- uyumluluk kontrolü
+- muhabir seçimi
+- bildirim / mutabakat / işlem sonrası durum
+- karar noktaları ve business rule mantığı
+
+VAKA 3:
+Sistem Sağlığı / Operasyonel KPI Görünümü
+İçerik:
+- örnek KPI kartları
+- sistem çalışma oranı
+- ortalama çözüm süresi
+- test kapsamı
+- UAT onay oranı
+- bunu analist perspektifiyle yorumlayan kısa açıklama
+
+VAKA 4:
+Gereksinimden Ekran Tasarımına Dönüşüm
+İçerik:
+- kullanıcı problemi
+- mevcut ekranın karmaşıklığı
+- sadeleştirilmiş çözüm yaklaşımı
+- hangi alanlar korunmalı, hangileri sadeleşmeli
+- işlevsellik vs UX dengesi
+
+VAKA 5:
+API Entegrasyonunda Beklenen ve Gerçekleşen Davranış Farkı
+İçerik:
+- payload / mapping / validasyon / servis response mantığı
+- analistin burada neyi kontrol ettiği
+- test senaryolarının nasıl türetildiği
+
+Bu bölüm kesinlikle daha iyi tasarlansın.
+Sadece statik metin değil:
+- mini diagram
+- kart yapısı
+- kod bloğu hissi
+- process stepper
+- case timeline
+- root cause tree
+- KPI card
+gibi zengin görsel öğelerle desteklenebilir.
+
+Ama hepsi profesyonel ve temiz dursun.
+Abartılı sahte dashboard görünümü olmasın.
+
+==================================================
+7) EĞİTİM & SERTİFİKALAR
+==================================================
+
+Bu bölüm düzenli ve modern olsun.
+
+Eğitim:
+- Marmara Üniversitesi – Yüksek Lisans, Yönetim Bilişim Sistemleri ve Mühendisliği
+- University of Lodz – Değişim Öğrencisi, Bilgisayar Bilimleri
+- Bilecik Şeyh Edebali Üniversitesi – Lisans, Yönetim Bilişim Sistemleri
+- Anadolu Üniversitesi – Önlisans, Web Tasarımı ve Kodlama
+
+Sertifikalar / Eğitimler:
+- İş Analistleri için Üretken Yapay Zeka
+- İş Analitiğine Giriş
+- Veri Bilimi & ML Bootcamp
+- Veri Bilimciler için İleri SQL
+- Python ile Algoritmik Düşünce Temelleri
+- SDLC / Yazılım Geliştirme Yaşam Döngüsü
+- Tableau / Veri Görselleştirme odaklı eğitimler
+- Veriyle Hikâye Anlatımı vb.
+
+Bunu iki kolonlu modern bir layout ile gösterebilirsin.
+
+==================================================
+8) FOOTER / İLETİŞİM
+==================================================
+
+Footer güçlü ve temiz olsun.
+Burada:
+- ad soyad
+- kısa title
+- email
+- telefon
+- LinkedIn
+- isteğe bağlı GitHub
+- telif / copyright
+olsun.
+
+İletişim alanı sıradan görünmesin.
+Şık ikonlar ve temiz düzen olsun.
+
+==================================================
+İÇERİK ÜRETİM KURALLARI
+==================================================
+
+Çok önemli:
+- Metinler premium ve doğal olsun
+- Yapay zeka yazmış gibi görünmesin
+- Fazla genel, boş, klişe cümlelerden kaçın
+- Çok sert kurumsal dille de boğma
+- Modern, akıcı, profesyonel ve güven veren bir ton kullan
+- CV kopyala-yapıştır gibi olmasın
+- Web sitesine uygun şekilde katmanlı anlatım olsun
+- Her bölümün bilgi mimarisi güçlü olsun
+
+İçerik dili:
+- Türkçe versiyonda doğal Türkçe
+- İngilizce versiyonda profesyonel ama aşırı şişirilmemiş business English
+
+==================================================
+TEKNİK / UX BEKLENTİLERİ
+==================================================
+
+- Responsive tasarım
+- Masaüstünde premium görünüm
+- Mobil uyumlu
+- Smooth scroll
+- Yumuşak hover’lar
+- Section reveal animasyonları olabilir
+- Performance çok düşmesin
+- Gereksiz ağır animasyon kullanma
+- Erişilebilirlik düşün
+- Contrast iyi olsun
+- Okunabilirlik yüksek olsun
+
+Opsiyonel ama iyi olur:
+- section bazlı active nav highlight
+- küçük parallax/glow efektleri
+- kart hover efekti
+- case showcase alanlarında mini interaktif durum
+- CV download butonu
+- dil değişiminde state yönetimi temiz olsun
+
+==================================================
+İSTEMEDİKLERİM
+==================================================
+
+- çok sıradan portfolio görünümü
+- sadece düz metin yığılması
+- sahte startup dashboard abartısı
+- copy-paste template hissi
+- fazla açık renk, fazla oyuncaklı tasarım
+- çocuk işi animasyon
+- rastgele ikon kalabalığı
+- klasik progress bar spam
+- gerçeği yansıtmayan fake başarı metrikleri
+- anlamsız lorem ipsum / placeholder içerik
+
+==================================================
+ÇOK ÖNEMLİ SONUÇ HEDEFİ
+==================================================
+
+Siteye giren biri 10-15 saniye içinde şunu anlamalı:
+“Bu kişi sıradan bir BA değil; bankacılık teknolojileri, sistem analizi, ödeme akışları, test, veri doğrulama ve iş-teknik köprüsü tarafında gerçekten bilinçli ve düzenli çalışan biri.”
+
+Ayrıca site şu hissi vermeli:
+- LinkedIn’de paylaşılabilecek kadar profesyonel
+- işe alım uzmanı için güven verici
+- yönetici için olgun
+- teknik ekip için anlaşılır
+- benim kişisel markamı taşıyan özgün bir portfolio
+
+==================================================
+UYGULAMA ŞEKLİ
+==================================================
+
+Şimdi bu brief’e göre mevcut sitemi yeniden düzenle:
+- section structure’ı geliştir
+- metinleri baştan yaz
+- tasarımı premiumlaştır
+- analist vitrini bölümünü çok daha güçlü kur
+- proje kartlarını profesyonel hale getir
+- Türkçe / İngilizce içerik sistemini tam kur
+- spacing, hierarchy, typography, colors, cards, hover, layout her şeyi iyileştir
+- gerekirse mevcut component yapısını refactor et
+- nihai sonuç üretime alınabilecek düzeyde olsun
+
+Önce genel sayfa yapısını kur.
+Sonra her section için içerikleri kaliteli biçimde yerleştir.
+Sonra görsel/etkileşim kalitesini yükselt.
+Tüm metinler gerçekçi, premium ve bana uygun olsun.

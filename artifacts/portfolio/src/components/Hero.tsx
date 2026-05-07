@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Linkedin, Download, ArrowRight } from "lucide-react";
+import { Mail, MapPin, Linkedin, Download, ArrowRight } from "lucide-react";
 import { useLang } from "@/lib/i18n";
 
 export function Hero() {
@@ -53,7 +53,8 @@ export function Hero() {
             {/* CTAs */}
             <div className="flex flex-wrap gap-3 mb-10">
               <a
-                href="#"
+                href="/Gorkem_Koroglu_CV.pdf"
+                download="Gorkem_Koroglu_CV.pdf"
                 className="inline-flex items-center justify-center h-11 px-6 rounded-lg bg-primary text-primary-foreground text-sm font-semibold transition-all hover:bg-primary/90 hover:shadow-[0_0_20px_rgba(0,200,200,0.25)] active:scale-[0.98]"
               >
                 <Download className="mr-2 h-4 w-4" />
@@ -91,10 +92,6 @@ export function Hero() {
               <a href="mailto:gorkem.koroglu@hotmail.com" className="flex items-center gap-2 hover:text-primary transition-colors">
                 <Mail className="h-4 w-4" />
                 gorkem.koroglu@hotmail.com
-              </a>
-              <a href="tel:+905533860059" className="flex items-center gap-2 hover:text-primary transition-colors">
-                <Phone className="h-4 w-4" />
-                +90 553 386 00 59
               </a>
               <span className="flex items-center gap-2">
                 <MapPin className="h-4 w-4" />

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Linkedin, Phone } from "lucide-react";
+import { Mail, Linkedin } from "lucide-react";
 import { useLang } from "@/lib/i18n";
 
 export function Footer() {
@@ -41,13 +41,6 @@ export function Footer() {
           >
             <Linkedin className="w-4 h-4" />
             linkedin.com/in/gorkemmkoroglu
-          </a>
-          <a
-            href="tel:+905533860059"
-            className="inline-flex items-center justify-center gap-2.5 h-11 px-6 rounded-lg border border-border bg-card text-sm font-semibold hover:border-primary/50 hover:text-primary transition-all"
-          >
-            <Phone className="w-4 h-4" />
-            +90 553 386 00 59
           </a>
         </motion.div>
 

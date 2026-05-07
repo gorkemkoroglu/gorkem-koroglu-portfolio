@@ -1,35 +1,19 @@
 import { motion } from "framer-motion";
 import { Activity, Database, Layout, Search, Users } from "lucide-react";
+import { useLang } from "@/lib/i18n";
 
-const skillCategories = [
-  {
-    title: "Data Analysis",
-    icon: <Search className="w-5 h-5" />,
-    skills: ["SQL", "Python (pandas, numpy)", "Microsoft Excel"],
-  },
-  {
-    title: "Visualization",
-    icon: <Activity className="w-5 h-5" />,
-    skills: ["Power BI", "Tableau", "matplotlib", "seaborn"],
-  },
-  {
-    title: "Testing & DB",
-    icon: <Database className="w-5 h-5" />,
-    skills: ["MySQL", "PL/SQL", "SQL Server", "SOAP UI", "Postman"],
-  },
-  {
-    title: "Project Tools",
-    icon: <Layout className="w-5 h-5" />,
-    skills: ["Jira", "Confluence", "MS Visio", "Figma"],
-  },
-  {
-    title: "Soft Skills",
-    icon: <Users className="w-5 h-5" />,
-    skills: ["Analytical Thinking", "Stakeholder Management", "Communication", "Adaptability"],
-  },
+const icons = [
+  <Search className="w-5 h-5" />,
+  <Activity className="w-5 h-5" />,
+  <Database className="w-5 h-5" />,
+  <Layout className="w-5 h-5" />,
+  <Users className="w-5 h-5" />,
 ];
 
 export function Skills() {
+  const { t } = useLang();
+  const s = t.skills;
+
   return (
     <section id="skills" className="py-24 bg-card/30 border-y border-border">
       <div className="max-w-7xl mx-auto px-6">
@@ -42,13 +26,13 @@ export function Skills() {
         >
           <h2 className="text-3xl font-bold font-heading mb-4 flex items-center gap-2">
             <Activity className="text-primary" />
-            Skills Matrix
+            {s.heading}
           </h2>
           <div className="h-1 w-12 bg-primary rounded-full"></div>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {skillCategories.map((category, idx) => (
+          {s.categories.map((category, idx) => (
             <motion.div
               key={idx}
               initial={{ opacity: 0, scale: 0.95 }}
@@ -58,7 +42,7 @@ export function Skills() {
               className="bg-background border border-border p-6 rounded-xl hover:border-primary/50 transition-colors"
             >
               <div className="flex items-center gap-3 mb-4 text-primary">
-                {category.icon}
+                {icons[idx]}
                 <h3 className="font-bold text-lg text-foreground">{category.title}</h3>
               </div>
               <div className="flex flex-wrap gap-2">

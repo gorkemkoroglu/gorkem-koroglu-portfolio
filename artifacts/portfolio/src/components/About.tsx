@@ -1,7 +1,11 @@
 import { motion } from "framer-motion";
 import { Terminal } from "lucide-react";
+import { useLang } from "@/lib/i18n";
 
 export function About() {
+  const { t } = useLang();
+  const a = t.about;
+
   return (
     <section id="about" className="py-24 bg-card/30 border-y border-border relative">
       <div className="max-w-7xl mx-auto px-6">
@@ -15,15 +19,13 @@ export function About() {
           <div>
             <h2 className="text-3xl font-bold font-heading mb-4 flex items-center gap-2">
               <Terminal className="text-primary" />
-              System.about()
+              {a.heading}
             </h2>
             <div className="h-1 w-12 bg-primary rounded-full"></div>
           </div>
-          
+
           <div className="prose prose-invert max-w-none">
-            <p className="text-lg text-foreground/80 leading-relaxed">
-              Görkem is a Senior Business Analyst with a track record in banking and insurance technologies. He specializes in systems analysis, cross-border payment platforms, and data-driven problem solving — working at the intersection of business needs and technical implementation. He's AI-aware, Python-literate, and relentlessly curious.
-            </p>
+            <p className="text-lg text-foreground/80 leading-relaxed">{a.bio}</p>
           </div>
         </motion.div>
       </div>

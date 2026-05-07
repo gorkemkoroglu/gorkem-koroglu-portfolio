@@ -1,7 +1,14 @@
 import { motion } from "framer-motion";
-import { AlertCircle, ArrowRight, CheckCircle2, Server, Clock, ShieldCheck, TrendingDown, Layers } from "lucide-react";
+import {
+  AlertCircle, ArrowRight, CheckCircle2, Server, Clock,
+  ShieldCheck, TrendingDown, Layers,
+} from "lucide-react";
+import { useLang } from "@/lib/i18n";
 
 export function SampleWork() {
+  const { t } = useLang();
+  const s = t.showcase;
+
   return (
     <section id="showcase" className="py-24">
       <div className="max-w-7xl mx-auto px-6">
@@ -14,15 +21,14 @@ export function SampleWork() {
         >
           <h2 className="text-3xl font-bold font-heading mb-4 flex items-center gap-2">
             <Layers className="text-primary" />
-            Analyst Showcase
+            {s.heading}
           </h2>
           <div className="h-1 w-12 bg-primary rounded-full mb-4"></div>
-          <p className="text-muted-foreground max-w-2xl">
-            A demonstration of structural thinking, process mapping, and performance analytics.
-          </p>
+          <p className="text-muted-foreground max-w-2xl">{s.subheading}</p>
         </motion.div>
 
         <div className="space-y-16">
+
           {/* Artifact 1: Root Cause Analysis */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -32,49 +38,41 @@ export function SampleWork() {
           >
             <div className="border-b border-border bg-muted/30 p-4 flex items-center gap-3">
               <div className="w-3 h-3 rounded-full bg-destructive"></div>
-              <h3 className="font-mono text-sm font-semibold tracking-wider">DOC-RCA-4091 :: Payment Failure Investigation</h3>
+              <h3 className="font-mono text-sm font-semibold tracking-wider">{s.rca.docId}</h3>
             </div>
             <div className="p-6 md:p-8 grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="text-lg font-bold mb-3 flex items-center gap-2 text-foreground">
                   <AlertCircle className="w-5 h-5 text-destructive" />
-                  Problem Statement
+                  {s.rca.problemHeading}
                 </h4>
                 <p className="text-sm text-foreground/80 mb-6 bg-background p-4 rounded-md border border-border">
-                  On Oct 12, 2023, 142 cross-border transactions failed during routing to European correspondent banks, resulting in a 4-hour delay and manual reconciliation overhead.
+                  {s.rca.problemText}
                 </p>
-                
-                <h4 className="text-lg font-bold mb-3">Root Cause Tree</h4>
+
+                <h4 className="text-lg font-bold mb-3">{s.rca.rcaHeading}</h4>
                 <ul className="text-sm space-y-2 font-mono text-muted-foreground bg-background p-4 rounded-md border border-border">
                   <li>└─ Transaction Failure (142 count)</li>
                   <li>&nbsp;&nbsp;└─ API Timeout at Validation Node</li>
                   <li>&nbsp;&nbsp;&nbsp;&nbsp;└─ Invalid XML Payload Structure</li>
-                  <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ Missing `<span className="text-primary">BeneficiaryIBAN</span>` tag</li>
+                  <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ Missing <span className="text-primary">`BeneficiaryIBAN`</span> tag</li>
                   <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ <strong className="text-destructive">Root:</strong> Core mapping update dropped field.</li>
                 </ul>
               </div>
-              
+
               <div>
                 <h4 className="text-lg font-bold mb-4 flex items-center gap-2 text-foreground">
                   <CheckCircle2 className="w-5 h-5 text-emerald-500" />
-                  Resolution & Action
+                  {s.rca.resolutionHeading}
                 </h4>
                 <div className="relative border-l border-border ml-3 space-y-6">
-                  <div className="relative pl-6">
-                    <div className="absolute w-3 h-3 bg-emerald-500 rounded-full -left-[6px] top-1"></div>
-                    <p className="text-sm font-bold">Immediate Fix</p>
-                    <p className="text-xs text-muted-foreground">Rolled back mapping config; reprocessed failed queue manually.</p>
-                  </div>
-                  <div className="relative pl-6">
-                    <div className="absolute w-3 h-3 bg-primary rounded-full -left-[6px] top-1"></div>
-                    <p className="text-sm font-bold">Preventive Action</p>
-                    <p className="text-xs text-muted-foreground">Added XSD schema validation pre-flight check in integration layer.</p>
-                  </div>
-                  <div className="relative pl-6">
-                    <div className="absolute w-3 h-3 bg-primary rounded-full -left-[6px] top-1"></div>
-                    <p className="text-sm font-bold">Process Update</p>
-                    <p className="text-xs text-muted-foreground">Mandatory UAT regression for all XML templates on core updates.</p>
-                  </div>
+                  {s.rca.steps.map((step, i) => (
+                    <div key={i} className="relative pl-6">
+                      <div className={`absolute w-3 h-3 rounded-full -left-[6px] top-1 ${i === 0 ? "bg-emerald-500" : "bg-primary"}`}></div>
+                      <p className="text-sm font-bold">{step.title}</p>
+                      <p className="text-xs text-muted-foreground">{step.desc}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -89,24 +87,25 @@ export function SampleWork() {
           >
             <div className="border-b border-border bg-muted/30 p-4 flex items-center gap-3">
               <div className="w-3 h-3 rounded-full bg-primary"></div>
-              <h3 className="font-mono text-sm font-semibold tracking-wider">FLOW-882 :: International Wire Transfer</h3>
+              <h3 className="font-mono text-sm font-semibold tracking-wider">{s.flow.docId}</h3>
             </div>
             <div className="p-6 md:p-8 overflow-x-auto">
               <div className="min-w-[800px] flex items-center justify-between gap-2 py-8">
-                {[
-                  { step: "Initiation", desc: "User inputs details" },
-                  { step: "Validation", desc: "Format & limits" },
-                  { step: "Compliance", desc: "AML/KYC check", highlight: true },
-                  { step: "Routing", desc: "Correspondent selection" },
-                  { step: "Settlement", desc: "Ledger update" },
-                  { step: "Notification", desc: "User alert" },
-                ].map((node, i, arr) => (
+                {s.flow.nodes.map((node, i, arr) => (
                   <div key={i} className="flex items-center">
-                    <div className={`p-4 rounded-lg border-2 ${node.highlight ? 'border-primary bg-primary/10 shadow-[0_0_15px_rgba(var(--primary),0.2)]' : 'border-border bg-background'} w-32 text-center relative`}>
+                    <div
+                      className={`p-4 rounded-lg border-2 ${
+                        node.highlight
+                          ? "border-primary bg-primary/10 shadow-[0_0_15px_rgba(var(--primary),0.2)]"
+                          : "border-border bg-background"
+                      } w-32 text-center relative`}
+                    >
                       <p className="text-sm font-bold text-foreground mb-1">{node.step}</p>
                       <p className="text-xs text-muted-foreground leading-tight">{node.desc}</p>
                       {node.highlight && (
-                        <div className="absolute -top-3 -right-3 w-6 h-6 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-xs font-bold animate-bounce">!</div>
+                        <div className="absolute -top-3 -right-3 w-6 h-6 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-xs font-bold animate-bounce">
+                          !
+                        </div>
                       )}
                     </div>
                     {i < arr.length - 1 && (
@@ -119,55 +118,49 @@ export function SampleWork() {
               </div>
               <div className="mt-4 p-4 bg-primary/5 border border-primary/20 rounded-md">
                 <p className="text-sm text-foreground/80">
-                  <strong className="text-primary">Decision Point Highlight:</strong> Compliance Check involves asynchronous API call to screening engine. Designed fallback logic for timeout scenarios to queue for manual review rather than rejecting.
+                  <strong className="text-primary">{s.flow.noteLabel}</strong> {s.flow.note}
                 </p>
               </div>
             </div>
           </motion.div>
 
-          {/* Artifact 3: Data Insight Card */}
+          {/* Artifact 3: Dashboard */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="border border-border rounded-2xl overflow-hidden bg-card shadow-lg"
           >
-             <div className="border-b border-border bg-muted/30 p-4 flex items-center gap-3">
+            <div className="border-b border-border bg-muted/30 p-4 flex items-center gap-3">
               <div className="w-3 h-3 rounded-full bg-chart-2"></div>
-              <h3 className="font-mono text-sm font-semibold tracking-wider">DASH-04 :: Insurance System Health (Q3)</h3>
+              <h3 className="font-mono text-sm font-semibold tracking-wider">{s.dashboard.docId}</h3>
             </div>
             <div className="p-6 md:p-8">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-                <div className="bg-background p-4 rounded-xl border border-border flex flex-col items-center justify-center text-center">
-                  <Server className="w-6 h-6 text-emerald-500 mb-2" />
-                  <span className="text-2xl font-bold font-mono text-foreground">99.7%</span>
-                  <span className="text-xs text-muted-foreground uppercase tracking-wider mt-1">System Uptime</span>
-                </div>
-                <div className="bg-background p-4 rounded-xl border border-border flex flex-col items-center justify-center text-center">
-                  <Clock className="w-6 h-6 text-chart-4 mb-2" />
-                  <span className="text-2xl font-bold font-mono text-foreground">18.4<span className="text-sm text-muted-foreground">h</span></span>
-                  <span className="text-xs text-muted-foreground uppercase tracking-wider mt-1">Avg Resolution</span>
-                </div>
-                <div className="bg-background p-4 rounded-xl border border-border flex flex-col items-center justify-center text-center">
-                  <ShieldCheck className="w-6 h-6 text-primary mb-2" />
-                  <span className="text-2xl font-bold font-mono text-foreground">94.0%</span>
-                  <span className="text-xs text-muted-foreground uppercase tracking-wider mt-1">Test Coverage</span>
-                </div>
-                <div className="bg-background p-4 rounded-xl border border-border flex flex-col items-center justify-center text-center">
-                  <CheckCircle2 className="w-6 h-6 text-chart-2 mb-2" />
-                  <span className="text-2xl font-bold font-mono text-foreground">98.2%</span>
-                  <span className="text-xs text-muted-foreground uppercase tracking-wider mt-1">UAT Approval</span>
-                </div>
+                {s.dashboard.metrics.map((metric, i) => {
+                  const icons = [
+                    <Server className="w-6 h-6 text-emerald-500 mb-2" />,
+                    <Clock className="w-6 h-6 text-chart-4 mb-2" />,
+                    <ShieldCheck className="w-6 h-6 text-primary mb-2" />,
+                    <CheckCircle2 className="w-6 h-6 text-chart-2 mb-2" />,
+                  ];
+                  return (
+                    <div key={i} className="bg-background p-4 rounded-xl border border-border flex flex-col items-center justify-center text-center">
+                      {icons[i]}
+                      <span className="text-2xl font-bold font-mono text-foreground">{metric.value}</span>
+                      <span className="text-xs text-muted-foreground uppercase tracking-wider mt-1">{metric.label}</span>
+                    </div>
+                  );
+                })}
               </div>
 
               <div className="bg-background p-6 rounded-xl border border-border">
                 <div className="flex justify-between items-center mb-6">
-                  <h4 className="font-bold text-sm">Monthly Error Volumes</h4>
+                  <h4 className="font-bold text-sm">{s.dashboard.chartTitle}</h4>
                   <div className="flex items-center text-emerald-500 text-sm font-medium">
-                    <TrendingDown className="w-4 h-4 mr-1" /> -12% vs Q2
+                    <TrendingDown className="w-4 h-4 mr-1" /> {s.dashboard.trend}
                   </div>
                 </div>
-                {/* CSS Bar Chart */}
                 <div className="flex items-end gap-4 h-32 pt-4">
                   {[
                     { label: "Jul", val: 80 },
@@ -176,14 +169,16 @@ export function SampleWork() {
                   ].map((bar) => (
                     <div key={bar.label} className="flex-1 flex flex-col items-center gap-2 group">
                       <div className="w-full relative bg-primary/20 rounded-t-md overflow-hidden h-full flex items-end">
-                        <motion.div 
+                        <motion.div
                           initial={{ height: 0 }}
                           whileInView={{ height: `${bar.val}%` }}
                           viewport={{ once: true }}
                           transition={{ duration: 1, ease: "easeOut" }}
                           className="w-full bg-primary rounded-t-md relative group-hover:bg-primary/80 transition-colors"
                         >
-                          <span className="absolute -top-6 left-1/2 -translate-x-1/2 text-xs font-mono opacity-0 group-hover:opacity-100 transition-opacity">{bar.val}</span>
+                          <span className="absolute -top-6 left-1/2 -translate-x-1/2 text-xs font-mono opacity-0 group-hover:opacity-100 transition-opacity">
+                            {bar.val}
+                          </span>
                         </motion.div>
                       </div>
                       <span className="text-xs text-muted-foreground">{bar.label}</span>
@@ -193,6 +188,7 @@ export function SampleWork() {
               </div>
             </div>
           </motion.div>
+
         </div>
       </div>
     </section>

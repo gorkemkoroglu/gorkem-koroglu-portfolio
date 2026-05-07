@@ -1,0 +1,101 @@
+import { motion } from "framer-motion";
+import { Briefcase, Calendar, ChevronRight } from "lucide-react";
+
+const experiences = [
+  {
+    title: "Senior Business Analyst",
+    company: "Yapı Kredi Teknoloji via NTT DATA Business Solutions",
+    date: "Oct 2024 – Present",
+    location: "Istanbul",
+    items: [
+      "End-to-end systems analysis for international core banking projects (Azerbaijan, Germany, Netherlands)",
+      "API and Web Service integration analysis (XML/JSON mapping)",
+      "SQL-based data validation and defect root cause analysis",
+      "Functional, service, and database testing + UAT coordination",
+      "Agile/Scrum delivery across distributed teams",
+    ],
+  },
+  {
+    title: "Technical Business Analyst",
+    company: "HDI Fibaemeklilik",
+    date: "Sep 2022 – Sep 2024",
+    location: "Istanbul",
+    items: [
+      "PL/SQL for data analysis, system updates, and root cause resolution",
+      "Translated business needs into functional specs and UI designs",
+      "Led test scenarios and UAT; resolved critical system errors within avg 24 hours",
+      "Prepared scope requirement docs: functional requirements, non-functional requirements, flow diagrams",
+    ],
+  },
+  {
+    title: "Data Science & ML Bootcamp",
+    company: "Veri Bilimi Okulu & Miuul",
+    date: "Mar 2022 – Sep 2022",
+    location: "",
+    items: [
+      "Python (pandas, numpy, matplotlib, seaborn), SQL, EDA, ML models",
+      "CRM analytics: Cohort Analysis, CLTV, RFM segmentation",
+      "Recommendation systems: Collaborative Filtering, Hybrid-Based Recommendations",
+    ],
+  },
+];
+
+export function Experience() {
+  return (
+    <section id="experience" className="py-24">
+      <div className="max-w-7xl mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mb-16"
+        >
+          <h2 className="text-3xl font-bold font-heading mb-4 flex items-center gap-2">
+            <Briefcase className="text-primary" />
+            Experience
+          </h2>
+          <div className="h-1 w-12 bg-primary rounded-full"></div>
+        </motion.div>
+
+        <div className="relative border-l-2 border-border ml-3 md:ml-6 space-y-12">
+          {experiences.map((exp, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="relative pl-8 md:pl-12"
+            >
+              {/* Timeline dot */}
+              <div className="absolute w-4 h-4 rounded-full bg-background border-2 border-primary -left-[9px] top-1.5"></div>
+              
+              <div className="bg-card border border-border rounded-xl p-6 hover-elevate transition-all">
+                <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4 mb-4">
+                  <div>
+                    <h3 className="text-xl font-bold text-foreground">{exp.title}</h3>
+                    <p className="text-primary font-medium">{exp.company}</p>
+                  </div>
+                  <div className="flex flex-col text-sm text-muted-foreground">
+                    <span className="flex items-center gap-1"><Calendar className="w-4 h-4" /> {exp.date}</span>
+                    {exp.location && <span className="flex items-center gap-1 mt-1">{exp.location}</span>}
+                  </div>
+                </div>
+                
+                <ul className="space-y-2 mt-4">
+                  {exp.items.map((item, i) => (
+                    <li key={i} className="flex items-start gap-2 text-foreground/80">
+                      <ChevronRight className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

@@ -11,6 +11,7 @@ export const translations = {
       highlights: "Work Highlights",
       showcase: "Showcase",
       education: "Education",
+      beyondcv: "Beyond the CV",
       contact: "Contact",
     },
     hero: {
@@ -310,6 +311,7 @@ export const translations = {
       highlights: "Öne Çıkanlar",
       showcase: "Vitrin",
       education: "Eğitim",
+      beyondcv: "CV Ötesi",
       contact: "İletişim",
     },
     hero: {

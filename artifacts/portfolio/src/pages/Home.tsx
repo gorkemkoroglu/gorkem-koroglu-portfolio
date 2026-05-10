@@ -6,6 +6,7 @@ import { Skills } from "../components/Skills";
 import { WorkHighlights } from "../components/WorkHighlights";
 import { SampleWork } from "../components/SampleWork";
 import { Education } from "../components/Education";
+import { BeyondCV } from "../components/BeyondCV";
 import { Footer } from "../components/Footer";
 import { CursorGlow } from "../components/CursorGlow";
 import { ScrollProgress } from "../components/ScrollProgress";
@@ -24,6 +25,7 @@ export default function Home() {
         <WorkHighlights />
         <SampleWork />
         <Education />
+        <BeyondCV />
       </main>
       <Footer />
     </div>

@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLang } from "@/lib/i18n";
 
-const SECTION_IDS = ["about", "experience", "skills", "highlights", "showcase", "education", "contact"];
+const SECTION_IDS = ["about", "experience", "skills", "highlights", "showcase", "education", "beyondcv", "contact"];
 
 export function Navbar() {
   const { lang, setLang, t } = useLang();
@@ -18,6 +18,7 @@ export function Navbar() {
     { href: "#highlights", id: "highlights", label: t.nav.highlights },
     { href: "#showcase", id: "showcase", label: t.nav.showcase },
     { href: "#education", id: "education", label: t.nav.education },
+    { href: "#beyondcv", id: "beyondcv", label: t.nav.beyondcv },
     { href: "#contact", id: "contact", label: t.nav.contact },
   ];
 

@@ -1,0 +1,111 @@
+TÜRKÇE
+CV’nin Ötesinde
+
+İK ve işe alım süreçlerinde sık sorulan sorulara, kendi yaklaşımımı yansıtan kısa yanıtlar.
+
+Kendinizi nasıl tanımlarsınız?
+
+Kendimi, iş ihtiyacı ile teknik uygulama arasında netlik oluşturan bir iş analisti olarak tanımlıyorum. Süreçleri sadece yüzeyden değil, iş kuralı, sistem davranışı, veri akışı ve kullanıcı etkisiyle birlikte okumayı seviyorum. Özellikle belirsiz talepleri sadeleştirmek, ekipler arasında ortak anlayış oluşturmak ve çözümü daha uygulanabilir hale getirmek en güçlü yönlerim arasında.
+
+Sizi diğer iş analistlerinden ayıran yön nedir?
+
+Beni ayıran en önemli nokta, analizi yalnızca dokümantasyon olarak görmemem. Benim için iyi analiz; doğru soruyu sormak, problemi parçalamak, beklenen davranış ile gerçekleşen sonucu karşılaştırmak ve gerçekten aksiyon alınabilir netlik üretmektir. Teknik farkındalığım sayesinde geliştirme ve test ekipleriyle daha rahat hizalanabiliyorum; aynı zamanda iş tarafının ihtiyacını da sade ve anlaşılır şekilde taşıyabiliyorum.
+
+Neden iş analistliği?
+
+İş analistliğini sevme nedenim, hem insan hem sistem hem de süreç tarafını aynı anda düşünmeyi gerektirmesi. Bir yandan iş ihtiyacını anlamlandırırken, diğer yandan bunun teknik karşılığını ve operasyonel etkisini değerlendirmek bana çok uygun geliyor. Belirsizliği netliğe dönüştürmek, bu rolün en çok sevdiğim tarafı.
+
+Teknik bilginiz bu role nasıl katkı sağlıyor?
+
+Teknik bilgimi ana rolümün yerine koymuyorum; onu analist bakışımı güçlendiren bir avantaj olarak görüyorum. SQL ile veri doğrulama yapabilmek, servis davranışlarını okuyabilmek, API ve entegrasyon mantığını anlayabilmek ya da Python ve veri analizi tarafına aşina olmak; gereksinimleri daha sağlam değerlendirmeme ve test süreçlerini daha doğru çerçevelememe yardımcı oluyor.
+
+En güçlü olduğunuz çalışma alanları neler?
+
+Sistem analizi, fonksiyonel analiz, gereksinim netleştirme, test/UAT koordinasyonu, veri doğrulama ve kök neden incelemesi benim en güçlü olduğum alanlar. Özellikle bankacılık ve finansal teknolojiler gibi hata toleransının düşük olduğu alanlarda, dikkatli ve yapılandırılmış çalışmanın önemli olduğuna inanıyorum.
+
+Bir problemi nasıl ele alırsınız?
+
+Önce problemi tanımlamaya çalışırım. Gerçek sorun ne, kim etkileniyor, beklenen davranış neydi ve mevcutta ne oluyor gibi sorularla başlarım. Sonrasında süreci katmanlarına ayırırım: iş kuralı, ekran davranışı, servis akışı, veri etkisi ve operasyonel sonuç. Böylece sadece semptomu değil, sorunun kaynağını ve kalıcı çözüm alanını daha net görebilirim.
+
+Takım içinde nasıl bir çalışma tarzınız var?
+
+Ben daha çok yapılandıran, netleştiren ve iletişimi güçlendiren bir çalışma tarzına sahibim. İnsanların aynı şeyi farklı anlamasının projelerde ciddi zaman kaybettirdiğini düşünüyorum. Bu yüzden toplantılarda, analizlerde ve test süreçlerinde ortak anlayış yaratmayı önemsiyorum. Sakin, düzenli ve sahiplenen bir şekilde çalışırım.
+
+Gelecekte kendinizi nasıl geliştirmek istiyorsunuz?
+
+İş analizi tarafında daha da derinleşirken, veri, yapay zekâ farkındalığı ve modern ürün/teknoloji yaklaşımlarıyla kendimi desteklemeye devam etmek istiyorum. Özellikle teknik ve analitik farkındalığı yüksek, ama merkezinde yine güçlü iş analizi bulunan bir kariyer çizgisi benim için en doğru gelişim alanı.
+
+ENGLISH
+Beyond the CV
+
+Short answers to questions recruiters and hiring managers often ask.
+
+How would you describe yourself?
+
+I would describe myself as a business analyst who brings clarity between business needs and technical implementation. I like to look at processes not only from the surface level, but also through business rules, system behavior, data flow, and user impact. Turning ambiguity into something more structured, testable, and actionable is one of the areas where I create the most value.
+
+What makes you different from other business analysts?
+
+What differentiates me most is that I do not see analysis as documentation alone. For me, good analysis means asking the right questions, breaking down the problem, comparing expected and actual behavior, and producing clarity that teams can act on. My technical awareness also helps me work more effectively with development and testing teams while still keeping business needs visible and understandable.
+
+Why business analysis?
+
+What I like about business analysis is that it requires thinking across people, systems, and processes at the same time. I enjoy understanding business needs, evaluating their technical implications, and helping shape workable solutions. Turning complexity into clarity is the part of the role I enjoy the most.
+
+How does your technical background support your role?
+
+I do not position technical knowledge as my main identity; I see it as something that strengthens my analyst perspective. Being able to validate data with SQL, understand service behavior, read integration logic, and having familiarity with Python and data analysis helps me assess requirements more solidly and support more reliable testing and validation.
+
+What are your strongest areas?
+
+My strongest areas include systems analysis, functional analysis, requirement clarification, test and UAT coordination, data validation, and root cause investigation. Especially in banking and financial technology environments, where accuracy matters greatly, I believe structured and careful analysis makes a real difference.
+
+How do you approach a problem?
+
+I first try to define the problem clearly. What is actually wrong, who is impacted, what was expected, and what is currently happening? Then I break the issue into layers: business rule, screen behavior, service flow, data impact, and operational outcome. This helps me move beyond symptoms and understand both the source of the issue and the most meaningful solution path.
+
+What is your working style within a team?
+
+My working style is structured, clarifying, and collaborative. I believe many project issues come from people interpreting the same need differently. That is why I care about building shared understanding across meetings, analysis outputs, and validation steps. I usually work in a calm, organized, and accountable way.
+
+How do you want to grow in the future?
+
+I want to deepen my business analysis capabilities while continuing to strengthen my awareness in data, AI, and modern technology thinking. The direction that fits me best is becoming an even stronger business analyst with solid technical and analytical awareness, without losing the core value of analysis itself.
+
+Tasarım önerisi
+
+Bu bölümü düz FAQ gibi değil, kart kart yap:
+
+Her kartta:
+
+soru üstte
+cevap altta
+yanında küçük bir ikon
+hover’da hafif glow
+istersen “play voice answer” gibi ikon koy ama ses olmasa da olur
+
+Daha da iyi fikir:
+Her cevap kısa olsun, altında bir mini etiket olsun:
+
+Mindset
+Working Style
+Analysis Approach
+Technical Awareness
+Career Direction
+
+Bu da bölümü daha modern gösterir.
+
+En doğru kullanım şekli
+
+Bence section adı şu olsun:
+
+TR: CV’nin Ötesinde
+EN: Beyond the CV
+
+İçindeki blok başlığı da:
+HR Questions, Answered
+
+Yani ikisini birlikte kullan:
+
+ana section başlığı premium
+alt tarafta recruiter-friendly yapı

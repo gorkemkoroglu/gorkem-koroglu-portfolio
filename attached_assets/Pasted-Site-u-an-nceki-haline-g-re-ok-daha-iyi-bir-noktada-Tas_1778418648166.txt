@@ -1,0 +1,133 @@
+Site şu an önceki haline göre çok daha iyi bir noktada. Tasarımı genel olarak korumak istiyorum. Ancak içerik mimarisi, section isimleri, bazı başlıklar ve birkaç bölümün tone-of-voice tarafında son bir profesyonel revizyona ihtiyacım var. Bu son aşamada amacım, siteyi yalnızca iyi görünen bir portfolio olmaktan çıkarıp, recruiter ve hiring manager gözünde çok güçlü ve aranan bir Technical Analyst profiline dönüştürmek.
+
+Lütfen aşağıdaki revizyonları uygula:
+
+1. MENU / BÖLÜM ADLARI DAHA NET OLSUN
+Şu an bazı section isimleri birbirine yakın his veriyor.
+Daha temiz ve profesyonel bir bilgi mimarisi istiyorum.
+
+Önerilen yapı:
+- Hakkımda
+- Deneyim
+- Uzmanlık Alanları
+- Katkı Sağladığım Çalışmalar
+- Analist Yaklaşımım
+- Eğitim & Sertifikalar
+- İK Soruları
+- İletişim
+
+Buna göre:
+- “Beceriler” yerine “Uzmanlık Alanları”
+- “Vitrin” yerine “Analist Yaklaşımım”
+- “CV Ötesi” yerine menüde daha net bir ifade gerekiyorsa “İK Soruları” ya da “CV’nin Ötesinde”
+kullanılabilir.
+
+2. HERO BÖLÜMÜ SON KEZ GÜÇLENDİRİLSİN
+Hero şu an iyi ama küçük iyileştirme istiyorum:
+- “Technical Analyst” positioning kalsın
+- Hero altındaki kısa açıklama daha tok, daha net ve daha recruiter-friendly hale getirilsin
+- “ALAN:” satırı daha güçlü bir mini positioning cümlesine dönüşsün
+
+Örnek mantık:
+“Odak alanım: sistem analizi, entegrasyon davranışı ve sınır ötesi ödeme akışları”
+
+Ama bunu daha doğal ve güçlü bir copy ile yaz.
+
+3. EXPERIENCE BÖLÜMÜNDE RESMİ UNVANLAR DAHA GÜVENLİ KULLANILSIN
+Hero ve genel positioning’de “Technical Analyst” kullanımı doğru.
+Ancak deneyim kartlarında, mümkünse rol isimleri gerçeğe daha yakın ve Türkçe/kurumsal şekilde gösterilsin.
+Örn:
+- Kıdemli İş Analisti
+- Teknik İş Analisti
+
+İngilizce modda ise uygun çevirileri kullanılabilir.
+Ama experience bölümü recruiter açısından fazla yeniden adlandırılmış görünmesin.
+
+4. “KATKI SAĞLADIĞIM ÇALIŞMALAR” BÖLÜMÜ TOKLAŞTIRILSIN
+Bu bölüm doğru yönde ama metinler biraz daha rafine edilsin:
+- daha kısa
+- daha net
+- daha az tekrar
+- daha güçlü katkı vurgusu
+- daha okunabilir bloklar
+
+Üst küçük başlık da daha güçlü hale gelsin.
+Örn:
+“En fazla değer ürettiğim çalışma alanları”
+veya
+“Analiz, doğrulama ve süreç iyileştirme odaklarım”
+
+5. “ANALİST VİTRİNİ” BÖLÜMÜ DAHA AZ DEMO, DAHA ÇOK PROFESYONEL OLSUN
+Bu bölüm görsel olarak ilgi çekici ama bazı örnekler fazla dashboard/demo hissi veriyor.
+Burayı tamamen kaldırmak istemiyorum; ancak tone daha gerçekçi ve daha profesyonel olsun.
+
+Revizyon kuralları:
+- daha az yapay KPI hissi
+- daha az ürün demo estetiği
+- daha çok analiz yaklaşımı
+- problem → analiz → karar → çıktı mantığı
+- güven veren ve gerçek dünya işi gibi duran içerik
+
+Gerekirse section adı değişsin:
+- “Analist Yaklaşımım”
+- “Nasıl Analiz Ederim”
+- “Analiz Yaklaşımı”
+gibi.
+
+Amaç: “şık örnekler” değil, “bu kişi analitik düşünür” hissi.
+
+6. İK SORULARI BÖLÜMÜ KORUNSUN AMA ADI VE ALT METNİ NETLEŞSİN
+Bu bölüm çok iyi. Kalsın.
+Ancak başlık ve alt başlık daha net olabilir.
+
+Öneri:
+Ana başlık: “CV’nin Ötesinde”
+Alt başlık: “İK Sorularına Yanıtlar”
+
+Kartlardaki cevaplar:
+- doğal kalsın
+- fazla uzamasın
+- güçlü ama sakin olsun
+- kendini bilen, net konuşan bir Technical Analyst izlenimi versin
+
+7. EĞİTİM & SERTİFİKALAR BÖLÜMÜ SADELEŞTİRİLSİN
+Eğitim kısmı iyi.
+Sertifika listesinde ise önceliklendirme istiyorum.
+En ilgili ve en güçlü eğitimler üstte kalsın.
+Gereksiz kalabalık azaltılsın.
+
+Öne çıkarılabilecek eğitimler:
+- İş Analistleri için Üretken Yapay Zeka
+- İş Analitiğine Giriş
+- Veri Bilimi & ML Bootcamp
+- Veri Bilimciler için İleri SQL
+- Yazılım Geliştirme Yaşam Döngüsü (SDLC)
+- Python ile Algoritmik Düşünce
+
+Diğerleri daha aşağıda veya secondary listede gösterilebilir.
+
+8. TÜRKÇE METİNLERİN SON KALİTE KONTROLÜ YAPILSIN
+Bu çok önemli.
+Tüm Türkçe metinleri son kez kontrol et ve şu kurallarla düzelt:
+- devrik cümle olmasın ya da minimum olsun
+- doğal profesyonel Türkçe olsun
+- recruiter okuyunca net anlaşılsın
+- hiring manager okuyunca güven versin
+- yapay zekâ üretimi hissi azaltılsın
+- gereksiz tekrarlar temizlensin
+- fazla uzun cümleler kısaltılsın
+
+9. ANA KİŞİSEL MARKA MESAJI DAHA BELİRGİN OLSUN
+Sitenin tamamı şu 3 ana mesajı daha net taşısın:
+- Yapılandırılmış düşünce
+- Doğrulama disiplini
+- İş ve teknik ekipler arasında netlik kurma
+
+Bu üçlü, tüm sitenin omurgası gibi hissedilmeli.
+
+10. SON HEDEF
+Final sonuçta siteye giren biri şu sonuca ulaşmalı:
+“Bu kişi teknik jargon kullanan biri olmaktan öte, gerçekten sistem okuyan, veriyi doğrulayan, test mantığını bilen, bankacılık deneyimi olan, sakin ve güvenilir bir Technical Analyst.”
+
+Tasarımı büyük ölçüde koru.
+İçerik mimarisini, bölüm isimlerini, başlıkları ve copy kalitesini son kez profesyonel seviyeye yükselt.

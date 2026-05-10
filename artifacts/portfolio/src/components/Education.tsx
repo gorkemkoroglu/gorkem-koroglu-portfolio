@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { GraduationCap, Award, BookOpen, Calendar } from "lucide-react";
 import { useLang } from "@/lib/i18n";
 
+
 export function Education() {
   const { t } = useLang();
   const e = t.education;
@@ -25,7 +26,7 @@ export function Education() {
           <div>
             <div className="flex items-center gap-2 mb-8">
               <GraduationCap className="w-5 h-5 text-primary" />
-              <h3 className="font-bold text-lg">Academic Background</h3>
+              <h3 className="font-bold text-lg">{e.academicLabel}</h3>
             </div>
             <div className="space-y-6">
               {e.degrees.map((edu, idx) => (
@@ -59,7 +60,7 @@ export function Education() {
           <div>
             <div className="flex items-center gap-2 mb-8">
               <Award className="w-5 h-5 text-primary" />
-              <h3 className="font-bold text-lg">Certifications & Training</h3>
+              <h3 className="font-bold text-lg">{e.certsLabel}</h3>
             </div>
             <div className="grid gap-2.5">
               {e.certs.map((cert, idx) => (

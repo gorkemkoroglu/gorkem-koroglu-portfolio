@@ -1,0 +1,409 @@
+Mevcut portfolio sitemin tasarımını genel olarak beğeniyorum; görsel dil, renk paleti, modern koyu tema, section yapısı ve premium his başarılı. Ancak içerik, başlıklandırma, konumlandırma ve özellikle Türkçe metin kalitesi istediğim seviyede değil. Bu yüzden senden tasarımı büyük ölçüde koruyup, içerik ve positioning tarafını çok daha güçlü, doğal, profesyonel ve bana daha uygun hale getirmeni istiyorum.
+
+Bu revizyonda ana hedef şu:
+Siteye giren biri beni sıradan bir CV sahibi gibi değil, bankacılık ve finansal teknolojiler alanında çalışan, sistem analizi güçlü, entegrasyon mantığını anlayan, veri doğrulama ve test tarafında sağlam, teknik farkındalığı yüksek ve iş-teknik köprüsü kurabilen çok güçlü bir analist olarak algılasın.
+
+==================================================
+1. ANA SORUNLAR
+==================================================
+
+Mevcut sitede aşağıdaki problemler var ve bunların tamamını düzeltmeni istiyorum:
+
+1) Türkçe metinlerin bir kısmı doğal değil.
+- Bazı cümleler devrik
+- Bazıları yapay zekâ üretimi gibi duruyor
+- Bazıları fazla sunum dili, fazla kurgusal
+- Bazılarında Türkçe akış profesyonel ama doğal değil
+
+2) Ana konumlandırma tam oturmamış.
+- profile.json içindeki "role": "Senior BA" ifadesini bana tam uygun bulmuyorum
+- Ben kendimi "Technical Analyst" olarak daha doğru konumlandırıyorum
+- Site beni klasik bir BA gibi değil, teknik farkındalığı yüksek analist olarak göstermeli
+
+3) Türkçe ve İngilizce içerik mantığı tam eşit kalitede değil.
+- Türkçe sürüm daha doğal, profesyonel ve akıcı hale getirilmeli
+- İngilizce sürüm de aynı kaliteye çekilmeli
+- Türkçe sürümde İngilizce ifadeler gereksiz kaldığı yerlerde azaltılmalı
+
+4) Bazı içerikler fazla kurgusal veya “demo case” gibi duruyor.
+- Özellikle vitrin/case bölümlerinde bazı metrikler ve örnekler fazla ürünleştirilmiş
+- Amaç etkileyici görünmek değil; güven veren, gerçekçi, profesyonel görünmek
+- Gerçek iş yaklaşımımı yansıtmalı, gereksiz şişirme olmamalı
+
+5) Bazı başlıklar daha stratejik seçilmeli.
+- "Senior BA" yerine daha doğru positioning kullanılmalı
+- "CV’nin Ötesinde" bölümü iyi bir fikir ama metin ve etiketler daha iyi olabilir
+- “Analist Vitrini” iyi ama daha gerçekçi / daha profesyonel / daha az demo görünümlü hale getirilmeli
+
+==================================================
+2. YENİ ANA KONUMLANDIRMA
+==================================================
+
+Sitedeki ana kişisel positioning şu olmalı:
+
+TÜRKÇE:
+Technical Analyst | Bankacılık & Finansal Teknolojiler
+
+Alternatif kısa kullanım:
+Teknik Analist | Bankacılık Sistemleri, Entegrasyon ve Doğrulama
+Teknik Analist | Sistem Analizi, Test, Veri Doğrulama ve Entegrasyon
+
+İNGİLİZCE:
+Technical Analyst | Banking & Financial Technologies
+
+Alternatif kısa kullanım:
+Technical Analyst | Systems, Integrations & Validation
+Technical Analyst | Banking Systems, Testing & Functional Analysis
+
+Önemli not:
+Buradaki “Technical Analyst” tanımı beni developer gibi göstermemeli.
+Benim merkez rolüm:
+- sistem analizi
+- fonksiyonel analiz
+- iş gereksinimi netleştirme
+- veri doğrulama
+- test/UAT
+- servis ve entegrasyon davranışı okuma
+- iş ve teknik ekip arasında köprü kurma
+
+Yani site şu mesajı vermeli:
+“Bu kişi teknik taraftan korkmayan, teknik dokümanı okuyabilen, veriyle doğrulama yapabilen, süreç mantığını çözebilen, ama asıl değeri analiz ve netleştirme olan bir Technical Analyst.”
+
+==================================================
+3. HERO / ANA SAYFA DÜZELTMELERİ
+==================================================
+
+Ana sayfada aşağıdakileri değiştir:
+
+- profile.json kutusundaki role alanını "Senior BA" yerine daha uygun hale getir:
+  "role": "Technical Analyst"
+
+- domain ifadesini daha güçlü ve daha doğal hale getir:
+  "domain": "Banking & Financial Technologies"
+
+- focus alanlarını çok daha bana uygun ve daha güçlü seç:
+  "focus": [
+    "Systems Analysis",
+    "API & Service Integration",
+    "Data Validation",
+    "Cross-Border Payments",
+    "UAT & Functional Testing"
+  ]
+
+- Hero altındaki tüm Türkçe metinleri doğal, akıcı ve premium Türkçe ile yeniden yaz
+
+- “Karmaşık sistemleri net kararlara dönüştürüyorum” fikri korunabilir ama daha iyi işlenebilir
+
+- Hero’da ben şu şekilde konumlanmalıyım:
+  İş ihtiyacını, sistem davranışını ve teknik doğrulamayı aynı çerçevede okuyabilen bir Technical Analyst
+
+İstediğim ana his:
+- güven veren
+- olgun
+- teknik farkındalığı yüksek
+- işe yarar
+- bankacılıkta değer üretebilecek biri
+
+Hero için örnek ton:
+“Bankacılık ve finansal teknolojiler alanında, sistem analizi, entegrasyon, veri doğrulama ve test süreçlerine odaklanan bir Technical Analyst’im. İş gereksinimlerini teknik gerçeklikle hizalayarak daha net, test edilebilir ve uygulanabilir çözümler ortaya çıkarmaya çalışıyorum.”
+
+Bunu daha iyi bir copywriting ile yaz.
+
+==================================================
+4. TÜRKÇE METİN KALİTESİ — EN KRİTİK NOKTA
+==================================================
+
+Sitedeki TÜM Türkçe metinleri yeniden ele al.
+Ana beklentim:
+- doğal Türkçe
+- profesyonel Türkçe
+- devrik olmayan cümleler
+- akıcı anlatım
+- CV maddesi gibi değil, iyi yazılmış web sitesi metni gibi olması
+- abartısız ama güçlü ton
+- çok “yapay zekâ yazmış” hissi vermemesi
+
+Şunlardan kaçın:
+- fazla uzun ve dolambaçlı cümleler
+- devrik ve bozuk akış
+- gereksiz sunum dili
+- aşırı pazarlama / abartı
+- demo ürün tanıtımı hissi
+- fazla İngilizce karışımı
+
+Türkçe metinlerde şu kaliteyi hedefle:
+LinkedIn’de paylaşınca profesyonel görünmeli
+Bir hiring manager okuyunca ciddiye almalı
+Bir recruiter okuyunca net anlamalı
+Bir teknik ekip lideri okuyunca “bu kişi işi anlar” demeli
+
+==================================================
+5. BÖLÜM BÖLÜM İÇERİK REVİZYONU
+==================================================
+
+A) HAKKIMDA
+Bu bölüm şu soruya cevap vermeli:
+“Bu kişi nasıl bir analist ve neden güçlü bir aday?”
+
+Şunları vurgula:
+- belirsiz gereksinimleri netleştirme
+- sistemi katmanlı okuma
+- iş kuralı + teknik davranış + veri etkisi + kullanıcı etkisini birlikte düşünme
+- ekipler arasında ortak anlayış kurma
+- test ve doğrulama odaklı çalışma
+- bankacılık ve sigorta tecrübesi
+- yapısal düşünme
+- teknik açıklığı olan analist profili
+
+“Nasıl çalışırım?” kutuları iyi fikir ama metinleri daha güçlü yap:
+- Yapılandırılmış düşünce
+- Net dokümantasyon
+- Test odaklı yaklaşım
+- İş + teknik açıklık
+
+Bu kutulardaki metinler daha kısa, tok ve iyi yazılmış olsun.
+
+B) DENEYİM
+Experience kısmı görsel olarak iyi. İçeriği daha gerçekçi ve etkili yap.
+Her deneyimde:
+- rolün gerçek adı korunsun
+- ama açıklamalar beni daha güçlü bir Technical Analyst olarak yansıtsın
+- fazla klişe ve görev listesi havası azaltılsın
+- iş ortamı, katkı biçimim ve güçlü yönlerim daha iyi anlaşılsın
+
+Yapı Kredi kısmında özellikle:
+- uluslararası çekirdek bankacılık
+- dış bankalar / farklı ülke yapıları
+- sistem analizi
+- API/web service entegrasyon mantığı
+- SQL veri doğrulama
+- test/UAT
+- Swift/SEPA / cross-border payment exposure
+- iş-teknik köprüsü
+öne çıksın
+
+HDI kısmında:
+- PL/SQL destekli analiz
+- gereksinimlerin fonksiyonel çıktıya dönüşmesi
+- test/UAT
+- hata inceleme
+- süreç iyileştirme
+öne çıksın
+
+Veri Bilimi & ML kısmı kalsın ama ana rolü çalmasın.
+Bu bölüm:
+“analitik altyapı” veya “destekleyici analitik temel” gibi daha doğru konumlandırılsın.
+
+C) BECERİLER
+Bu bölüm görsel olarak başarılı ama içerik ve etiketleri optimize et.
+
+Öncelik sırası şu olsun:
+1. Analiz & Gereksinim
+2. Teknik Entegrasyon & Veri
+3. Test & Teslimat
+4. Domain Bilgisi
+5. Araçlar
+6. Güçlü Yönler
+
+Ancak buradaki metinler beni sadece araç bilen biri gibi göstermesin.
+Merkezde şu olsun:
+- systems analysis
+- requirement clarification
+- validation
+- UAT
+- service behavior understanding
+- business-technical alignment
+
+Python / SQL / PL/SQL görünsün ama destekleyici kalsın.
+
+D) KATKI SAĞLADIĞIM ÇALIŞMALAR
+Bu bölüm bence doğru yönde.
+Ancak metinleri daha da iyi hale getir:
+- daha tok
+- daha doğal
+- daha az uzun
+- daha güçlü
+- daha az “rapor dili”
+- daha fazla “bu kişi burada ne yaptı ve ne kattı?” hissi
+
+Başlık şu mantıkta kalabilir:
+Katkı Sağladığım Çalışmalar
+Ancak alt açıklama daha iyi yazılsın.
+
+Kart metinlerinde:
+- tekrarlı yapı azaltılsın
+- gereksiz uzama azaltılsın
+- daha okunabilir bloklar olsun
+- her kart tek paragraf değil, kısa giriş + net katkı mantığında yeniden kurulabilir
+
+E) ANALİST VİTRİNİ
+Bu bölüm görsel olarak ilgi çekici ama içerik tarafında fazla demo/showcase hissi veriyor.
+Burayı daha gerçekçi hale getir.
+
+Amaç:
+- “Vay ne şık görünüyor”dan çok
+- “Bu kişi gerçekten analitik düşünüyor” hissi vermek
+
+Buradaki case’lerde:
+- abartılı kurgusal metrikleri azalt
+- daha profesyonel ve daha nötr bir dil kullan
+- örnekler hâlâ etkileyici olsun ama fazla ‘tasarlanmış vaka’ gibi görünmesin
+- gerçek dünyadan ilham alınmış ama aşırı ürünleştirilmemiş örnekler olsun
+
+Özellikle:
+- root cause
+- decision flow
+- KPI view
+- requirement to screen
+- expected vs actual
+vaka mantıkları korunabilir
+
+Ama metinler:
+- daha az sahte başarı hikâyesi
+- daha fazla analiz yaklaşımı
+- daha fazla problem çözme mantığı
+- daha fazla professional credibility
+taşımalı
+
+F) EĞİTİM & SERTİFİKALAR
+Bu bölüm iyi ama Türkçe ve İngilizce karmasını temizle.
+Türkçe modda:
+- Academic Background yerine Türkçe
+- Certifications & Training yerine Türkçe
+- daha doğal bölüm isimleri
+kullan
+
+Ayrıca sertifika listesinde çok kalabalık görünen kısım daha rafine olabilir.
+Önceliklendirme yap:
+- en ilgili eğitimler üstte
+- en güçlü ve profile en uygun eğitimler öne çıksın
+
+G) CV’NİN ÖTESİNDE
+Bu bölüm çok iyi bir fikir ve kalsın.
+Ama metinler daha üst düzey olsun.
+Buradaki sorular çok doğru, fakat cevaplar:
+- biraz daha kısa
+- daha profesyonel
+- daha net
+- daha doğal
+hale getirilsin.
+
+Burada amaç:
+HR, recruiter, hiring manager ve team lead beni “konuşması net, kendini iyi tanıyan, rolünü iyi bilen biri” olarak görsün.
+
+“Dinle” özelliği varsa kalsın ama ses üretimi içeriğin önüne geçmesin.
+İçeriğin asıl gücü metinde olsun.
+
+H) İLETİŞİM / FOOTER
+Bu bölüm temiz, büyük ölçüde iyi.
+Ama kapanış metni biraz daha güçlü olabilir:
+- yeni fırsatlara açık
+- bankacılık / finansal sistemler / analiz
+- profesyonel bağlantı kurma
+şeklinde daha iyi bir copy yaz.
+
+==================================================
+6. TÜRKÇE MOD / İNGİLİZCE MOD TAM AYRI KALİTEDE OLSUN
+==================================================
+
+Bilingual yapı devam etsin ama şu kurallarla:
+
+Türkçe mod:
+- %100 doğal Türkçe
+- İngilizce bölüm isimleri minimum
+- profesyonel ama akıcı
+- Türkçe işe alım diline uygun
+
+İngilizce mod:
+- polished business English
+- aşırı şişirilmiş değil
+- recruiter-friendly
+- hiring manager friendly
+- modern ama ölçülü
+
+Çeviri birebir olmasın.
+Her dil kendi içinde doğal olsun.
+
+==================================================
+7. BAŞLIKLANDIRMA STRATEJİSİ
+==================================================
+
+Mevcut tüm başlıkları analiz et ve daha doğru hale getir.
+
+Özellikle:
+- Hero ana title
+- profile.json içi role
+- bölüm alt başlıkları
+- case label’ları
+- eğitim başlıkları
+- CV’nin Ötesinde alt başlıkları
+
+Tüm başlıklar şu hedefe hizmet etsin:
+Beni piyasada aranan, güven veren, teknik farkındalığı yüksek, sistem okuyan ve iş-teknik arasında değer yaratan bir Technical Analyst olarak konumlandırsın.
+
+==================================================
+8. BENİM GÜÇLÜ PROFİLİMİ TAM AÇIĞA ÇIKAR
+==================================================
+
+Bu çok önemli.
+Site şu alanları güçlü şekilde göstermeli:
+
+- İş gereksinimini anlama ve netleştirme
+- Sistem davranışlarını analiz etme
+- Servis ve entegrasyon mantığını okuma
+- Veri doğrulama
+- SQL ile kontrol
+- Test ve UAT
+- İş + teknik ekipler arasında köprü kurma
+- Bankacılık/ödeme/core banking ortamında çalışma
+- Sigorta teknolojileri tecrübesi
+- Yapısal ve sakin çalışma tarzı
+- Teknik farkındalık
+- Analitik düşünce
+- Profesyonel iletişim
+
+Benim Python / machine learning / veri analizi bilgim görünmeye devam edebilir.
+Ama bunlar beni data scientist gibi göstermesin.
+Doğru konum:
+“Analitik ve teknik farkındalığı yüksek Technical Analyst”
+
+==================================================
+9. KOPYA YAZIM KURALLARI
+==================================================
+
+Tüm site metinlerini şu kurallarla yeniden yaz:
+
+- her cümle doğal olacak
+- devrik cümle minimum olacak
+- gereksiz tekrar olmayacak
+- güçlü ama sakin ton olacak
+- abartılı başarı anlatımı olmayacak
+- güven veren bir profesyonel ton olacak
+- CV dili değil, premium portfolio dili olacak
+- recruiter ve hiring manager gözüyle okunabilir olacak
+- teknik ekip lideri için de anlamlı olacak
+
+Yani metinler şunu hissettirmeli:
+“Bu kişi gerçekten işi biliyor, ne yaptığını biliyor, kendini doğru konumluyor ve ekipte değer üretir.”
+
+==================================================
+10. SON HEDEF
+==================================================
+
+Bu siteyi, bir recruiter veya hiring manager gördüğünde şu sonucu çıkarmalı:
+
+- Bu kişi yalnızca klasik business tarafında değil
+- Teknik ekiplerle rahat çalışır
+- Sistem ve süreç okur
+- Veriyle doğrulama yapar
+- Test/UAT tarafında güçlüdür
+- Bankacılık ve finansal teknolojilerde doğrudan işe değer katabilir
+- Kendini doğru tanımlıyor
+- Güven veriyor
+- Olgun ve profesyonel
+
+Kısacası:
+Sitenin tamamı beni “çok aranan, güçlü Technical Analyst adayı” gibi göstermeli.
+
+Mevcut tasarımı büyük ölçüde koru.
+Ama tüm başlıkları, ana positioning’i, Türkçe copy’leri, section açıklamalarını, case metinlerini, label’ları ve role tanımlarını bu doğrultuda yeniden tasarla.

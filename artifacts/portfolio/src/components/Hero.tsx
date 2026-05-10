@@ -170,20 +170,20 @@ export function Hero() {
                 <div>
                   <span className="text-primary">"role"</span>
                   <span className="text-muted-foreground">: </span>
-                  <span className="text-foreground/80">"Senior BA"</span>
+                  <span className="text-foreground/80">"Technical Analyst"</span>
                 </div>
                 <div>
                   <span className="text-primary">"domain"</span>
                   <span className="text-muted-foreground">: </span>
-                  <span className="text-foreground/80">"Banking & Fintech"</span>
+                  <span className="text-foreground/80">"Banking & FinTech"</span>
                 </div>
                 <div>
                   <span className="text-primary">"focus"</span>
                   <span className="text-muted-foreground">: [</span>
                   <div className="pl-3 text-foreground/70 space-y-0.5">
                     <div>"Systems Analysis",</div>
-                    <div>"API Integration",</div>
-                    <div>"Cross-Border PMT",</div>
+                    <div>"API & Integration",</div>
+                    <div>"Data Validation",</div>
                     <div>"UAT & Testing"</div>
                   </div>
                   <span className="text-muted-foreground">]</span>

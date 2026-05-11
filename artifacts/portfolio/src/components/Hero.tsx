@@ -175,16 +175,29 @@ export function Hero() {
                 <div>
                   <span className="text-primary">"domain"</span>
                   <span className="text-muted-foreground">: </span>
-                  <span className="text-foreground/80">"Banking & FinTech"</span>
+                  <span className="text-foreground/80">
+                    {lang === "tr" ? '"Bankacılık & FinTech"' : '"Banking & FinTech"'}
+                  </span>
                 </div>
                 <div>
                   <span className="text-primary">"focus"</span>
                   <span className="text-muted-foreground">: [</span>
                   <div className="pl-3 text-foreground/70 space-y-0.5">
-                    <div>"Systems Analysis",</div>
-                    <div>"API & Integration",</div>
-                    <div>"Data Validation",</div>
-                    <div>"UAT & Testing"</div>
+                    {lang === "tr" ? (
+                      <>
+                        <div>"Sistem Analizi",</div>
+                        <div>"API & Entegrasyon",</div>
+                        <div>"Veri Doğrulama",</div>
+                        <div>"UAT & Test"</div>
+                      </>
+                    ) : (
+                      <>
+                        <div>"Systems Analysis",</div>
+                        <div>"API & Integration",</div>
+                        <div>"Data Validation",</div>
+                        <div>"UAT & Testing"</div>
+                      </>
+                    )}
                   </div>
                   <span className="text-muted-foreground">]</span>
                 </div>

@@ -1,0 +1,164 @@
+Portfolio sitemin mevcut tasarımını büyük ölçüde koru ama içerik mimarisini, bölüm isimlerini, metin kalitesini ve genel positioning’ini son kez profesyonel seviyeye çıkar.
+
+Amaç:
+Siteye giren recruiter veya hiring manager şunu hissetsin:
+“Bu kişi bankacılık ve finansal teknolojiler alanında güçlü bir Technical Analyst. Sistemi okuyor, gereksinimi netleştiriyor, entegrasyonu anlıyor, veriyi doğruluyor, test/UAT mantığını biliyor ve iş ile teknik ekipler arasında netlik kuruyor.”
+
+Ana marka mesajı tüm siteye yay:
+- Yapılandırılmış düşünce
+- Doğrulama disiplini
+- İş ve teknik ekipler arasında netlik kurma
+
+Genel kurallar:
+- Tasarımı koru
+- Türkçe ve İngilizce metinleri doğal hale getir
+- Türkçe metinlerde devrik cümleleri azalt
+- Yapay zekâ hissi veren ifadeleri temizle
+- Cümleleri daha kısa, net ve profesyonel yap
+- Recruiter-friendly ama güçlü bir tone kullan
+- Kendimi abartmadan çok yetkin ve güvenilir göster
+
+MENU / BÖLÜM YAPISI:
+Menü ve section isimlerini şu yapıya getir:
+- Hakkımda
+- Deneyim
+- Uzmanlık Alanları
+- Katkı Sağladığım Çalışmalar
+- Analist Yaklaşımım
+- Eğitim & Sertifikalar
+- CV’nin Ötesinde
+- İletişim
+
+İngilizce karşılıkları:
+- About
+- Experience
+- Areas of Expertise
+- Work I Contributed To
+- My Analytical Approach
+- Education & Certifications
+- Beyond the CV
+- Contact
+
+HERO:
+- “Technical Analyst” positioning kalsın
+- Hero açıklamasını daha tok, net ve recruiter-friendly hale getir
+- “ALAN:” satırını daha güçlü mini positioning cümlesine dönüştür
+- Border payments, systems analysis, integration behavior, data validation, banking technologies ekseni hissedilsin
+- Sağ taraftaki profile.json alanını daha anlamlı yap ama gimmick hissi verme
+
+HAKKIMDA:
+- İlk paragraf çok güçlü olsun
+- İş gereksinimi, sistem davranışı ve teknik doğrulama arasındaki bağı net anlatsın
+- Teknik ve iş ekipleri arasında köprü kurduğum hissedilsin
+- Sağdaki çalışma tarzı kartlarını daha profesyonel hale getir
+
+DENEYİM:
+- Experience kısmında resmi unvanları daha gerçekçi kullan
+- Türkçede: Kıdemli İş Analisti / Teknik İş Analisti
+- İngilizcede: Senior Business Analyst / Technical Business Analyst
+- Hero’daki Technical Analyst positioning’i genel marka konumlandırması olarak koru
+- Mevcut deneyimimi daha detaylı ama kısa ve tok şekilde anlat
+- Özellikle şu alanları görünür yap:
+  - uluslararası çekirdek bankacılık projeleri
+  - sınır ötesi ödeme akışları
+  - XML / JSON payload doğrulama
+  - API / servis davranışı
+  - SQL / veri doğrulama
+  - test senaryosu ve UAT koordinasyonu
+  - Jira / Qmetry / sprint teslimatı
+
+UZMANLIK ALANLARI:
+- “Beceriler” yerine “Uzmanlık Alanları” kullan
+- Bölüm ilanlarla daha uyumlu olsun
+- Kategorileri profesyonel şekilde yeniden düzenle:
+  - Analiz & Gereksinim Yönetimi
+  - Sistem & Entegrasyon Analizi
+  - Veri Doğrulama & Kök Neden Analizi
+  - Test, UAT & Yayın Öncesi Doğrulama
+  - Bankacılık & Finansal Sistem Bilgisi
+  - Araçlar & Çalışma Ortamı
+  - Güçlü Yönler
+- Keyword’ler düzgün gruplansın
+- Sadece tool listesi gibi görünmesin
+- Recruiter’ın aradığı ana başlıklar görünür olsun
+
+KATKI SAĞLADIĞIM ÇALIŞMALAR:
+- Bu bölümü daha güçlü yaz
+- Kartlar daha kısa, daha net, daha profesyonel olsun
+- Tekrarları azalt
+- “Ben en çok hangi alanlarda değer üretiyorum?” sorusuna cevap versin
+- Küçük başlığı güçlendir:
+  - “En fazla değer ürettiğim çalışma alanları”
+  veya benzeri daha güçlü bir ifade kullan
+
+ANALİST YAKLAŞIMIM:
+- Mevcut “vitrin” hissini azalt
+- Demo / ürün showcase hissini düşür
+- Daha gerçekçi, profesyonel ve analitik düşünceyi gösteren case yapısı kur
+- Gerekirse bu bölümü baştan yaz
+- Bölüm adı:
+  - Analist Yaklaşımım
+  veya
+  - Analiz Yaklaşımım
+- Burada şu mantık olsun:
+  Problem → Analiz → Karar → Çıktı
+- KPI demo hissi azaltılsın
+- Daha çok gerçek analyst düşüncesi gösterilsin
+- Örnekler şu tipte olsun:
+  - ödeme hatasında kök neden analizi
+  - dokümantasyonu net olmayan akışta karar noktalarının netleştirilmesi
+  - operasyonel ekranın sadeleştirilmesi
+  - entegrasyon testinde beklenen vs gerçekleşen karşılaştırması
+  - iş kuralı ile sistem çıktısı farkının görünür hale getirilmesi
+
+EĞİTİM & SERTİFİKALAR:
+- Bu bölümü sadeleştir
+- Sertifikaları önem sırasına koy
+- Bende öğrenme disiplini ve gelişim isteği olduğu hissedilsin
+- Öne çıkar:
+  - İş Analistleri için Üretken Yapay Zeka
+  - İş Analitiğine Giriş
+  - Veri Bilimi & ML Bootcamp
+  - Veri Bilimciler için İleri SQL
+  - Yazılım Geliştirme Yaşam Döngüsü (SDLC)
+  - Python ile Algoritmik Düşünce
+- Veri tarafı destekleyici güç olarak görünsün, ana kimliği gölgelemesin
+
+CV’NİN ÖTESİNDE:
+- Bu bölüm kalsın
+- Başlık:
+  - CV’nin Ötesinde
+- Alt başlık:
+  - İK Sorularına Yanıtlar
+- Cevaplar daha doğal, daha sakin, daha profesyonel olsun
+- Aşağıdaki sorular iyi işlenebilir:
+  - Kendinizi nasıl tanımlarsınız?
+  - Sizi diğer analistlerden ayıran nedir?
+  - Teknik bilginiz bu role nasıl katkı sağlıyor?
+  - Bir problemi nasıl ele alırsınız?
+  - En güçlü olduğunuz alanlar neler?
+  - Takım içinde nasıl çalışırsınız?
+  - Gelecekte kendinizi nasıl geliştirmek istiyorsunuz?
+- Cevaplar abartılı değil, net ve güven verici olsun
+
+İLETİŞİM:
+- Basit ama güçlü kalsın
+- “Bağlanalım” metni daha profesyonel hale getirilebilir
+- Yeni fırsatlara açık ama seçici ve profesyonel bir profil hissi versin
+
+SON KALİTE KONTROL:
+Tüm siteyi son kez kontrol et ve şu sorulara göre düzelt:
+1. İlk 10 saniyede bu kişinin ne yaptığı anlaşılıyor mu?
+2. Technical Analyst positioning’i tutarlı mı?
+3. Experience kısmı güven veriyor mu?
+4. Uzmanlık Alanları ilanlarla uyumlu mu?
+5. Katkı Sağladığım Çalışmalar bölümü güçlü mü?
+6. Analist Yaklaşımım bölümü demo değil, gerçekten düşünme biçimimi yansıtıyor mu?
+7. Eğitim & Sertifikalar düzenli ve güçlü mü?
+8. CV’nin Ötesinde bölümü doğal mı?
+9. Türkçe metinlerde gariplik, devriklik, yapaylık kaldı mı?
+10. Site beni aranan bir Technical Analyst gibi gösteriyor mu?
+
+Final hedef:
+Bu siteye giren biri sonunda şunu düşünmeli:
+“Bu kişi sakin, net, teknik farkındalığı yüksek, bankacılık deneyimi olan, sistem davranışını anlayan, veriyi doğrulayan ve ekipler arasında güvenle köprü kurabilen güçlü bir Technical Analyst.”

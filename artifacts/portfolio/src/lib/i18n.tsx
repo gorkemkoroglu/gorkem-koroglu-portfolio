@@ -308,7 +308,7 @@ export const translations = {
     hero: {
       badge: "Yeni fırsatlara açık",
       name: "Görkem Köroğlu",
-      title: "Technical Analyst",
+      title: "Teknik Analist",
       subtitle: "Bankacılık & Finansal Teknolojiler",
       tagline: "İş gereksinimlerinin, sistem davranışının ve teknik doğrulamanın aynı çerçevede okunmasını sağlıyorum — çekirdek bankacılık, entegrasyon ve ödeme sistemleri ortamlarında yapılandırılmış analiz odağıyla.",
       downloadCV: "CV İndir",

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Activity, Database, Layout, Search, Users, Globe } from "lucide-react";
+import { Activity, Database, Layout, Search, Users, Globe, Star } from "lucide-react";
 import { useLang } from "@/lib/i18n";
 
 const icons = [
@@ -9,6 +9,7 @@ const icons = [
   <Globe className="w-5 h-5" />,
   <Layout className="w-5 h-5" />,
   <Users className="w-5 h-5" />,
+  <Star className="w-5 h-5" />,
 ];
 
 export function Skills() {

@@ -1,0 +1,188 @@
+Mevcut “Analist Vitrini / Vitrin / Showcase” bölümünü mevcut haliyle bırakma. Bu bölüm şu anda fazla demo, fazla portfolio-showcase ve yer yer yapay görünüyor. Ben bu alanın çok daha profesyonel, sade, gerçekçi ve güven veren bir yapıya dönüşmesini istiyorum.
+
+Bu bölümü tamamen yeniden tasarla ve yeniden yaz.
+
+ANA AMAÇ:
+Bu bölüme giren recruiter, hiring manager veya team lead şunu hissetsin:
+“Bu kişi görsel örnek sergilemiyor; gerçekten analiz eden, problemi parçalayan, sistem davranışını okuyan ve aksiyon alınabilir netlik üreten bir Technical Analyst.”
+
+BÖLÜMÜN YENİ ADI:
+Türkçe:
+- Analiz Yaklaşımım
+
+İngilizce:
+- My Analytical Approach
+
+Alternatif gerekiyorsa:
+- Nasıl Analiz Ederim / How I Analyze
+
+Ama birinci tercih:
+- Analiz Yaklaşımım / My Analytical Approach
+
+BÖLÜMÜN ALT AÇIKLAMASI:
+Alt metin kısa ama güçlü olsun.
+Şu hissi vermeli:
+- Benim ne düşündüğümü değil, nasıl düşündüğümü gösteriyor
+- Demo değil, gerçek iş yaklaşımı
+- Problem → analiz → netlik → sonuç
+
+Örnek ton:
+“Bu bölüm, problemleri nasıl ele aldığımı; iş kuralı, sistem davranışı, veri doğrulama ve operasyonel etki açısından nasıl analiz ettiğimi gösterir.”
+
+İNGİLİZCE karşılığı da doğal yazılsın.
+
+ÖNEMLİ TASARIM KURALI:
+- Mevcut genel site tasarım dili korunsun
+- Ancak bu bölümde gereksiz demo estetiği azaltılsın
+- Fazla dashboard hissi veren kutular kaldırılabilir
+- KPI kartı, sahte metrik, fazla sunum/demo havası veren öğeler çıkarılsın
+- Daha sade, daha ciddi, daha kurumsal ve daha inandırıcı bir görünüm hedeflensin
+
+İÇERİK YAPISI:
+Bu bölümde 3 veya en fazla 4 güçlü mini analiz vakası olsun.
+5–6 tane olmasın.
+Az ama güçlü olsun.
+
+Her vaka şu yapı ile yazılsın:
+1. Bağlam
+2. Problem
+3. Analiz yaklaşımım
+4. Netleştirdiğim kritik nokta
+5. Sonuç / katkı
+
+Kartlar çok uzun olmasın.
+Ama yüzeysel de olmasın.
+Net, tok, güven veren mini case formatı olsun.
+
+VAKALARIN TEMASI:
+Vakalar benim gerçek deneyim alanlarımla uyumlu olsun.
+Ana eksen:
+- bankacılık
+- finansal teknolojiler
+- çekirdek bankacılık
+- sınır ötesi ödeme akışları
+- entegrasyon
+- veri doğrulama
+- test/UAT
+- ekran / süreç analizi
+- kök neden analizi
+
+Aşağıdaki 4 vaka mantığı kullanılabilir:
+
+VAKA 1 — Kök Neden Analizi
+Tema:
+Bir ödeme akışında hata oluşuyor, semptom var ama neden net değil.
+Ben semptomla yetinmeyip veri, kural ve entegrasyon davranışı üzerinden kök nedeni ayrıştırıyorum.
+
+Bu vakada göster:
+- semptom ile kök neden farkını gördüğüm
+- veri doğrulama ve teknik davranışı birlikte ele aldığım
+- yalnızca hata raporlamadığım, açıklık ürettiğim
+- düzeltmeye giden netlik sağladığım
+
+Bu vaka “root cause analysis” kimliğimi taşısın.
+
+VAKA 2 — Belirsiz Süreçte Analiz ve Karar Noktası Netleştirme
+Tema:
+Dokümantasyonu eksik, davranışı net olmayan bir ödeme/iş akışı var.
+Ben akıştaki karar noktalarını, istisnaları ve operasyonel etkileri görünür hale getiriyorum.
+
+Bu vakada göster:
+- belirsizlikte düzen kurduğum
+- iş kuralı ile sistem davranışını ayrıştırdığım
+- riskli karar noktasını bulduğum
+- süreci daha net ve yönetilebilir hale getirdiğim
+
+Bu vaka “structured thinking” tarafımı göstersin.
+
+VAKA 3 — Ekran / Operasyonel Süreç Sadeleştirme
+Tema:
+Kullanıcıya veya operasyona hizmet eden bir ekran/akış parçalı, yorucu, tekrar içeriyor.
+Ben gereksinimi sadeleştirip daha net fonksiyonel yapı öneriyorum.
+
+Bu vakada göster:
+- sadece UI bakmadığım
+- iş ihtiyacını ve operasyonel yükü düşündüğüm
+- ekran mantığını sadeleştirdiğim
+- kullanıcı ve iş birimi için netlik sağladığım
+
+Bu vaka “functional thinking” ve “business clarity” yönümü göstersin.
+
+VAKA 4 — Entegrasyon Beklenen / Gerçekleşen Davranış Analizi
+Tema:
+Harici servis ya da entegrasyon cevabı, beklenen sözleşme veya iş mantığıyla tam uyuşmuyor.
+Ben alan eşleşmesi, payload davranışı ve response yapısı üzerinden farkı görünür kılıyorum.
+
+Bu vakada göster:
+- payload / alan / veri eşleşmesi analizi yaptığım
+- beklenen ile gerçekleşeni karşılaştırdığım
+- geliştirici ve iş ekibinin aynı tabloya bakmasını sağladığım
+- test ve doğrulama açısından netlik ürettiğim
+
+Bu vaka “integration analysis” gücümü taşısın.
+
+METİN TONE-OF-VOICE:
+- sunum dili değil, profesyonel iş dili
+- abartılı değil ama güçlü
+- sakin ama yetkin
+- “harika, mükemmel, inanılmaz” gibi ifadeler olmasın
+- daha çok şu hissi versin:
+  - bu kişi problem çözüyor
+  - bu kişi sistem okuyor
+  - bu kişi netlik üretiyor
+  - bu kişi aksiyon alınabilir analiz yapıyor
+
+KESİNLİKLE KAÇIN:
+- sahte KPI’lar
+- uydurma dashboard hissi
+- aşırı görsel ama düşük güvenli örnekler
+- fazla ürün demosu havası
+- “portfolio için hazırlanmış şık şeyler” görünümü
+- yapay zekâ ile üretilmiş pazarlama metni tonu
+- fazla uzun, akademik ve dolambaçlı anlatım
+
+TÜRKÇE METİNLER:
+Bu bölümdeki tüm Türkçe metinler:
+- doğal
+- profesyonel
+- net
+- devrik olmayan
+- recruiter okuyunca hemen anlayacağı düzeyde
+olsun.
+
+İNGİLİZCE METİNLER:
+İngilizce versiyon birebir çeviri gibi durmasın.
+Doğal profesyonel İngilizce ile yeniden yazılsın.
+
+BÖLÜM BAŞINA KISA MARKA CÜMLESİ KOY:
+Bu bölüme kısa bir vurucu cümle ekle.
+Türkçe örnek mantık:
+“İyi analiz, problemi tarif etmekten fazlasıdır; doğru soruları sorup karar verilebilir netlik üretmektir.”
+Ama bunu daha iyi bir şekilde yaz.
+
+İngilizce karşılığı da profesyonel yazılsın.
+
+GÖRSEL HİYERARŞİ:
+Her vaka kartında şu yapı okunaklı olsun:
+- küçük vaka etiketi
+- güçlü vaka başlığı
+- kısa bağlam
+- problem
+- yaklaşım
+- sonuç
+
+Ama gereksiz kalabalık yapma.
+Daha çok “executive-friendly analysis notes” gibi dursun.
+
+SON HEDEF:
+Bu bölüm, site içindeki en zayıf alan olmaktan çıkıp en güçlü alanlardan biri olsun.
+Bana şu hissi kazandırsın:
+- yapılandırılmış düşünen
+- doğrulama disiplinine sahip
+- iş ve teknik ekip arasında netlik kuran
+- bankacılık bağlamını anlayan
+- sistem ve veri davranışını okuyabilen
+bir Technical Analyst.
+
+Yani bu bölümün finalinde kullanıcı şunu düşünmeli:
+“Bu kişi örnek gösteren biri değil; gerçekten nasıl analiz ettiğini bilen biri.”

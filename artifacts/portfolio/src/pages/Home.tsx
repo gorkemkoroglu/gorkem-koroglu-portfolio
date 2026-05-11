@@ -5,6 +5,7 @@ import { Experience } from "../components/Experience";
 import { Skills } from "../components/Skills";
 import { WorkHighlights } from "../components/WorkHighlights";
 import { SampleWork } from "../components/SampleWork";
+import { AnalysisCases } from "../components/AnalysisCases";
 import { Education } from "../components/Education";
 import { BeyondCV } from "../components/BeyondCV";
 import { Footer } from "../components/Footer";
@@ -24,6 +25,7 @@ export default function Home() {
         <Skills />
         <WorkHighlights />
         <SampleWork />
+        <AnalysisCases />
         <Education />
         <BeyondCV />
       </main>

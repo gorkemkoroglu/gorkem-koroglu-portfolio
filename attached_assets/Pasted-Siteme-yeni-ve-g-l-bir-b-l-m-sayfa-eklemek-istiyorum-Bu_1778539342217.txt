@@ -1,0 +1,124 @@
+Siteme yeni ve güçlü bir bölüm/sayfa eklemek istiyorum. Bu alan, sıradan bir vitrin veya demo showcase değil; gerçek bir Technical Analyst portfolyo örneği gibi görünmeli. Adı:
+
+Türkçe: Analiz Vakaları
+İngilizce: Analysis Cases
+
+Bu yeni alanda ilk vaka olarak aşağıdaki kapsamlı analist portfolyo çalışmasını ekle:
+
+VAKA BAŞLIĞI:
+Türkçe: Uluslararası Ödeme Süreçlerinde Hata Nedenlerinin Ayrıştırılması ve Operasyonel Görünürlüğün Artırılması
+İngilizce: Separating Error Causes in International Payment Processes and Improving Operational Visibility
+
+ÇOK ÖNEMLİ TASARIM KURALLARI:
+- Bu alan mevcut site tasarım diliyle uyumlu olsun
+- Koyu tema, modern kart yapısı ve premium his korunsun
+- Ama demo ürün sayfası gibi değil, profesyonel vaka inceleme sayfası gibi görünsün
+- Okunabilirlik çok yüksek olsun
+- Uzun metin blokları kırılarak okunabilir hale getirilsin
+- Her alt başlık net biçimde ayrışsın
+- Masaüstünde çok güçlü, mobilde ise sıkıştırılmış ama düzenli görünsün
+
+BÖLÜM / SAYFA YAPISI:
+Bu vakayı aşağıdaki sırayla ve profesyonel bir bilgi mimarisiyle göster:
+
+1. Vaka başlığı
+2. Kısa özet
+3. İş Problemi
+4. Analiz Amacı
+5. Kapsam
+6. Mevcut Durum
+7. Tespit Edilen Temel Sorunlar
+8. Analiz Yaklaşımı
+9. İncelenen Katmanlar
+10. Önerilen Hata Kategorileri
+11. Örnek İş Kuralları
+12. Önerilen Hata Ayrıştırma Akışı
+13. Operasyonel Görünürlük İhtiyacı
+14. Önerilen Operasyon Ekranı Alanları
+15. Test Yaklaşımı
+16. UAT Yaklaşımı
+17. Analist Deliverable’ları
+18. Beklenen İş Çıktısı
+19. Bu Vaka Ne Gösteriyor?
+
+İÇERİKLERİ AŞAĞIDAKİ METNE GÖRE YERLEŞTİR:
+
+[Buraya yukarıda verdiğim “VAKA SAYFASI FINAL İÇERİĞİ” bölümünün tamamını yerleştir]
+
+EK GÖRSEL / BİLEŞEN YAPISI:
+Bu sayfada yalnızca düz metin kullanma. Aşağıdaki yapıları profesyonel biçimde ekle:
+
+1. Akış diyagramı / stepper
+Başlık: Önerilen Hata Ayrıştırma Akışı
+Adımlar:
+1. Ödeme talebi alınır
+2. Temel veri doğrulaması yapılır
+3. İş kuralı kontrolleri çalıştırılır
+4. Hata varsa kategori belirlenir
+5. Hata yoksa entegrasyon çağrısı yapılır
+6. Response değerlendirilir
+7. Teknik / iş / veri / süreç bazlı ayrıştırma yapılır
+8. İşlem statüsü güncellenir
+9. Operasyon ekranında anlamlı hata bilgisi gösterilir
+10. Test ve izleme için hata kaydı sınıflandırılmış şekilde saklanır
+
+2. İş kuralı tablosu
+Başlık: Örnek İş Kuralları
+Kolonlar:
+- Kural No
+- İş Kuralı
+- Gerekçe
+
+Aşağıdaki satırları kullan:
+BR-01 | Zorunlu ödeme alanları eksiksiz olmalıdır | Eksik veri kaynaklı başarısızlıkların önlenmesi
+BR-02 | Para birimi ve hesap tipi uyumlu olmalıdır | Geçersiz işlem kombinasyonlarını engellemek
+BR-03 | Ön kontroller geçilmeden entegrasyon çağrısı yapılmamalıdır | Aşağı sistem çağrılarında gereksiz hata riskini azaltmak
+BR-04 | Hata oluştuğunda ana kategori ve alt neden ayrıştırılmalıdır | Operasyonel görünürlüğü artırmak
+BR-05 | Aynı görünüme yol açan farklı hata nedenleri ayrı kaydedilmelidir | Kök neden analizini hızlandırmak
+BR-06 | Tekrar denenebilir işlemler ile manuel müdahale gerekenler ayrılmalıdır | Operasyon aksiyonunu netleştirmek
+
+3. Test senaryosu tablosu
+Başlık: Örnek Test Senaryoları
+Kolonlar:
+- Test No
+- Senaryo
+- Beklenen Sonuç
+
+Aşağıdaki satırları kullan:
+TS-01 | Zorunlu alan eksik gönderilir | Hata veri kategorisinde sınıflanır
+TS-02 | Alan formatı geçersizdir | Format hatası açık şekilde görünür
+TS-03 | İş kuralına aykırı işlem oluşturulur | İş kuralı kaynaklı hata üretilir
+TS-04 | Entegrasyon response süresi aşılır | Timeout kategorisiyle kaydedilir
+TS-05 | Response yapısı beklenenden farklıdır | Entegrasyon kaynaklı hata olarak ayrışır
+TS-06 | Yanlış statüde işlem tetiklenir | Süreç/statü kaynaklı hata görünür
+TS-07 | Aynı semptoma yol açan iki farklı neden çalıştırılır | İki hata ayrı kategoride izlenir
+
+4. UAT checklist alanı
+Başlık: UAT Doğrulama Checklist’i
+Madde listesi:
+- Operasyon kullanıcıları hata kategorisini anlayabiliyor mu?
+- Alt hata nedeni aksiyon almaya yetecek kadar net mi?
+- Teknik hata ile iş kuralı hatası ayrışıyor mu?
+- Veri eksikliği ve format hatası farklı şekilde görünüyor mu?
+- Tekrar deneme uygunluğu net mi?
+- Aynı semptoma yol açan farklı nedenler ayırt edilebiliyor mu?
+- Statü görünürlüğü ve hata bilgisi uyumlu mu?
+- Operasyon ekranı karar vermeyi kolaylaştırıyor mu?
+
+TÜRKÇE VE İNGİLİZCE:
+- Bu vaka hem Türkçe hem İngilizce destekli olsun
+- İngilizce metinler birebir çeviri gibi değil, profesyonel doğal İngilizce ile yazılsın
+- Türkçe metinler doğal, devrik olmayan, profesyonel ve akıcı olsun
+
+ÇOK ÖNEMLİ:
+- Bu içerik asla sahte startup case study gibi görünmesin
+- Gerçek analist deliverable’ı gibi dursun
+- Yapay KPI, uydurma başarı yüzdeleri veya boş pazarlama dili kullanma
+- Bu sayfa benim analist portfolyomun en güçlü alanlarından biri olsun
+- Tasarımı koru ama içerik hiyerarşisini çok güçlü kur
+- Gerekirse bu vaka için ayrı bir detay sayfası aç; eğer UX açısından daha doğruysa ana siteden kart ile o sayfaya geçiş ver
+- Eğer ayrı sayfa yaparsan ana sayfadaki Analiz Vakaları bölümünde kısa bir kart özeti göster ve “Detayı İncele / View Case” butonu ekle
+
+FINAL AMAÇ:
+Bu vaka sayfasını gören kişi şunu düşünmeli:
+“Bu kişi gerçekten bir analist gibi düşünüyor; problemi tanımlıyor, kapsam çıkarıyor, iş kurallarını yazıyor, akışı modelliyor, hata kategorilerini ayrıştırıyor, test/UAT mantığını kuruyor ve konuyu teslim edilebilir hale getiriyor.”

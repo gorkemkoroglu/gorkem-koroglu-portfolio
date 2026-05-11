@@ -1,0 +1,240 @@
+Deneyim bölümünü baştan sona yeniden yaz ve güçlendir.
+
+ÇOK ÖNEMLİ:
+Bu bölüm artık sıradan bir “iş tanımı listesi” gibi görünmemeli. Benim gerçek deneyimimi, uzmanlaştığım alanları ve analist olarak yarattığım değeri güçlü biçimde göstermeli. Amaç, bu experience section’ı recruiter ve hiring manager gözünde gerçekten güven veren, güçlü, gerçekçi ve aranan bir profile dönüştürmek.
+
+Benim ana profilim:
+- Technical Analyst / Teknik yönü güçlü İş Analisti
+- Bankacılık ve finansal teknolojiler odağı
+- Temel bankacılık, entegrasyon, veri doğrulama, test, UAT, sistem davranışı analizi
+- Son dönemde özellikle para transferleri / sınır ötesi ödeme akışları tarafında derinleşmiş profil
+- Teknik ve iş ekipleri arasında netlik kuran kişi
+- Gereksinimi dokümana çeviren değil; sistemi gerçekten okuyan, doğrulayan ve aksiyon alınabilir hale getiren analist
+
+ANA AMAÇ:
+Experience section’ı okuyan kişi şu sonuca ulaşsın:
+“Bu aday yalnızca analiz yapmamış; karmaşık sistemleri anlamış, gereksinimleri netleştirmiş, entegrasyon davranışını çözmüş, veri doğrulaması yapmış, test/UAT süreçlerine yapı kazandırmış ve teknik-ekip / iş-ekibi arasında ciddi netlik üretmiş.”
+
+GENEL YAZIM KURALLARI:
+1. Deneyim kısmı görev listesi gibi değil, katkı ve etki odaklı yazılsın.
+2. Her deneyimde şu mantık hissedilsin:
+   - ne tür sistemlerde çalıştım
+   - neyi analiz ettim / doğruladım / iyileştirdim
+   - bunun ekip, süreç, kalite veya teslimat açısından katkısı ne oldu
+3. Çok iç jargonlu, dışarıdan anlamsız duran ifadeleri sadeleştir.
+4. Teknik yönüm kaybolmasın.
+5. Abartı, yapay başarı dili ve uydurma KPI kullanılmasın.
+6. Ama etki dili mutlaka hissedilsin.
+7. Mümkün olan yerlerde şu temalar görünür olsun:
+   - gereksinim netleştirme
+   - sistem davranışı analizi
+   - entegrasyon ve servis davranışı
+   - veri doğrulama
+   - kök neden analizi
+   - test senaryosu ve UAT koordinasyonu
+   - iş ve teknik ekipler arasında netlik
+   - operasyonel risk azaltma
+   - süreç sadeleştirme
+   - teslim kalitesine katkı
+8. Türkçe metinler doğal, profesyonel, güçlü ve akıcı olsun.
+9. Dışarıdan okuyan biri için anlaşılır olsun.
+10. Benim profilimi “sakin, güvenilir, teknik farkındalığı yüksek, iş etkisini anlayan analist” olarak taşısın.
+
+YAPI:
+Her deneyim kartında şu sıra olsun:
+- Rol başlığı
+- Şirket adı
+- kısa, güçlü 1 özet paragraf / positioning cümlesi
+- 5 veya 6 etkili madde
+- altta stratejik etiketler
+
+ROL BAŞLIKLARI:
+Türkçe modda şunları kullan:
+- Kıdemli İş Analisti
+- Teknik İş Analisti
+
+İngilizce modda doğal karşılıklarını kullan:
+- Senior Business Analyst
+- Technical Business Analyst
+
+Hero tarafında “Technical Analyst” positioning’i korunabilir ama experience kartlarında daha gerçekçi kurumsal unvanlar kullanılsın.
+
+--------------------------------------------------
+1) YAPI KREDİ TEKNOLOJİ / NTT DATA
+--------------------------------------------------
+
+Bu deneyimi benim ana gücüm gibi yaz.
+
+GERÇEK BAĞLAM:
+- Kıdemli İş Analisti olarak çalışıyorum
+- Yapı Kredi Teknoloji tarafında, NTT DATA Business Solutions bünyesinde görev alıyorum
+- İlk aşamada temel bankacılık / core banking tarafında çalıştım
+- Sonrasında özellikle para transferleri ve sınır ötesi ödeme akışlarına odaklandım
+- Özellikle Azerbaycan yapısına odaklı çalıştım
+- Uluslararası bankacılık altyapılarında sistem analizi yaptım
+- Entegrasyon, servis davranışı, veri doğrulama, ödeme akışları, test ve UAT alanlarında aktif rol aldım
+- Bankacılık mesaj yapıları, ödeme süreçleri, servis/payload davranışları ve beklenen-gerçekleşen sistem davranışı üzerinde çalıştım
+- SQL ile veri kontrolü ve kök neden analizi yaptım
+- Test senaryosu, fonksiyonel doğrulama, servis testi ve UAT koordinasyonu süreçlerinde görev aldım
+- Teknik ve iş ekipleri arasında netlik üreten kişi oldum
+- Gereksinimlerin uygulanabilir hale gelmesi, geliştirme öncesi belirsizliklerin azalması ve teslim kalitesinin artması tarafında katkı verdim
+
+BU ROLDE VURGULANMASI GEREKENLER:
+- temel bankacılık + ödeme sistemleri kombinasyonu
+- sınır ötesi ödeme ve para transferi süreçlerinde derinleşme
+- sistem davranışı ile iş gereksinimi arasındaki farkı analiz etme
+- entegrasyon / payload / alan doğrulama
+- veri tabanında kontrol ve kök neden analizi
+- test/UAT ve teslim kalitesine katkı
+- çok paydaşlı ortamlarda ilerleme yönetimi
+- bankacılık domain bilgisi
+- analizi aksiyon alınabilir hale getirme
+
+BU ROLÜN ÖZET CÜMLESİ:
+Tek bir güçlü cümle yaz.
+Bu cümlede benim artık yalnızca klasik iş analisti değil, sistem davranışı, entegrasyon ve ödeme akışı analizinde uzmanlaşan bir profil olduğum hissedilsin.
+
+Örnek mantık:
+“Uluslararası bankacılık ve ödeme sistemleri projelerinde, gereksinimlerin sistem davranışıyla uyumunu netleştiren; entegrasyon, veri doğrulama ve teslim kalitesi tarafında aktif rol alan bir analiz yaklaşımıyla çalışıyorum.”
+Ama bunu daha güçlü ve daha profesyonel hale getir.
+
+MADDELER:
+Bu rol için 6 güçlü madde yaz.
+Maddelerde şu tarz etkiler hissedilsin:
+- gereksinimi sistem ve fonksiyonel akışlara dönüştürme
+- entegrasyon davranışını görünür hale getirme
+- veri ve alan doğrulamasıyla hataların kaynağını ayrıştırma
+- test senaryolarını ve UAT sürecini daha net hale getirme
+- iş, analiz ve geliştirme ekipleri arasında netlik sağlama
+- sınır ötesi ödeme süreçlerinde davranış, kontrol ve teslim kalitesini güçlendirme
+
+Ama lütfen iç jargon kullanma.
+“inquiry mantığı” gibi spesifik ama dışarıdan zayıf duran ifadeleri daha profesyonel düzeyde yeniden kur.
+
+ETİKETLER:
+Bu kart için stratejik etiketler seç:
+- Çekirdek Bankacılık
+- Sınır Ötesi Ödemeler
+- Para Transferleri
+- Sistem Analizi
+- API & Entegrasyon
+- Veri Doğrulama
+- SQL
+- UAT
+- Fonksiyonel Analiz
+
+Hepsini kullanmak zorunda değilsin; en iyi seçimi yap.
+
+--------------------------------------------------
+2) HDI FIBAEMEKLİLİK
+--------------------------------------------------
+
+Bu deneyimi de daha güçlü yaz.
+Şu an bu rol fazla “görev yaptım” gibi kalıyor.
+Bunu daha olgun ve değer odaklı hale getir.
+
+GERÇEK BAĞLAM:
+- Teknik İş Analisti olarak çalıştım
+- Sigorta sistemi iş akışları ve uygulama süreçleri üzerinde görev aldım
+- İş gereksinimlerini fonksiyonel çıktılara dönüştürdüm
+- PL/SQL tabanlı veri analizi ve sistem doğrulama yaptım
+- Test senaryoları hazırladım
+- UAT süreçlerinde aktif rol aldım
+- Kök neden analizi yaptım
+- Süreç akışları, fonksiyonel gereksinimler ve ekran mantığı üzerinde çalıştım
+- İş birimleri ve geliştirme ekipleri arasında koordinasyon sağladım
+- Sorunların görünür hale gelmesi ve sistematik iyileştirme önerileri tarafında katkı sundum
+
+BU ROLDE VURGULANMASI GEREKENLER:
+- sigorta sistemlerinde fonksiyonel ve teknik analizin birlikte yürütülmesi
+- iş gereksinimlerini uygulanabilir spesifikasyonlara dönüştürme
+- veri analizi ve sistem doğrulama
+- test/UAT sürecine yapı kazandırma
+- hata inceleme ve kök neden analizi
+- iş birimi ve teknik ekip arasında koordinasyon
+- süreç geliştirme bakış açısı
+
+ÖZET CÜMLESİ:
+Teknik yönü olan bir iş analisti olarak sigorta sistemlerinde gereksinim, doğrulama ve test süreçlerine yapı kazandırdığımı anlatan güçlü, kısa bir paragraf yaz.
+
+MADDELER:
+Bu rol için 5 veya 6 güçlü madde yaz.
+Şu etki hissedilsin:
+- gereksinimleri netleştirdim
+- sistemin beklenen ve gerçekleşen davranışını doğruladım
+- test ve kabul süreçlerini daha düzenli hale getirdim
+- hata nedenlerini görünür hale getirdim
+- süreçlerde daha net ilerleme ve daha doğru geliştirme için köprü görevi gördüm
+
+ETİKETLER:
+- Sigorta Sistemleri
+- PL/SQL
+- Fonksiyonel Gereksinim
+- Test & UAT
+- Kök Neden Analizi
+- Süreç Analizi
+
+--------------------------------------------------
+3) VERİ BİLİMİ & ML PROGRAMI
+--------------------------------------------------
+
+Bu bölümü deneyim kısmında tutacaksan, ana kimliğimi bozmadan yeniden yaz.
+
+KRİTİK:
+Ben ana olarak veri bilimci değilim.
+Bu kart beni yanlış konumlandırmamalı.
+Ama analitik altyapımı güçlendiren bir eğitim/uygulama alanı olarak görünmeli.
+
+GERÇEK BAĞLAM:
+- Python, SQL, veri odaklı düşünme, keşifsel veri analizi
+- CRM analitiği, kohort, CLTV, RFM gibi konular
+- öneri sistemleri ve analitik modelleme mantığına temas
+- bugün yaptığım veri doğrulama, kök neden analizi ve yapısal düşünmeyi destekleyen temel
+
+Bunu şu çerçevede yaz:
+“Analitik temelimi güçlendiren, veri odaklı düşünme ve teknik değerlendirme kasımı besleyen program”
+gibi.
+
+Bu kart kısa ama güçlü olsun.
+Abartılı data scientist positioning verme.
+Destekleyici ama değerli dursun.
+
+ETİKETLER:
+- Python
+- SQL
+- Veri Analizi
+- Analitik Düşünce
+
+--------------------------------------------------
+YAZIM KALİTESİ KONTROLÜ
+--------------------------------------------------
+
+Yeniden yazarken şu sorunları temizle:
+- görev listesi hissi
+- fazla uzun maddeler
+- tekrarlı ifadeler
+- recruiter için zayıf kalan iç jargon
+- etkisiz fiiller
+- çok genel kalmış cümleler
+
+Şu tarz fiilleri tercih et:
+- netleştirdim
+- yapı kazandırdım
+- görünür hale getirdim
+- doğruladım
+- iyileştirdim
+- sadeleştirdim
+- ayrıştırdım
+- destekledim
+- koordine ettim
+- güçlendirdim
+
+Ama metin doğal kalsın.
+Yapay başarı dili kullanma.
+
+SON KONTROL:
+Bu experience section sonunda okuyucu şu sonuca ulaşmalı:
+“Bu aday bankacılık ve finansal teknolojilerde gerçek sistemler üzerinde çalışmış, temel bankacılık ve para transferleri tarafında deneyim kazanmış, veri doğrulama ve entegrasyon davranışı tarafında güçlü, test ve teslim kalitesine katkı sağlayan, güvenilir ve teknik yönü kuvvetli bir analist.”
+
+Şimdi experience section’ı bu çerçevede tamamen yeniden yaz.
+Türkçe ve İngilizce mod için iki dilde de doğal karşılıklarını üret.

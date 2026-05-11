@@ -1,0 +1,234 @@
+TÜRKÇE VERSİYON
+Bölüm adı
+
+Analiz Yaklaşımım
+
+Alt açıklama
+
+Belirsiz ihtiyaçları; sistem davranışı, veri doğrulama, entegrasyon akışı ve operasyonel etki üzerinden netleştirme biçimimi gösteren çalışma yaklaşımım.
+
+Üst blok başlığı
+
+Bir problemi nasıl ele alırım?
+
+1) Problemi katmanlarına ayırırım
+
+Bir sorunla karşılaştığımda önce semptomu değil, yapıyı anlamaya çalışırım. İş kuralı, ekran davranışı, servis akışı, veri etkisi ve operasyonel sonuç gibi katmanları ayırarak gerçek problemin nerede başladığını netleştiririm.
+
+2) Beklenen ile gerçekleşeni karşılaştırırım
+
+İyi analiz, varsayım üretmekten önce doğrulama yapmaktır. Bu nedenle gereksinimi, mevcut sistem davranışını ve oluşan çıktıyı yan yana koyar; farkın gerçekten nerede oluştuğunu görünür hale getiririm.
+
+3) Belirsizliği net karara dönüştürürüm
+
+İş birimi talepleri çoğu zaman genel başlar, teknik ekip ihtiyaçları ise daha net çerçeve ister. Ben bu iki alan arasında netlik kurar; belirsiz ifadeleri uygulanabilir kurallara, kabul kriterlerine ve doğrulanabilir analiz çıktısına dönüştürürüm.
+
+4) Doğrulamayı sürecin merkezine alırım
+
+Analizi yalnızca doküman üretimi olarak görmem. Veri kontrolü, entegrasyon davranışı, test senaryosu ve uç durumlar üzerinden çözümün gerçekten doğru çalışıp çalışmadığını doğrulamayı işin doğal bir parçası olarak ele alırım.
+
+5) İş ve teknik ekipler arasında ortak anlayış kurarım
+
+Analizin en kritik çıktılarından biri ortak dil oluşturmaktır. Teknik detayı iş etkisinden koparmadan aktarır, iş ihtiyacını da teknik gerçeklerden uzaklaştırmadan çerçevelerim. Böylece ekiplerin aynı probleme aynı yerden bakmasını sağlarım.
+
+6) Teslim edilebilir sonucu hedeflerim
+
+Bir analiz çıktısının değeri, yalnızca doğru olması değil; uygulanabilir, test edilebilir ve sürdürülebilir olmasıdır. Bu yüzden çalışmamı yalnızca “sorunu tarif eden” değil, geliştirme, test ve operasyon ekipleri için kullanılabilir hale gelen bir yapıya dönüştürmeye odaklanırım.
+
+Alt blok başlığı
+
+Bu yaklaşım işte nasıl karşılık bulur?
+
+1) Kök Neden Analizi
+
+Beklenen sistem davranışı ile gerçekleşen çıktı arasında fark oluştuğunda, semptomu değil kaynağı ayırmaya odaklanırım.
+
+UI, servis ve veri katmanını birlikte değerlendiririm
+Beklenen davranışı mevcut kayıtlar ve akışlarla karşılaştırırım
+Sorunu yalnızca tarif etmem; doğrulanabilir çözüm alanına indirgerim
+
+Etiketler: Kök neden analizi, veri doğrulama, sistem davranışı, hata inceleme
+
+2) Entegrasyon ve Servis Doğrulaması
+
+API ve servis odaklı yapılarda, alan eşleşmeleri, payload yapısı ve yanıt davranışının gereksinimle gerçekten uyumlu olup olmadığını analiz ederim.
+
+Alan bazlı beklenti ve gerçekleşen davranışı karşılaştırırım
+Sessiz hataları ve aşağı akışta büyüyen etkileri erken görünür hale getiririm
+Teknik bulguları iş etkisiyle birlikte anlamlandırırım
+
+Etiketler: API analizi, payload doğrulama, entegrasyon davranışı, servis testi
+
+3) Süreç ve Karar Noktalarını Netleştirme
+
+Bir akışın neden karmaşıklaştığını anlamak için yalnızca adımları değil, karar noktalarını ve istisna senaryolarını da görünür hale getiririm.
+
+Sürecin gerçek akışını baştan sona haritalarım
+Belirsiz kalan karar ve yönlendirme noktalarını tespit ederim
+İş, teknik ve operasyon tarafı için ortak referans oluştururum
+
+Etiketler: süreç analizi, karar akışı, operasyon etkisi, netleştirme
+
+4) Gereksinimden Test ve UAT’e İlerleme
+
+Analizin yalnızca başlangıç aşamasında kalmaması gerektiğine inanırım. Gereksinimin doğru anlaşılmasından test ve kullanıcı doğrulamasına kadar sürecin tutarlı ilerlemesini sağlamaya çalışırım.
+
+Gereksinimi kabul kriterleriyle netleştiririm
+Test senaryolarını sistem davranışına göre çerçevelerim
+UAT sürecinde iş beklentisinin gerçekten karşılandığını doğrularım
+
+Etiketler: gereksinim yönetimi, test tasarımı, UAT, fonksiyonel doğrulama
+
+Kısa kapanış cümlesi
+
+Analiz yaklaşımımın odağında üç şey var: yapılandırılmış düşünce, doğrulama disiplini ve iş ile teknik ekipler arasında netlik kurmak.
+
+İNGİLİZCE VERSİYON
+Section title
+
+My Analysis Approach
+
+Subtitle
+
+How I turn ambiguous needs into clear, actionable outputs through system behavior, data validation, integration flow, and operational impact.
+
+Upper block title
+
+How I approach a problem
+
+1) I break problems into layers
+
+When I face an issue, I do not start with the symptom alone. I separate business rules, screen behavior, service flow, data impact, and operational effect to understand where the real problem begins.
+
+2) I compare expected vs actual behavior
+
+Good analysis starts with validation, not assumption. I place requirements, current system behavior, and actual output side by side so the gap becomes visible and measurable.
+
+3) I turn ambiguity into clear decisions
+
+Business needs often begin broadly, while technical teams need precision. I help bridge that gap by turning unclear requests into structured rules, acceptance criteria, and actionable analysis outputs.
+
+4) I keep validation at the center
+
+I do not treat analysis as documentation only. I see validation through data checks, integration behavior, test scenarios, and edge cases as a core part of making sure the solution is truly correct.
+
+5) I create clarity between business and technical teams
+
+One of the most important outcomes of analysis is shared understanding. I explain technical detail without losing business meaning, and I frame business needs without ignoring technical reality.
+
+6) I focus on deliverable outcomes
+
+An analysis output is valuable only when it is usable. I aim to produce outputs that are not just correct, but also implementable, testable, and sustainable for development, testing, and operations teams.
+
+Lower block title
+
+How this approach shows up in practice
+
+1) Root Cause Analysis
+
+When expected system behavior and actual output do not match, I focus on separating the source from the symptom.
+
+I examine UI, service, and data layers together
+I compare expected behavior with actual records and process flow
+I reduce the issue into a verifiable solution area, not just a description
+
+Tags: Root cause analysis, data validation, system behavior, issue investigation
+
+2) Integration and Service Validation
+
+In API- and service-based environments, I analyze whether field mappings, payload structure, and response behavior actually align with requirements.
+
+I compare expected versus actual behavior at field level
+I make silent failures and downstream effects visible early
+I interpret technical findings together with business impact
+
+Tags: API analysis, payload validation, integration behavior, service testing
+
+3) Process and Decision Flow Clarification
+
+To understand why a process becomes difficult or inconsistent, I make not only the steps but also the decision points and exception paths visible.
+
+I map the real end-to-end flow
+I identify unclear routing and decision points
+I create a shared reference for business, technical, and operations teams
+
+Tags: Process analysis, decision flow, operational impact, clarification
+
+4) From Requirement to Test and UAT
+
+I believe analysis should not stop at requirement gathering. I work to ensure consistency from requirement clarification to testing and user validation.
+
+I make requirements concrete through acceptance criteria
+I frame test scenarios around system behavior
+I help validate whether business expectations are truly met during UAT
+
+Tags: Requirement management, test design, UAT, functional validation
+
+Closing line
+
+At the core of my analysis approach are three things: structured thinking, validation discipline, and creating clarity between business and technical teams.
+
+BUNU SİTEDE EN DOĞRU NASIL KULLANMALI?
+
+Bence bu bölüm şu yapıda gösterilsin:
+
+Üstte:
+
+başlık
+kısa alt açıklama
+
+Sonra 2 kolonlu bir alan:
+
+solda 3 kart
+sağda 3 kart
+“Bir problemi nasıl ele alırım?” ilkeleri
+
+Altında:
+
+4 adet daha büyük ama sade blok
+“Bu yaklaşım işte nasıl karşılık bulur?”
+
+Yani şu anki gibi:
+
+VAKA-01
+problem
+kritik tespit
+sonuç
+gibi biraz yapay duran akış yerine
+
+daha profesyonel bir yapı:
+
+çalışma tipi
+yaklaşım
+3 madde
+etiketler
+
+Bu daha güçlü durur.
+
+BU BÖLÜM NEDEN BÖYLE DAHA İYİ?
+
+Çünkü bu haliyle okuyucu şunu anlar:
+
+bu kişi düşünme biçimini biliyor
+analizi lafta bırakmıyor
+teknik ve iş tarafını birlikte okuyabiliyor
+test ve veri doğrulama mantığı var
+bankacılık gibi kritik alanlarda güven verebilir
+
+Yani “güzel site” değil,
+“güçlü analist” hissi verir.
+
+REPLIT’E VERECEĞİN KISA UYGULAMA NOTU
+
+Bunu da promptunun sonuna ekle:
+
+Bu bölümü mevcut yapay vaka hissinden çıkar.
+“VAKA-01 / VAKA-02” tarzı gösterimleri kaldır.
+Yerine iki katmanlı profesyonel bir yapı kur:
+
+1) “Bir problemi nasıl ele alırım?” başlığı altında 6 kısa ilke kartı
+2) “Bu yaklaşım işte nasıl karşılık bulur?” başlığı altında 4 çalışma tipi bloğu
+
+Türkçe ve İngilizce içerikleri ayrı ayrı doğal şekilde yerleştir.
+Metinleri birebir aşağıdaki içerikten kullan veya çok küçük UI uyarlamaları dışında bozma.
+Ama tasarımı koru, sadece yapıyı daha profesyonel hale getir.

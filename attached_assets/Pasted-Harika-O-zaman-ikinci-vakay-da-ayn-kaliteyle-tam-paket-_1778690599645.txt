@@ -1,0 +1,510 @@
+Harika. O zaman ikinci vakayı da aynı kaliteyle tam paket hazırlıyorum.
+
+Bu vaka, senin **teknik farkındalığı yüksek analist** yönünü çok iyi gösterir.
+
+---
+
+# 2. ANALİZ VAKASI
+
+## Sayfa/Bölüm Adı
+
+**Analiz Vakaları**
+
+## Vaka Başlığı
+
+**Harici Servis Entegrasyonunda Alan Eşleşmesi ve Doğrulama Analizi**
+
+## Kısa Özet
+
+Servis entegrasyonlarında sorun her zaman bağlantının kopması değildir. Çoğu zaman asıl problem, iş gereksinimi ile request/response yapısının birebir örtüşmemesi, alan eşleşmelerinin eksik veya hatalı kurgulanması ve beklenen davranışın sistem çıktısında tam karşılık bulmamasıdır. Bu vaka, entegrasyon sürecinde alan eşleşmelerini, doğrulama kurallarını ve beklenen-gerçekleşen davranış farkını görünür hale getirmeyi amaçlar.
+
+---
+
+## 1. İş Problemi
+
+Bir ödeme veya finansal işlem sürecinde harici bir servis ile entegrasyon kurulduğunda, iş birimi çoğu zaman sürecin yalnızca beklenen sonucuna odaklanır: işlem gönderilsin, yanıt gelsin, süreç ilerlesin. Ancak entegrasyonun gerçek başarısı, alan eşleşmelerinin doğruluğuna, zorunlu verilerin uygun sırada ve doğru formatta iletilmesine ve dönen yanıtın iş mantığıyla uyumlu şekilde yorumlanmasına bağlıdır.
+
+Mevcut durumda yaşanan temel problem şudur:
+Servis teknik olarak çalışıyor gibi görünse bile, bazı alanlar eksik, yanlış, beklenenden farklı veya iş gereksinimiyle uyumsuz olabilir. Bu da şu sonuçlara yol açar:
+
+* işlem teknik olarak tamamlanmış görünür ama işsel sonucu yanlış olabilir
+* response doğru yorumlanmadığı için statü veya çıktı hatalı oluşabilir
+* test süreci yalnızca bağlantıyı doğrular, içerik doğruluğunu kaçırabilir
+* iş ve teknik ekipler aynı entegrasyon davranışını farklı şekillerde yorumlayabilir
+
+---
+
+## 2. Analiz Amacı
+
+Bu çalışmanın amacı, entegrasyon sürecini yalnızca “servis çağrısı yapılıyor mu?” düzeyinde değil, iş gereksinimi ile veri yapısının gerçekten uyumlu olup olmadığını gösterecek şekilde ele almaktır.
+
+Ana hedefler:
+
+* alan eşleşmelerini görünür hale getirmek
+* zorunlu ve koşullu alanları netleştirmek
+* request/response davranışını iş açısından anlamlandırmak
+* beklenen ve gerçekleşen davranış farklarını ayrıştırmak
+* test ve UAT için doğrulanabilir entegrasyon çerçevesi oluşturmak
+
+---
+
+## 3. Kapsam
+
+Bu analiz aşağıdaki alanları kapsar:
+
+* entegrasyona gönderilen request yapısı
+* alan eşleşmeleri ve veri kaynakları
+* zorunlu / opsiyonel / koşullu alan ayrımı
+* response içeriğinin iş mantığıyla yorumlanması
+* hata veya eksik veri durumlarının sınıflandırılması
+* entegrasyon odaklı test senaryoları
+* UAT sürecinde iş beklentisinin doğrulanması
+
+Kapsam dışı alanlar:
+
+* harici servisin gerçek teknik mimarisi
+* altyapı seviyesinde ağ ve güvenlik detayları
+* üretim ortamı erişim logları
+* kurum içi canlı veri örnekleri
+
+---
+
+## 4. Mevcut Durum
+
+Mevcut yapıda entegrasyon süreci genel olarak şu mantıkla çalışmaktadır:
+
+1. İşlem başlatılır
+2. İç sistemdeki alanlar request yapısına dönüştürülür
+3. Servise çağrı yapılır
+4. Response alınır
+5. İç sistemde ilgili alanlara veya statülere yansıtılır
+
+Ancak pratikte aşağıdaki sorunlar oluşabilir:
+
+* bazı alanlar kaynak sistemde vardır ama servise hiç gitmez
+* bazı alanlar yanlış kaynak alandan beslenir
+* bazı alanlar koşullu zorunlu olduğu halde kontrol edilmez
+* response’daki teknik başarı, iş başarısı gibi yorumlanır
+* response alanları yanlış ekrana veya yanlış statüye yansır
+* eksik/boş değerler sessiz hata üretir
+
+---
+
+## 5. Tespit Edilen Temel Sorunlar
+
+### Alan eşleşmeleri yeterince görünür değil
+
+Hangi iç alanın hangi request alanına gittiği açık ve merkezi biçimde izlenemediğinde hata ayıklama zorlaşır.
+
+### Zorunlu alan mantığı net ayrışmamış
+
+Bazı alanlar her işlemde zorunlu değildir; belirli işlem tiplerinde, para birimlerinde veya müşteri tiplerinde zorunlu hale gelir. Bu mantık net değilse eksik veri sorunu büyür.
+
+### Response iş açısından doğru yorumlanmıyor olabilir
+
+Teknik olarak başarılı bir response, iş açısından da başarılı kabul edilemeyebilir. Bu ayrım görünür olmazsa yanlış statü veya yanlış operasyonel yorum oluşabilir.
+
+### Sessiz hatalar geç fark edilir
+
+Alan boş gitse de servis teknik hata dönmeyebilir. Ama sonraki adımda yanlış veri, eksik bilgi veya hatalı yönlendirme doğabilir.
+
+### Test senaryoları yüzeyde kalır
+
+Yalnızca başarılı çağrı senaryoları test edilirse, alan doğrulama ve response yorumlama tarafındaki sorunlar kaçabilir.
+
+---
+
+## 6. Analiz Yaklaşımı
+
+Bu vakada entegrasyonu yalnızca teknik çağrı olarak ele almam. Aşağıdaki sırayı izlerim:
+
+* önce iş gereksinimini ve beklenen iş sonucunu netleştiririm
+* sonra request alanlarını ve kaynak veri noktalarını çıkarırım
+* zorunlu, koşullu ve opsiyonel alanları ayırırım
+* response yapısının hangi iş anlamına geldiğini netleştiririm
+* beklenen ve gerçekleşen davranışı alan bazında karşılaştırırım
+* sessiz hata risklerini görünür hale getiririm
+* test ve UAT için doğrulama çerçevesi kurarım
+
+---
+
+## 7. İncelenen Katmanlar
+
+### İş Gereksinimi Katmanı
+
+Entegrasyonun neden yapıldığı, hangi iş sonucunu üretmesi gerektiği ve hangi alanların kritik olduğu değerlendirilir.
+
+### Request Katmanı
+
+İç sistemden çıkan verinin request’e nasıl dönüştüğü, hangi alanların hangi kaynaktan beslendiği incelenir.
+
+### Mapping Katmanı
+
+Alan eşleşmeleri, alan dönüşümleri, sabit değerler ve format kuralları değerlendirilir.
+
+### Response Katmanı
+
+Dönen verinin hangi statü, ekran bilgisi veya sonraki süreci tetiklediği incelenir.
+
+### Doğrulama Katmanı
+
+Eksik veri, tutarsızlık, beklenmeyen response ve sessiz hata ihtimalleri değerlendirilir.
+
+---
+
+## 8. Önerilen Analiz Çerçevesi
+
+### A. Request Alan Matrisi
+
+Her request alanı için şu bilgiler çıkarılır:
+
+* alan adı
+* kaynak alan
+* zorunlu mu
+* hangi koşulda zorunlu
+* format kuralı
+* dönüşüm gerekiyor mu
+* boş gelirse etkisi ne olur
+
+### B. Response Yorumlama Matrisi
+
+Her kritik response alanı için şu bilgiler netleştirilir:
+
+* teknik anlamı
+* işsel anlamı
+* statüye etkisi
+* kullanıcıya/operasyona yansıması
+* hata/uyarı üretip üretmeyeceği
+
+### C. Sessiz Hata Noktaları
+
+Servisin hata dönmediği ama iş açısından risk üreten alanlar ayrıca belirlenir.
+
+---
+
+## 9. Örnek İş Kuralları
+
+* Her işlem için temel müşteri ve işlem alanları eksiksiz olmalıdır
+* Belirli ödeme türlerinde ek referans alanı zorunlu olabilir
+* Para birimi ve alıcı ülke kombinasyonuna göre bazı alanlar koşullu zorunlu hale gelebilir
+* Request’e giden alanlar doğrulanmadan servis çağrısı yapılmamalıdır
+* Response teknik olarak başarılı olsa bile iş kuralları ayrıca değerlendirilmelidir
+* Hatalı veya eksik mapping, yalnızca teknik değil işsel hata olarak da izlenmelidir
+
+---
+
+## 10. Önerilen Entegrasyon Akışı
+
+1. İş gereksinimi ve beklenen sonuç tanımlanır
+2. Request alan listesi çıkarılır
+3. Alan kaynakları ve mapping mantığı belirlenir
+4. Zorunlu ve koşullu alan kuralları netleştirilir
+5. Servis çağrısı yapılır
+6. Response alanları teknik ve işsel açıdan yorumlanır
+7. Statü ve ekran etkisi belirlenir
+8. Hata / uyarı / sessiz risk sınıflandırılır
+9. Test ve UAT senaryoları bu çerçeveye göre çalıştırılır
+
+---
+
+## 11. Operasyonel ve İşsel Görünürlük İhtiyacı
+
+Bu analiz sonucunda yalnızca teknik ekip değil, iş ve operasyon ekipleri de şu sorulara cevap bulabilmelidir:
+
+* hangi alan eksik veya hatalı gitti?
+* response başarılı görünse de iş sonucu neden oluşmadı?
+* bu sorun veri eksikliğinden mi, mapping’den mi, response yorumlamadan mı kaynaklandı?
+* kullanıcıya veya operasyon ekranına hangi bilgi yansıtılmalı?
+* bu durum tekrar üretilebilir ve test edilebilir mi?
+
+---
+
+## 12. Önerilen Mapping ve Doğrulama Alanları
+
+Bir analiz deliverable’ında şu sütunlar bulunmalıdır:
+
+* İç Sistem Alanı
+* Request Alanı
+* Alan Açıklaması
+* Zorunluluk Durumu
+* Koşullu Kural
+* Format
+* Dönüşüm Kuralı
+* Response Karşılığı
+* İşsel Etki
+* Not / Risk
+
+---
+
+## 13. Test Yaklaşımı
+
+Bu vaka için test yalnızca “çağrı başarılı mı?” sorusuna göre değil, içerik doğruluğuna göre kurulmalıdır.
+
+Örnek test alanları:
+
+* zorunlu alan eksikliği
+* koşullu zorunlu alan eksikliği
+* yanlış mapping
+* format uyumsuzluğu
+* sabit değer hatası
+* response alanının yanlış yorumlanması
+* teknik başarı / iş başarısızlığı ayrımı
+* sessiz hata senaryoları
+
+---
+
+## 14. UAT Yaklaşımı
+
+UAT aşamasında şu sorular doğrulanmalıdır:
+
+* iş birimi beklediği sonucu gerçekten görüyor mu?
+* başarılı response iş açısından da başarılı mı?
+* response bilgileri operasyon için yeterince anlamlı mı?
+* eksik mapping veya yanlış alan kullanımı işsel etki yaratıyor mu?
+* kullanıcı/operasyon ekranındaki bilgi karar vermeye yetiyor mu?
+* sessiz hatalar görünür hale gelmiş mi?
+
+---
+
+## 15. Analist Deliverable’ları
+
+Bu vaka sonunda üretilebilecek analist çıktıları:
+
+* entegrasyon kapsam dokümanı
+* request field mapping matrisi
+* response yorumlama tablosu
+* zorunlu/koşullu alan listesi
+* sessiz hata risk listesi
+* test senaryosu seti
+* UAT doğrulama checklist’i
+* entegrasyon davranışı özet notu
+
+---
+
+## 16. Beklenen İş Çıktısı
+
+Bu yaklaşım sonucunda:
+
+* mapping kaynaklı hatalar daha erken bulunur
+* iş gereksinimi ile teknik entegrasyon arasındaki boşluk azalır
+* response yorumlama hataları görünür hale gelir
+* test senaryoları daha güçlü kurgulanır
+* operasyon ekranlarında daha doğru bilgi gösterilir
+* teknik ve iş ekipleri aynı entegrasyon davranışını aynı şekilde yorumlar
+
+---
+
+## 17. Bu Vaka Ne Gösteriyor?
+
+Bu vaka, analist olarak şu yönlerimi gösterir:
+
+* iş gereksinimini teknik yapıyla birlikte okuyabilirim
+* alan bazlı doğrulama yapabilirim
+* entegrasyon davranışındaki sessiz riskleri görünür hale getirebilirim
+* beklenen ve gerçekleşen farkını yalnızca teknik değil, işsel açıdan da yorumlayabilirim
+* analizi test ve UAT için kullanılabilir çıktıya dönüştürebilirim
+
+---
+
+# AKIŞ DİYAGRAMI METNİ
+
+## Başlık
+
+**Önerilen Entegrasyon Doğrulama Akışı**
+
+1. İş gereksinimi tanımlanır
+2. Request alanları ve kaynakları çıkarılır
+3. Zorunlu / koşullu alan kuralları belirlenir
+4. Mapping doğrulaması yapılır
+5. Servis çağrısı gerçekleştirilir
+6. Response teknik olarak değerlendirilir
+7. Response işsel açıdan yorumlanır
+8. Statü / ekran / operasyon etkisi belirlenir
+9. Sessiz hata riskleri işaretlenir
+10. Test ve UAT senaryoları çalıştırılır
+
+---
+
+# İŞ KURALI TABLOSU
+
+## Başlık
+
+**Örnek Entegrasyon İş Kuralları**
+
+| Kural No | İş Kuralı                                                          | Gerekçe                                            |
+| -------- | ------------------------------------------------------------------ | -------------------------------------------------- |
+| IR-01    | Request’e giden tüm kritik alanlar kaynak sistemde doğrulanmalıdır | Eksik veya yanlış veri aktarımını önlemek          |
+| IR-02    | Koşullu zorunlu alanlar işlem tipine göre kontrol edilmelidir      | Sessiz hata riskini azaltmak                       |
+| IR-03    | Format ve dönüşüm kuralları çağrı öncesi uygulanmalıdır            | Teknik uyumsuzlukları azaltmak                     |
+| IR-04    | Response teknik ve işsel anlamda ayrı değerlendirilmelidir         | Başarılı response’un yanlış yorumlanmasını önlemek |
+| IR-05    | Mapping hataları ayrıca izlenebilir olmalıdır                      | Kök neden analizini kolaylaştırmak                 |
+| IR-06    | Sessiz hata üreten response durumları ayrıca işaretlenmelidir      | Operasyonel görünürlüğü artırmak                   |
+
+---
+
+# TEST SENARYOSU TABLOSU
+
+## Başlık
+
+**Örnek Entegrasyon Test Senaryoları**
+
+| Test No | Senaryo                                                       | Beklenen Sonuç                           |
+| ------- | ------------------------------------------------------------- | ---------------------------------------- |
+| IT-01   | Zorunlu request alanı boş gönderilir                          | Çağrı öncesi doğrulama hatası alınır     |
+| IT-02   | Koşullu zorunlu alan eksik gönderilir                         | Kural bazlı eksik veri hatası görünür    |
+| IT-03   | Alan formatı beklenen yapıda değildir                         | Format doğrulama hatası alınır           |
+| IT-04   | Yanlış iç alan yanlış request alanına map edilir              | İşsel uyumsuzluk görünür hale gelir      |
+| IT-05   | Response teknik olarak başarılı ama işsel sonucu eksiktir     | Response yorumlama uyarısı oluşur        |
+| IT-06   | Response alanı yanlış statüye yansıtılır                      | Statü değerlendirme hatası tespit edilir |
+| IT-07   | Teknik hata dönmeyen ancak eksik veri taşıyan response alınır | Sessiz hata senaryosu görünür hale gelir |
+
+---
+
+# UAT CHECKLIST
+
+## Başlık
+
+**UAT Doğrulama Checklist’i**
+
+* İş birimi beklenen sonucu gerçekten görüyor mu?
+* Response teknik olarak başarılı olsa da işsel açıdan eksik durum var mı?
+* Mapping kaynaklı hatalar kullanıcıya/operasyona yansıyor mu?
+* Koşullu zorunlu alanlar doğru şekilde çalışıyor mu?
+* Response alanları doğru statü ve ekran bilgisine dönüşüyor mu?
+* Sessiz hata senaryoları görünür mü?
+* Operasyon ekibi ilk aksiyonu belirleyebiliyor mu?
+* Beklenen ve gerçekleşen davranış net biçimde ayrışıyor mu?
+
+---
+
+# REPLIT’E GÖNDERİLECEK PROMPT
+
+```text id="w7m3or"
+Analiz Vakaları bölümüne ikinci güçlü vaka olarak yeni bir case ekle.
+
+Türkçe başlık:
+Harici Servis Entegrasyonunda Alan Eşleşmesi ve Doğrulama Analizi
+
+İngilizce başlık:
+Field Mapping and Validation Analysis in External Service Integration
+
+Bu vaka, ilk vaka ile aynı tasarım dilinde ama yeni içerikle yer almalı.
+Ana amaç: beni teknik farkındalığı yüksek, iş gereksinimini entegrasyon davranışıyla birlikte okuyabilen, mapping, response yorumlama ve doğrulama süreçlerini anlayan güçlü bir Technical Analyst olarak göstermek.
+
+TASARIM KURALLARI:
+- Mevcut koyu tema ve premium görünüm korunsun
+- Vaka, demo showcase gibi değil gerçek analist deliverable’ı gibi görünsün
+- Uzun metinler iyi bölünsün
+- Tablolar, bloklar ve stepper yapıları okunaklı olsun
+- Türkçe ve İngilizce mod doğal içerik kullansın
+
+AŞAĞIDAKİ BAŞLIKLARLA GÖSTER:
+1. Vaka başlığı
+2. Kısa özet
+3. İş Problemi
+4. Analiz Amacı
+5. Kapsam
+6. Mevcut Durum
+7. Tespit Edilen Temel Sorunlar
+8. Analiz Yaklaşımı
+9. İncelenen Katmanlar
+10. Önerilen Analiz Çerçevesi
+11. Örnek İş Kuralları
+12. Önerilen Entegrasyon Doğrulama Akışı
+13. Operasyonel ve İşsel Görünürlük İhtiyacı
+14. Önerilen Mapping ve Doğrulama Alanları
+15. Test Yaklaşımı
+16. UAT Yaklaşımı
+17. Analist Deliverable’ları
+18. Beklenen İş Çıktısı
+19. Bu Vaka Ne Gösteriyor?
+
+AŞAĞIDAKİ METNİ BU BAŞLIKLAR ALTINDA KULLAN:
+
+[Buraya yukarıdaki tüm vaka metnini yerleştir]
+
+EKLENMESİ GEREKEN BİLEŞENLER:
+
+1. Stepper / akış diyagramı
+Başlık:
+Önerilen Entegrasyon Doğrulama Akışı
+
+Adımlar:
+1. İş gereksinimi tanımlanır
+2. Request alanları ve kaynakları çıkarılır
+3. Zorunlu / koşullu alan kuralları belirlenir
+4. Mapping doğrulaması yapılır
+5. Servis çağrısı gerçekleştirilir
+6. Response teknik olarak değerlendirilir
+7. Response işsel açıdan yorumlanır
+8. Statü / ekran / operasyon etkisi belirlenir
+9. Sessiz hata riskleri işaretlenir
+10. Test ve UAT senaryoları çalıştırılır
+
+2. İş kuralı tablosu
+Başlık:
+Örnek Entegrasyon İş Kuralları
+
+Kolonlar:
+- Kural No
+- İş Kuralı
+- Gerekçe
+
+Satırlar:
+IR-01 | Request’e giden tüm kritik alanlar kaynak sistemde doğrulanmalıdır | Eksik veya yanlış veri aktarımını önlemek
+IR-02 | Koşullu zorunlu alanlar işlem tipine göre kontrol edilmelidir | Sessiz hata riskini azaltmak
+IR-03 | Format ve dönüşüm kuralları çağrı öncesi uygulanmalıdır | Teknik uyumsuzlukları azaltmak
+IR-04 | Response teknik ve işsel anlamda ayrı değerlendirilmelidir | Başarılı response’un yanlış yorumlanmasını önlemek
+IR-05 | Mapping hataları ayrıca izlenebilir olmalıdır | Kök neden analizini kolaylaştırmak
+IR-06 | Sessiz hata üreten response durumları ayrıca işaretlenmelidir | Operasyonel görünürlüğü artırmak
+
+3. Test senaryosu tablosu
+Başlık:
+Örnek Entegrasyon Test Senaryoları
+
+Kolonlar:
+- Test No
+- Senaryo
+- Beklenen Sonuç
+
+Satırlar:
+IT-01 | Zorunlu request alanı boş gönderilir | Çağrı öncesi doğrulama hatası alınır
+IT-02 | Koşullu zorunlu alan eksik gönderilir | Kural bazlı eksik veri hatası görünür
+IT-03 | Alan formatı beklenen yapıda değildir | Format doğrulama hatası alınır
+IT-04 | Yanlış iç alan yanlış request alanına map edilir | İşsel uyumsuzluk görünür hale gelir
+IT-05 | Response teknik olarak başarılı ama işsel sonucu eksiktir | Response yorumlama uyarısı oluşur
+IT-06 | Response alanı yanlış statüye yansıtılır | Statü değerlendirme hatası tespit edilir
+IT-07 | Teknik hata dönmeyen ancak eksik veri taşıyan response alınır | Sessiz hata senaryosu görünür hale gelir
+
+4. UAT checklist
+Başlık:
+UAT Doğrulama Checklist’i
+
+Maddeler:
+- İş birimi beklenen sonucu gerçekten görüyor mu?
+- Response teknik olarak başarılı olsa da işsel açıdan eksik durum var mı?
+- Mapping kaynaklı hatalar kullanıcıya/operasyona yansıyor mu?
+- Koşullu zorunlu alanlar doğru şekilde çalışıyor mu?
+- Response alanları doğru statü ve ekran bilgisine dönüşüyor mu?
+- Sessiz hata senaryoları görünür mü?
+- Operasyon ekibi ilk aksiyonu belirleyebiliyor mu?
+- Beklenen ve gerçekleşen davranış net biçimde ayrışıyor mu?
+
+ÇOK ÖNEMLİ:
+- Bu vaka beni developer gibi değil, güçlü bir analyst gibi göstermeli
+- Yapay KPI, uydurma başarı yüzdesi, boş pazarlama dili kullanma
+- İçerik gerçek iş dünyasına yakın ve profesyonel dursun
+- Gerekirse ilk vaka gibi ayrı detay sayfası halinde aç
+- Ana sayfada kısa kart özeti + “Detayı İncele” bağlantısı ver
+
+FINAL AMAÇ:
+Bu vaka sayfasını gören kişi şunu düşünmeli:
+“Bu aday yalnızca servis çağrısı biliyor değil; iş gereksinimini teknik yapı ile birlikte okuyabiliyor, mapping ve response davranışını doğrulayabiliyor ve entegrasyonu test edilebilir hale getirebiliyor.”
+```
+
+---
+
+Bundan sonra en mantıklı üçüncü vaka:
+**Operasyon ekranı ve süreç sadeleştirme vakası.**
+
+İstersen şimdi ona geçelim.

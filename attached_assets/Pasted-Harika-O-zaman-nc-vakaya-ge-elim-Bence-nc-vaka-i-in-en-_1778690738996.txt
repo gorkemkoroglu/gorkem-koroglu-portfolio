@@ -1,0 +1,501 @@
+Harika. O zaman üçüncü vakaya geçelim.
+
+Bence üçüncü vaka için en doğru konu:
+
+# **Operasyon Ekranının Sadeleştirilmesi ve Süreç Netliğinin Artırılması**
+
+Bu vaka şunları gösterir:
+
+* sadece teknik doğrulama değil, **fonksiyonel analiz** gücünü
+* kullanıcı/operasyon bakışını düşündüğünü
+* karmaşık akışı sadeleştirebildiğini
+* iş kuralı ile ekran tasarımını bağlayabildiğini
+* analizi kullanılabilir çıktıya dönüştürdüğünü
+
+Bu da seni çok dengeli gösterir:
+
+1. hata / kök neden
+2. entegrasyon / doğrulama
+3. süreç / ekran / fonksiyonel sadeleştirme
+
+Aşağıya üçüncü vakayı da tam paket veriyorum.
+
+---
+
+# 3. ANALİZ VAKASI
+
+## Vaka Başlığı
+
+**Operasyon Ekranının Sadeleştirilmesi ve Süreç Netliğinin Artırılması**
+
+## Kısa Özet
+
+Operasyon ekiplerinin kullandığı ekranlar zaman içinde yeni alanlar, ek kontroller ve parçalı akışlarla karmaşık hale gelebilir. Bu durumda kullanıcı neyi ne zaman yapacağını anlamakta zorlanır, hata riski artar ve süreç takibi zorlaşır. Bu vaka, dağınık operasyon akışını daha sade, daha görünür ve daha yönetilebilir hale getirmek için yapılan analiz yaklaşımını gösterir.
+
+---
+
+## 1. İş Problemi
+
+Operasyon süreçlerinde kullanılan ekranlar çoğu zaman zaman içinde büyür; yeni alanlar eklenir, bazı bilgiler tekrar eder, karar noktaları net görünmez ve kullanıcı akışın hangi aşamasında ne yapması gerektiğini açık biçimde göremez.
+
+Bu durum şu sonuçları doğurur:
+
+* kullanıcı karar yükü artar
+* kritik bilgi ekranda kaybolur
+* gereksiz tekrar oluşur
+* işlem takibi zorlaşır
+* yanlış alan kullanımı veya eksik aksiyon riski yükselir
+* eğitim ve adaptasyon süresi uzar
+
+Sorun yalnızca görsel karmaşa değildir. Asıl problem, ekranın arkasındaki iş mantığının kullanıcıya açık ve doğru şekilde yansıtılamamasıdır.
+
+---
+
+## 2. Analiz Amacı
+
+Bu çalışmanın amacı:
+
+* operasyon ekranındaki bilgi yoğunluğunu anlamlı hale getirmek
+* gereksiz tekrarları ve belirsiz alanları azaltmak
+* kullanıcı karar noktalarını görünür kılmak
+* iş kuralı ile ekran davranışını uyumlu hale getirmek
+* ekranı daha sade ama işlev kaybı olmadan daha kullanılabilir hale getirmektir
+
+---
+
+## 3. Kapsam
+
+Bu analiz aşağıdaki alanları kapsar:
+
+* mevcut ekran yapısı
+* alan grupları ve bilgi yoğunluğu
+* kullanıcı adımları ve karar noktaları
+* zorunlu / opsiyonel / yalnızca görüntüleme alanları
+* buton / aksiyon mantığı
+* hata / uyarı / yönlendirme yapısı
+* süreç akışının ekran üzerinde nasıl temsil edildiği
+
+Kapsam dışı alanlar:
+
+* görsel tasarım sisteminin tamamının yeniden oluşturulması
+* canlı kullanıcı davranış verisi analitiği
+* altyapı ve performans mimarisi
+* tüm modüllerin yeniden yazımı
+
+---
+
+## 4. Mevcut Durum
+
+Mevcut ekranda kullanıcı aynı anda çok sayıda bilgi, alan ve işlem seçeneği ile karşılaşmaktadır. Ancak bu bilgilerin hepsi aynı önemde değildir. Bazı alanlar yalnızca belirli işlem tiplerinde gereklidir, bazıları yalnızca bilgi amaçlıdır, bazıları ise kritik karar noktalarını etkiler.
+
+Buna rağmen mevcut yapı:
+
+* bilgiyi yeterince önceliklendirmez
+* alanları işlevine göre ayırmaz
+* kullanıcıya hangi adımda olduğunu açıkça hissettirmez
+* ekranı bir işlem aracı değil, bilgi yığını haline getirir
+
+---
+
+## 5. Tespit Edilen Temel Sorunlar
+
+### Bilgi önceliği görünür değil
+
+Kritik alanlarla ikincil alanlar aynı ağırlıkta gösterildiğinde kullanıcı dikkatini doğru yere veremez.
+
+### Karar noktaları ekrana yansımıyor
+
+Kullanıcının hangi aşamada hangi kararı vermesi gerektiği net değilse süreç yalnızca tecrübeye dayalı ilerler.
+
+### Gereksiz tekrar ve dağınıklık var
+
+Aynı bilginin farklı alanlarda tekrar etmesi veya birbirine yakın alanların kopuk görünmesi ekranı zorlaştırır.
+
+### İş mantığı ile ekran yapısı tam hizalı değil
+
+Bazı alanlar ekranda var olsa da kullanıcı açısından ne işe yaradıkları veya hangi durumda anlam kazandıkları yeterince açık değildir.
+
+### Hata ve yönlendirme dili yetersiz
+
+Ekran yalnızca veri gösteren bir yapıysa, kullanıcıyı doğru aksiyona yönlendirme kapasitesi sınırlı kalır.
+
+---
+
+## 6. Analiz Yaklaşımı
+
+Bu tür bir durumda ekrana yalnızca görsel tasarım problemi olarak bakmam. Önce ekranın arkasındaki süreci anlamaya çalışırım.
+
+Yaklaşımım şu sırayla ilerler:
+
+* ekranın desteklediği iş akışını çıkarırım
+* kullanıcı rollerini ve karar noktalarını belirlerim
+* alanları kritik, destekleyici ve bilgi amaçlı olarak ayırırım
+* işlem sırasına göre ekranın hangi bilgiyi ne zaman göstermesi gerektiğini netleştiririm
+* gereksiz tekrarları ve belirsiz alanları tespit ederim
+* işlevselliği koruyarak daha sade bir yapı öneririm
+
+---
+
+## 7. İncelenen Katmanlar
+
+### Süreç Katmanı
+
+Ekranın hangi iş adımına hizmet ettiği, kullanıcının hangi aşamada ne yapması gerektiği değerlendirilir.
+
+### Bilgi Mimarisi Katmanı
+
+Ekrandaki alanlar önem, kullanım sıklığı ve karar etkisi açısından sınıflandırılır.
+
+### Kullanıcı Kararı Katmanı
+
+Kullanıcının verdiği kararlar, seçtiği aksiyonlar ve hata yapma riski taşıyan noktalar incelenir.
+
+### İş Kuralı Katmanı
+
+Belirli alanların hangi koşullarda görünmesi, aktifleşmesi veya zorunlu hale gelmesi gerektiği netleştirilir.
+
+### Doğrulama Katmanı
+
+Hata, uyarı ve yönlendirme mesajlarının kullanıcıyı doğru aksiyona taşıyıp taşımadığı değerlendirilir.
+
+---
+
+## 8. Önerilen Tasarım / Analiz Çerçevesi
+
+### A. Alan Önceliklendirme
+
+Alanlar üç gruba ayrılır:
+
+* kritik işlem alanları
+* destekleyici bilgi alanları
+* yalnızca görüntüleme amaçlı alanlar
+
+### B. Adım Bazlı Yapı
+
+Kullanıcının akışta hangi aşamada olduğu görünür hale getirilir. Böylece ekran tek blok değil, mantıklı ilerleyen bir yapı gibi çalışır.
+
+### C. Koşullu Görünürlük
+
+Her alan her kullanıcıya ve her senaryoya aynı anda gösterilmez. İşlem tipine veya statüye göre ilgili alanlar aktif hale gelir.
+
+### D. Yönlendirici Mesajlar
+
+Hata ve uyarı mesajları yalnızca problemi söylemez; kullanıcının ne yapması gerektiğini de destekler.
+
+---
+
+## 9. Örnek İş Kuralları
+
+* Kritik işlem alanları ekranın üst bölümünde ve öncelikli görünmelidir
+* Yalnızca bilgi amaçlı alanlar ikincil bölgede gösterilmelidir
+* Koşullu alanlar ilgili işlem tipi seçilmeden görünmemelidir
+* Kullanıcının sonraki aksiyonu belirlemesi gereken noktalarda yönlendirici mesaj bulunmalıdır
+* Aynı bilgiyi tekrar eden alanlar tek bir mantıklı noktada toplanmalıdır
+* Statü ve karar ilişkisi ekranda görünür olmalıdır
+
+---
+
+## 10. Önerilen Süreç Akışı
+
+1. Kullanıcı işlem ekranına girer
+2. Temel işlem bağlamı gösterilir
+3. Kritik karar alanları öncelikli olarak sunulur
+4. İşlem tipine göre koşullu alanlar görünür olur
+5. Destekleyici bilgiler ikincil blokta gösterilir
+6. Kullanıcı aksiyon seçer
+7. Hata / uyarı / yönlendirme mesajı açık şekilde gösterilir
+8. Sonraki adım veya sonuç görünür hale gelir
+
+---
+
+## 11. Operasyonel Görünürlük İhtiyacı
+
+Kullanıcı ekrana baktığında şu soruların cevabını kolayca görebilmelidir:
+
+* bu ekran hangi işlem için kullanılıyor?
+* şu an hangi aşamadayım?
+* hangi alanları doldurmam gerekiyor?
+* hangi alanlar yalnızca bilgi amaçlı?
+* hangi hata kritik, hangisi uyarı?
+* sıradaki aksiyon ne olmalı?
+
+---
+
+## 12. Önerilen Ekran Alan Grupları
+
+* İşlem Özeti
+* Kritik Karar Alanları
+* Koşullu İşlem Bilgileri
+* Destekleyici Veri Alanları
+* Statü ve Süreç Bilgisi
+* Hata / Uyarı / Yönlendirme Mesajları
+* İşlem Geçmişi veya Notlar
+
+---
+
+## 13. Test Yaklaşımı
+
+Bu vaka için test yaklaşımı yalnızca ekran açılıyor mu sorusuna göre değil, kullanılabilirlik ve iş mantığına göre kurulmalıdır.
+
+Örnek test alanları:
+
+* kritik alanların öncelikli görünmesi
+* koşullu alanların doğru durumda açılması
+* gereksiz alan tekrarının kaldırılması
+* kullanıcı akışının statüyle uyumlu olması
+* hata ve uyarı mesajlarının yönlendirici olması
+* yanlış aksiyon riskinin azaltılması
+
+---
+
+## 14. UAT Yaklaşımı
+
+UAT aşamasında şu sorular doğrulanmalıdır:
+
+* kullanıcı ekranı ilk bakışta anlayabiliyor mu?
+* kritik bilgi kolay fark ediliyor mu?
+* süreçte hangi aşamada olduğu net mi?
+* koşullu alanlar doğru çalışıyor mu?
+* hata mesajları yalnızca sorun göstermiyor, doğru aksiyona yönlendiriyor mu?
+* ekran mevcut iş yükünü azaltıyor mu?
+
+---
+
+## 15. Analist Deliverable’ları
+
+Bu vaka sonunda üretilebilecek analist çıktıları:
+
+* mevcut ekran analizi
+* alan önceliklendirme matrisi
+* karar noktası listesi
+* koşullu görünürlük kuralları
+* to-be ekran akışı
+* hata / uyarı dili önerileri
+* test senaryosu seti
+* UAT checklist’i
+
+---
+
+## 16. Beklenen İş Çıktısı
+
+Bu yaklaşım sonucunda:
+
+* kullanıcı karar yükü azalır
+* kritik bilgi daha hızlı görünür hale gelir
+* hata yapma riski düşer
+* ekran daha anlaşılır olur
+* süreç takibi kolaylaşır
+* iş mantığı ile ekran davranışı daha uyumlu hale gelir
+
+---
+
+## 17. Bu Vaka Ne Gösteriyor?
+
+Bu vaka, analist olarak şu yönlerimi gösterir:
+
+* süreci yalnızca iş akışı olarak değil, kullanıcı deneyimi açısından da okuyabilirim
+* işlevsellik ile sadelik arasında denge kurabilirim
+* ekranı veri yığını olmaktan çıkarıp karar destek aracına dönüştürebilirim
+* iş kuralını ekrana yansıtabilirim
+* analizi uygulanabilir tasarım ve doğrulama çıktısına dönüştürebilirim
+
+---
+
+# AKIŞ DİYAGRAMI METNİ
+
+## Başlık
+
+**Önerilen Operasyon Ekranı Akışı**
+
+1. İşlem bağlamı gösterilir
+2. Kritik karar alanları sunulur
+3. Koşullu alanlar işlem tipine göre açılır
+4. Destekleyici bilgiler ikincil blokta gösterilir
+5. Kullanıcı aksiyon seçer
+6. Hata / uyarı / yönlendirme mesajı görünür olur
+7. Sonraki adım veya sonuç net biçimde sunulur
+
+---
+
+# İŞ KURALI TABLOSU
+
+## Başlık
+
+**Örnek Ekran ve Süreç Kuralları**
+
+| Kural No | İş Kuralı                                                          | Gerekçe                                           |
+| -------- | ------------------------------------------------------------------ | ------------------------------------------------- |
+| UI-01    | Kritik işlem alanları öncelikli bölgede gösterilmelidir            | Kullanıcı odağını doğru noktaya yönlendirmek      |
+| UI-02    | Koşullu alanlar yalnızca ilgili senaryoda görünmelidir             | Ekran karmaşasını azaltmak                        |
+| UI-03    | Aynı bilgiyi tekrar eden alanlar tek noktada toplanmalıdır         | Bilgi dağınıklığını azaltmak                      |
+| UI-04    | Hata ve uyarı mesajları aksiyon yönlendirmesi içermelidir          | Kullanıcının doğru adımı belirlemesini sağlamak   |
+| UI-05    | Süreç aşaması ve mevcut statü görünür olmalıdır                    | Kullanıcının işlem bağlamını kaybetmesini önlemek |
+| UI-06    | Destekleyici bilgiler kritik alanlardan görsel olarak ayrılmalıdır | Bilgi önceliğini güçlendirmek                     |
+
+---
+
+# TEST SENARYOSU TABLOSU
+
+## Başlık
+
+**Örnek Ekran ve Süreç Test Senaryoları**
+
+| Test No  | Senaryo                                              | Beklenen Sonuç                                |
+| -------- | ---------------------------------------------------- | --------------------------------------------- |
+| UI-TS-01 | Kritik alanlar ekran açılışında görünür              | Kullanıcı öncelikli bilgiyi ilk bakışta görür |
+| UI-TS-02 | Koşullu alanlar yalnızca ilgili işlem tipinde açılır | Gereksiz alan gösterimi engellenir            |
+| UI-TS-03 | Tekrarlı alanlar sadeleştirilmiş yapıdadır           | Bilgi dağınıklığı azalır                      |
+| UI-TS-04 | Hata mesajı yönlendirici metin içerir                | Kullanıcı doğru aksiyonu anlayabilir          |
+| UI-TS-05 | Süreç aşaması/statü görünürdür                       | Kullanıcı hangi aşamada olduğunu bilir        |
+| UI-TS-06 | Destekleyici bilgiler ikincil bölgede gösterilir     | Kritik alanlar görsel olarak öne çıkar        |
+
+---
+
+# UAT CHECKLIST
+
+## Başlık
+
+**UAT Doğrulama Checklist’i**
+
+* Kullanıcı ekranın amacını ilk bakışta anlayabiliyor mu?
+* Kritik alanlar yeterince görünür mü?
+* Koşullu alanlar doğru zamanda açılıyor mu?
+* Hata ve uyarılar doğru aksiyonu düşündürüyor mu?
+* Süreç statüsü kullanıcı için net mi?
+* Ekran önceki yapıya göre daha sade ve daha yönetilebilir mi?
+* Kullanıcı işlem sırasında daha az tereddüt ediyor mu?
+* Bilgi önceliği doğru kurulmuş mu?
+
+---
+
+# REPLIT’E GÖNDERİLECEK PROMPT
+
+```text id="m87lqg"
+Analiz Vakaları bölümüne üçüncü güçlü vaka olarak yeni bir case ekle.
+
+Türkçe başlık:
+Operasyon Ekranının Sadeleştirilmesi ve Süreç Netliğinin Artırılması
+
+İngilizce başlık:
+Simplifying an Operational Screen and Improving Process Clarity
+
+Bu vaka, ilk iki vaka ile aynı tasarım dilinde yer almalı.
+Ana amaç: beni yalnızca teknik doğrulama yapan biri değil, fonksiyonel analiz, süreç okuma, ekran mantığı ve kullanıcı/operasyon odaklı düşünme becerisine sahip güçlü bir Technical Analyst olarak göstermek.
+
+TASARIM KURALLARI:
+- Mevcut koyu tema ve premium görünüm korunsun
+- Bu vaka gerçek analyst deliverable’ı gibi görünsün
+- Demo ürün hissi verme
+- Uzun metinleri okunabilir bloklara böl
+- Stepper, tablo ve kart yapıları dengeli olsun
+- Türkçe ve İngilizce mod doğal içerik kullansın
+
+AŞAĞIDAKİ BAŞLIKLARLA GÖSTER:
+1. Vaka başlığı
+2. Kısa özet
+3. İş Problemi
+4. Analiz Amacı
+5. Kapsam
+6. Mevcut Durum
+7. Tespit Edilen Temel Sorunlar
+8. Analiz Yaklaşımı
+9. İncelenen Katmanlar
+10. Önerilen Tasarım / Analiz Çerçevesi
+11. Örnek İş Kuralları
+12. Önerilen Süreç Akışı
+13. Operasyonel Görünürlük İhtiyacı
+14. Önerilen Ekran Alan Grupları
+15. Test Yaklaşımı
+16. UAT Yaklaşımı
+17. Analist Deliverable’ları
+18. Beklenen İş Çıktısı
+19. Bu Vaka Ne Gösteriyor?
+
+AŞAĞIDAKİ METNİ BU BAŞLIKLAR ALTINDA KULLAN:
+
+[Buraya yukarıdaki tüm vaka metnini yerleştir]
+
+EKLENMESİ GEREKEN BİLEŞENLER:
+
+1. Stepper / akış diyagramı
+Başlık:
+Önerilen Operasyon Ekranı Akışı
+
+Adımlar:
+1. İşlem bağlamı gösterilir
+2. Kritik karar alanları sunulur
+3. Koşullu alanlar işlem tipine göre açılır
+4. Destekleyici bilgiler ikincil blokta gösterilir
+5. Kullanıcı aksiyon seçer
+6. Hata / uyarı / yönlendirme mesajı görünür olur
+7. Sonraki adım veya sonuç net biçimde sunulur
+
+2. İş kuralı tablosu
+Başlık:
+Örnek Ekran ve Süreç Kuralları
+
+Kolonlar:
+- Kural No
+- İş Kuralı
+- Gerekçe
+
+Satırlar:
+UI-01 | Kritik işlem alanları öncelikli bölgede gösterilmelidir | Kullanıcı odağını doğru noktaya yönlendirmek
+UI-02 | Koşullu alanlar yalnızca ilgili senaryoda görünmelidir | Ekran karmaşasını azaltmak
+UI-03 | Aynı bilgiyi tekrar eden alanlar tek noktada toplanmalıdır | Bilgi dağınıklığını azaltmak
+UI-04 | Hata ve uyarı mesajları aksiyon yönlendirmesi içermelidir | Kullanıcının doğru adımı belirlemesini sağlamak
+UI-05 | Süreç aşaması ve mevcut statü görünür olmalıdır | Kullanıcının işlem bağlamını kaybetmesini önlemek
+UI-06 | Destekleyici bilgiler kritik alanlardan görsel olarak ayrılmalıdır | Bilgi önceliğini güçlendirmek
+
+3. Test senaryosu tablosu
+Başlık:
+Örnek Ekran ve Süreç Test Senaryoları
+
+Kolonlar:
+- Test No
+- Senaryo
+- Beklenen Sonuç
+
+Satırlar:
+UI-TS-01 | Kritik alanlar ekran açılışında görünür | Kullanıcı öncelikli bilgiyi ilk bakışta görür
+UI-TS-02 | Koşullu alanlar yalnızca ilgili işlem tipinde açılır | Gereksiz alan gösterimi engellenir
+UI-TS-03 | Tekrarlı alanlar sadeleştirilmiş yapıdadır | Bilgi dağınıklığı azalır
+UI-TS-04 | Hata mesajı yönlendirici metin içerir | Kullanıcı doğru aksiyonu anlayabilir
+UI-TS-05 | Süreç aşaması/statü görünürdür | Kullanıcı hangi aşamada olduğunu bilir
+UI-TS-06 | Destekleyici bilgiler ikincil bölgede gösterilir | Kritik alanlar görsel olarak öne çıkar
+
+4. UAT checklist
+Başlık:
+UAT Doğrulama Checklist’i
+
+Maddeler:
+- Kullanıcı ekranın amacını ilk bakışta anlayabiliyor mu?
+- Kritik alanlar yeterince görünür mü?
+- Koşullu alanlar doğru zamanda açılıyor mu?
+- Hata ve uyarılar doğru aksiyonu düşündürüyor mu?
+- Süreç statüsü kullanıcı için net mi?
+- Ekran önceki yapıya göre daha sade ve daha yönetilebilir mi?
+- Kullanıcı işlem sırasında daha az tereddüt ediyor mu?
+- Bilgi önceliği doğru kurulmuş mu?
+
+ÇOK ÖNEMLİ:
+- Bu vaka beni ürün tasarımcısı gibi değil, güçlü bir functional/technical analyst gibi göstermeli
+- Yapay KPI, uydurma başarı yüzdesi veya boş pazarlama dili kullanma
+- İçerik gerçek iş dünyasına yakın ve profesyonel dursun
+- Gerekirse ilk iki vaka gibi ayrı detay sayfası halinde aç
+- Ana sayfada kısa kart özeti + “Detayı İncele” bağlantısı ver
+
+FINAL AMAÇ:
+Bu vaka sayfasını gören kişi şunu düşünmeli:
+“Bu aday yalnızca sistem ve entegrasyon analizi yapmıyor; süreçleri sadeleştirebiliyor, ekran mantığını iş kurallarıyla hizalayabiliyor ve operasyonel netlik sağlayan fonksiyonel analiz üretebiliyor.”
+```
+
+Böylece elinde 3 güçlü vaka olmuş oluyor.
+Bence bu üçlü, seni çok iyi taşır.
+
+İstersen bir sonraki adımda sana bunların site içindeki **en doğru yerleşimini** de söyleyeyim:
+
+* ana sayfada nasıl teaser olacak
+* detay sayfasına nasıl gidilecek
+* kart başlıkları nasıl kısa yazılacak
+* mobilde nasıl görünmeli

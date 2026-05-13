@@ -1,0 +1,245 @@
+Site içindeki mevcut “Analysis Cases / Analiz Vakaları” bölümünü tamamen profesyonel seviyeye çıkar.
+
+ÖNEMLİ:
+- Mevcut tasarım dilini büyük ölçüde koru
+- Renk paleti, premium görünüm, kart yapısı ve genel estetik bozulmasın
+- Ancak içerik mimarisi, başlıklar, kart metinleri, detay sayfaları ve dil kalitesi ciddi şekilde iyileştirilsin
+- Bu bölüm “demo showcase” gibi değil, gerçek bir Technical Analyst portfolio alanı gibi görünmeli
+- Amaç: recruiter ve hiring manager şunu düşünsün:
+  “Bu kişi yalnızca şık bir site yapmamış; gerçekten analiz düşüncesi, doğrulama disiplini ve teknik-iş köprüsü kurabilen güçlü bir analyst.”
+
+GENEL POZİSYONLAMA:
+Bu bölümün omurgası şu 3 mesajı taşımalı:
+1. Yapılandırılmış düşünce
+2. Doğrulama disiplini
+3. İş ve teknik taraf arasında netlik kurma
+
+BÖLÜM ADI:
+- İngilizce: Analysis Cases
+- Türkçe: Analiz Vakaları
+
+BÖLÜM ALT METNİ:
+İngilizce:
+Selected case studies that show how I structure ambiguity, validate system behavior, and turn technical findings into actionable analysis outputs.
+
+Türkçe:
+Belirsizliği yapılandırma, sistem davranışını doğrulama ve teknik bulguları aksiyon alınabilir analiz çıktısına dönüştürme biçimimi gösteren seçili vaka çalışmaları.
+
+KART YAPISI:
+Ana sayfadaki kartlar kısa, net ve profesyonel olsun.
+Her kartta:
+- vaka numarası
+- başlık
+- kısa özet
+- 3–5 etiket
+- “Vakayı İncele / View Case” butonu
+olsun.
+
+Kartlarda şu tarz yapay / demo hissi veren öğeleri azalt:
+- gereksiz büyük sayılar
+- dashboard hissi
+- ürün demosu estetiği
+- “çok yaratıcı ama gerçek dışı” içerik
+
+Kartlar daha çok şu hissi vermeli:
+problem → analiz → netleştirme → çıktı
+
+3 VAKA OLUŞTUR:
+Bu bölümde toplam 3 güçlü vaka olsun.
+“Coming soon” kartı kalmasın.
+Her biri ayrı detay sayfasına açılsın.
+
+VAKA 1
+TR Başlık:
+Uluslararası Ödeme Akışlarında Hata Nedenlerinin Ayrıştırılması
+EN Title:
+Separating Error Causes in International Payment Flows
+
+TR Kısa Özet:
+Sınır ötesi ödeme akışlarında benzer görünen hata çıktılarının; iş kuralı, entegrasyon, veri doğrulama ve operasyon kaynaklı nedenler üzerinden ayrıştırılmasına odaklanan analiz vakası.
+
+EN Short Summary:
+An analysis case focused on distinguishing similar visible failures by separating business rule, integration, data validation, and operational causes within cross-border payment flows.
+
+Etiketler:
+- Kök Neden Analizi / Root Cause Analysis
+- Ödeme Süreçleri / Payment Flows
+- Veri Doğrulama / Data Validation
+- Entegrasyon / Integration
+
+VAKA 2
+TR Başlık:
+Harici Servis Entegrasyonunda Alan Eşleşmesi ve Doğrulama Analizi
+EN Title:
+Field Mapping and Validation Analysis in External Service Integration
+
+TR Kısa Özet:
+İş gereksinimi ile request/response yapısı arasındaki uyumu değerlendirerek alan eşleşmesi, response yorumlama ve veri bütünlüğü risklerini görünür hale getiren entegrasyon analizi.
+
+EN Short Summary:
+An integration analysis case focused on evaluating alignment between business expectations and request/response structures, with emphasis on field mapping, response interpretation, and data integrity risks.
+
+Etiketler:
+- Entegrasyon Analizi / Integration Analysis
+- Mapping
+- Servis Davranışı / Service Behavior
+- Payload Doğrulama / Payload Validation
+
+VAKA 3
+TR Başlık:
+Operasyon Ekranının Sadeleştirilmesi ve Süreç Netliğinin Artırılması
+EN Title:
+Simplifying an Operational Screen and Improving Process Clarity
+
+TR Kısa Özet:
+Karmaşık operasyon ekranlarında karar noktalarını, bilgi önceliğini ve kullanıcı akışını sadeleştirerek daha net ve yönetilebilir bir yapı oluşturmayı hedefleyen fonksiyonel analiz vakası.
+
+EN Short Summary:
+A functional analysis case focused on simplifying decision points, information priority, and user flow in a complex operational screen to create a clearer and more manageable structure.
+
+Etiketler:
+- Süreç Analizi / Process Analysis
+- Fonksiyonel Tasarım / Functional Design
+- Ekran Mantığı / Screen Logic
+- Operasyonel Netlik / Operational Clarity
+
+DETAY SAYFASI KURGUSU:
+Her vaka ayrı detay sayfasına açılsın.
+Her detay sayfası aynı profesyonel şablonu kullansın.
+
+Her vaka detay sayfasında şu yapı olsun:
+
+1. Hero / Case Header
+- vaka numarası
+- vaka başlığı
+- kısa konumlandırma satırı
+- 4 kısa meta etiketi
+Örnek meta:
+Core Banking / Cross-Border Payments / Integration / UAT
+veya vakaya göre uygun versiyonlar
+
+2. Vakanın Amacı
+- Bu vakanın neyi görünür kıldığı kısa ve net anlatılsın
+- 2–3 kısa paragrafı geçmesin
+
+3. Problem Tanımı
+- Problemin ilk görünen yüzü
+- Neden ilk bakışta yanıltıcı olduğu
+- İş etkisi / operasyon etkisi
+- Teknik etki
+Bu alan net, profesyonel ve gerçek iş hayatı diliyle yazılsın
+
+4. Analiz Yaklaşımı
+Bu bölüm çok güçlü yazılsın.
+Madde madde ilerlesin.
+Her vakada analyst düşünce biçimi net görünsün.
+
+Ton şu olsun:
+- sistematik
+- sakin
+- güvenilir
+- net
+- aksiyon odaklı
+
+5. Nasıl Ayrıştırdım / Nasıl Netleştirdim
+Bu bölüm vaka özelinde farklılaşsın.
+Ama her vakada analistin yaptığı gerçek iş görünmeli:
+- akışın parçalanması
+- karar noktalarının bulunması
+- beklenen vs gerçekleşen davranışın ayrıştırılması
+- veri / response / süreç / ekran / iş kuralı karşılaştırmaları
+- kök neden hipotezlerinin test edilmesi
+
+6. Çıktılar / Deliverables
+Bu bölüm çok önemli.
+Her vakada analistin ürettiği somut çıktılar gösterilsin.
+Örnek deliverable türleri:
+- analiz notu
+- karar akışı
+- alan doğrulama tablosu
+- test senaryosu çerçevesi
+- UAT hazırlık notları
+- iş kuralı netleştirmesi
+- ekran sadeleştirme önerisi
+- hata kategorilendirme matrisi
+- entegrasyon delta listesi
+
+7. Sonuç / Değer
+Bu bölüm asla abartılı KPI masalı gibi yazılmasın.
+Gerçekçi, güçlü ve profesyonel olsun.
+Örnek etki türleri:
+- belirsizlik azaldı
+- ekipler arası ortak anlayış oluştu
+- test edilebilirlik arttı
+- hata nedenleri görünür hale geldi
+- düzeltme kapsamı netleşti
+- operasyonel takip kolaylaştı
+- gereksiz tekrar ve sürtünme azaltıldı
+
+DİL KALİTESİ KURALLARI:
+Bu madde çok kritik.
+
+Hem Türkçe hem İngilizce için:
+- Devriğe kaçan cümleleri düzelt
+- Yapay zekâ üretimi hissi veren kalıpları azalt
+- Aşırı süslü pazarlama dili kullanma
+- Recruiter ve hiring manager için net ve güven veren dil kullan
+- “demo”, “cool”, “fancy”, “creative showcase” gibi hislerden uzak dur
+- Gerçek analyst dili kullan
+- Daha az slogan, daha çok net düşünce
+- Cümleler orta uzunlukta olsun
+- Gereksiz tekrarları temizle
+- Fazla iddialı ama içi boş ifadeler kaldır
+- “Bu kişi analitik düşünüyor” hissi güçlü gelsin
+
+TÜRKÇE MOD:
+Türkçe metinler doğal, profesyonel ve akıcı olsun.
+Şu sorunlar temizlensin:
+- garip kelime dizilimleri
+- devrik cümleler
+- yapay ve mekanik ton
+- “tam ne dediği belli olmayan” cümleler
+
+İNGİLİZCE MOD:
+İngilizce metinler corporate ama doğal olsun.
+Şu tonda yaz:
+- business analyst / technical analyst portfolio dili
+- sade ama güçlü
+- recruiter-friendly
+- not flashy, but credible
+
+ASLA KULLANMA / AZALT:
+- fake KPI tarzı ifadeler
+- “improved by 40%” gibi uydurma sayılar
+- fazla ürün demo görselliği
+- dashboard hissi veren gereksiz kartlar
+- anlamsız büyük metrik kutuları
+- “generic showcase” hissi
+- çok uzun ve akademik paragraf blokları
+
+GÖRSEL YAPI:
+- Kart yapısını koru ama içerik daha premium görünsün
+- Hiyerarşi net olsun
+- Başlıklar kolay taransın
+- Etiketler düzenli olsun
+- Detay sayfasında bölümler temiz ayrışsın
+- Çok uzun metin tek blok halinde akmasın
+- Okunabilirlik artırılsın
+
+TEKNİK İSTEKLER:
+- TR/EN toggle düzgün çalışsın
+- Türkçe modda İngilizce section ismi kalmasın
+- İngilizce modda Türkçe section ismi kalmasın
+- Nav label’lar da locale’a göre tam değişsin
+- Analysis Cases bölümü navbar’da görünsün
+- Her vaka sayfası route ile çalışsın
+- Kartlardan ilgili vaka detayına düzgün geçiş olsun
+- Mobil görünüm bozulmasın
+
+SON AMAÇ:
+Bölümün sonunda ziyaretçi şu izlenimi edinsin:
+Bu kişi yalnızca sistem bilen biri değil; problemi ayrıştırabilen, entegrasyonu okuyabilen, veriyi doğrulayabilen, test mantığını bilen ve teknik-iş tarafı arasında gerçek netlik kurabilen güçlü bir Technical Analyst.
+
+Yani bu bölüm “şık bir demo alanı” gibi değil, güçlü bir analyst portfolio alanı gibi hissettirsin.
+
+Şimdi mevcut Analysis Cases / Analiz Vakaları bölümünü ve tüm ilgili detay sayfalarını bu çerçevede tamamen revize et.

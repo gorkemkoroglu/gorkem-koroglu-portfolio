@@ -1,0 +1,221 @@
+Site artık güçlü bir noktaya geldi. Tasarımı büyük ölçüde koru. Bu revizyonda yalnızca en kritik 3 alanı son kez profesyonel seviyeye çıkar:
+
+1. Hero
+2. Deneyim
+3. Analiz Yaklaşımım
+
+Amaç:
+Siteye giren recruiter veya hiring manager şu izlenimi net alsın:
+“Bu kişi yalnızca teknik terim bilen biri değil; gerçekten sistem davranışını okuyan, gereksinimi netleştiren, veriyi doğrulayan, test mantığını bilen, bankacılık deneyimi olan ve iş ile teknik ekipler arasında güvenilir netlik kurabilen bir Technical Analyst.”
+
+Önemli genel kurallar:
+
+* Tasarımı bozma, mevcut premium yapıyı koru
+* İçeriği daha tok, profesyonel ve recruiter-friendly hale getir
+* Türkçe ve İngilizce içerikler birbirine kaliteli ve doğal şekilde karşılık gelsin
+* Yapay zekâ üretimi hissi veren devrik, fazla uzun, süslü ya da belirsiz cümleleri temizle
+* Gereksiz tekrarları kaldır
+* Her metin daha sakin, güven veren, net ve kurumsal tonda olsun
+* Abartılı iddialar, kanıtlanamaz büyütmeler ve boş pazarlama dili kullanma
+* “Ben çok iyiyim” demek yerine bunu içerik kalitesiyle hissettir
+* Tüm copy şu 3 ana mesajı taşısın:
+
+  1. Yapılandırılmış düşünce
+  2. Doğrulama disiplini
+  3. İş ve teknik ekipler arasında netlik kurma
+
+---
+
+## A) HERO BÖLÜMÜNÜ SON KEZ GÜÇLENDİR
+
+Hero’da “Technical Analyst” positioning kalsın.
+Ama alt copy ve mini positioning daha güçlü olsun.
+
+İstediğim etki:
+
+* daha tok
+* daha net
+* daha recruiter-friendly
+* daha kurumsal
+* daha az genel
+
+Şunları özellikle hissettirsin:
+
+* sistem analizi
+* entegrasyon davranışı
+* veri doğrulama
+* test/UAT mantığı
+* çekirdek bankacılık ve sınır ötesi ödeme akışları
+
+Mevcut “ALAN:” satırı daha güçlü ve doğal bir mini positioning cümlesine dönüşsün.
+Sadece “Çekirdek Bankacılık” gibi dar ve kısa kalmasın.
+
+Örnek yön:
+“Odak alanım: çekirdek bankacılık, entegrasyon davranışı ve sınır ötesi ödeme akışlarında doğrulama odaklı sistem analizi”
+
+Ama bunu birebir kopyalama; daha iyi, daha doğal ve daha güçlü final copy yaz.
+
+Hero açıklama metni:
+
+* 2 kısa paragrafı geçmesin
+* net olsun
+* “iş ihtiyacı, sistem davranışı ve teknik doğrulama” eksenini taşısın
+* bankacılık ve finansal teknolojiler bağlamını hissettirsin
+* seni teknik yazılımcı değil, güçlü analitik köprü rolünde konumlandırsın
+
+CTA buton metinlerini de kontrol et:
+
+* daha profesyonel ve doğal hale getir
+* TR ve EN uyumlu olsun
+
+---
+
+## B) DENEYİM BÖLÜMÜNÜ CİDDİ ŞEKİLDE GÜÇLENDİR
+
+Bu bölüm şu an iyiye yakın ama yeterince güçlü değil.
+Daha “görev listesi” gibi duran yerleri, daha güçlü “analitik etki” anlatan hale getir.
+
+En kritik hedef:
+Experience bölümünü okuyunca kişi şunu hissetsin:
+“Bu aday yalnızca analiz yazmıyor; gereksinimi test edilebilir hale getiriyor, sistem davranışını sorguluyor, sapmaları görünür hale getiriyor ve ekipler arasında ortak anlayış kuruyor.”
+
+Kurallar:
+
+* Rol başlıkları gerçeğe yakın ve güvenli kalsın
+* Hero’da Technical Analyst positioning olabilir ama experience’ta kurumsal gerçekliğe yakın unvanlar kullan
+* TR ve EN modda doğal karşılıklar olsun
+
+Roller:
+
+* Yapı Kredi Teknoloji tarafı: Kıdemli İş Analisti / Senior Business Analyst ya da uygun kurumsal karşılığı
+* HDI Fibaemeklilik tarafı: Teknik İş Analisti / Technical Business Analyst
+
+Ama içerik title’dan daha önemli: açıklamaları çok güçlendir.
+
+Özellikle şunları yansıt:
+Mevcut deneyimime göre aşağıdaki ana gerçekleri daha iyi işle:
+
+Yapı Kredi Teknoloji / mevcut deneyim:
+
+* Başlangıçta daha geniş temel bankacılık odağı vardı; süreç sonradan daha belirgin biçimde para transferleri ve sınır ötesi ödeme alanına yoğunlaştı
+* Özellikle Azerbaijan / uluslararası yapı / border payments / core banking ilişkisi hissedilsin
+* Sistem analizi, entegrasyon davranışı, veri doğrulama, test/UAT ve hata kök neden analizi ana omurga olsun
+* API / servis / payload / response / alan eşleşmesi / statü davranışı gibi gerçek teknik BA işleri daha görünür olsun
+* Beklenen ile gerçekleşen sistem davranışını karşılaştırma kası daha net anlatılsın
+* Sessiz veri sapmalarını veya response/payload uyumsuzluklarını fark eden analitik yaklaşım görünür olsun
+* İş, test ve geliştirme ekipleri arasında netlik kurma açık biçimde hissedilsin
+* Operasyonel etkiyi de dikkate alan analist profili ortaya çıksın
+
+HDI Fibaemeklilik / önceki deneyim:
+
+* İş gereksinimlerini fonksiyonel spesifikasyona dönüştürme
+* PL/SQL tabanlı veri analizi ve sistem doğrulama
+* UAT, test senaryosu, süreç akışı, ekran / UI spesifikasyonu
+* Tutarsızlıkların tespiti ve yapılandırılmış iyileştirme
+* Birden fazla paydaş ve ekip arasında koordinasyon
+  daha güçlü ve daha profesyonel yazılsın
+
+En önemli kural:
+Maddeler daha “etki biçimi” anlatsın.
+Yani şu tarza yaklaş:
+
+* gereksinimi netleştirdim
+* sistem davranışını iş beklentisiyle karşılaştırdım
+* doğrulanabilir kabul kriterleri oluşturdum
+* entegrasyon ve veri katmanındaki sapmaları görünür hale getirdim
+* test/UAT akışını analizin doğal devamı olarak ele aldım
+* ekipler arasında ortak referans oluşturdum
+
+Kaçınılacak şeyler:
+
+* boş görev listesi
+* çok genel BA klişeleri
+* “çalıştım, yaptım, destek oldum” seviyesinde zayıf anlatım
+* gerçekçi olmayan sayısal KPI uydurmaları
+* inquiry mantığı gibi aşırı teknik ama recruiter için anlamsız detayların ham biçimde yazılması
+
+İstenen çıktı:
+
+* Her deneyim kartında daha güçlü bir giriş özeti
+* Daha tok, net, profesyonel 5-6 madde
+* Etiketler de daha anlamlı hale gelsin
+* Türkçe ve İngilizce sürümleri doğal olsun
+
+---
+
+## C) “ANALİZ YAKLAŞIMIM” BÖLÜMÜNÜ BAŞTAN POLISH ET
+
+Bu alan çok kritik.
+Burası okunduğunda benim analitik kimliğim gerçekten görünmeli.
+
+Şu hissi vermeli:
+
+* problemi semptomdan ayırırım
+* beklenen ile gerçekleşeni karşılaştırırım
+* belirsizliği uygulanabilir karara dönüştürürüm
+* doğrulamayı sürecin merkezine alırım
+* analizi teslim edilebilir çıktıya çeviririm
+
+Mevcut yapıyı koruyabilirsin ama copy kalitesini yükselt.
+İçerik daha doğal, daha net ve daha tok olsun.
+
+İstediğim etki:
+“Bu kişi problem çözmeye başlamadan önce yapıyı okur, katmanlara ayırır, sistem davranışını sorgular ve analizi ekiplerin kullanabileceği net çıktıya dönüştürür.”
+
+Bu bölümde özellikle şu temaları en güçlü şekilde işle:
+
+1. Problemi katmanlarına ayırma
+2. Beklenen ile gerçekleşeni karşılaştırma
+3. Belirsiz ifadeleri net kurallara dönüştürme
+4. Doğrulamayı analiz sürecinin parçası görme
+5. İş ve teknik ekipler arasında ortak anlayış kurma
+6. Analizi teslim edilebilir, test edilebilir sonuca dönüştürme
+
+Metin kuralları:
+
+* daha kısa cümleler
+* daha az soyut anlatım
+* daha az devrik ifade
+* daha doğal Türkçe
+* daha güven veren ton
+* daha az “uydurma kişisel gelişim cümlesi”
+* daha çok gerçek analist düşünme biçimi
+
+TR modda bazı metinler hâlâ yapay ve tuhaf his veriyorsa hepsini temizle.
+Bölümün tamamında son kalite kontrol yap.
+
+---
+
+## D) TÜRKÇE / İNGİLİZCE KALİTE KONTROL
+
+Bu revizyon sadece içerik eklemek değil, kalite yükseltmek için.
+O yüzden Hero + Experience + Analiz Yaklaşımım içindeki tüm metinleri iki dilde de son kez kontrol et.
+
+Türkçe için:
+
+* doğal profesyonel Türkçe kullan
+* devrik cümleleri azalt
+* uzun ve yorucu cümleleri kısalt
+* recruiter’ın ilk okuyuşta anlamasını sağla
+* hiring manager için güven veren bir netlik oluştur
+
+İngilizce için:
+
+* doğal business English kullan
+* Türkçeden birebir çevrilmiş hissi olmasın
+* over-marketing dili olmasın
+* technical analyst / business analyst / systems analysis / validation / integration behavior gibi ana kavramlar güçlü kalsın
+
+---
+
+## E) SON HEDEF
+
+Bu revizyon sonunda şu sonuç çıkmalı:
+
+* Hero daha güçlü ve net olsun
+* Experience bölümü gerçekten güçlü analitik etki anlatsın
+* Analiz Yaklaşımım bölümü beni ayırt edici hale getirsin
+* Site genelinde “aranan, güven veren, sakin ama güçlü Technical Analyst” hissi artsın
+
+Lütfen bu revizyonu içerik kalitesine odaklanarak uygula.
+Tasarımı büyük ölçüde koru; esas işi copy, positioning ve profesyonel ton tarafında yap.

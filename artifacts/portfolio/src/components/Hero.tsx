@@ -133,21 +133,21 @@ export function Hero() {
               ))}
             </div>
 
-            {/* Contact info */}
+            {/* Contact info — full row on tablet/desktop, just location on mobile (Footer has full contact) */}
             <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-5 text-xs md:text-sm text-muted-foreground">
-              <a href="mailto:gorkem.koroglu@hotmail.com" className="flex items-center gap-2 hover:text-primary transition-colors break-all">
-                <Mail className="h-4 w-4 shrink-0" />
-                gorkem.koroglu@hotmail.com
-              </a>
               <span className="flex items-center gap-2">
                 <MapPin className="h-4 w-4 shrink-0" />
                 {h.location}
               </span>
+              <a href="mailto:gorkem.koroglu@hotmail.com" className="hidden sm:flex items-center gap-2 hover:text-primary transition-colors break-all">
+                <Mail className="h-4 w-4 shrink-0" />
+                gorkem.koroglu@hotmail.com
+              </a>
               <a
                 href="https://linkedin.com/in/gorkemmkoroglu"
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-2 hover:text-primary transition-colors break-all"
+                className="hidden sm:flex items-center gap-2 hover:text-primary transition-colors break-all"
               >
                 <Linkedin className="h-4 w-4 shrink-0" />
                 linkedin.com/in/gorkemmkoroglu

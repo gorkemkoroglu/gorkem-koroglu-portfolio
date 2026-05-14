@@ -28,19 +28,21 @@ export function Footer() {
         >
           <a
             href="mailto:gorkem.koroglu@hotmail.com"
-            className="inline-flex items-center justify-center gap-2.5 h-11 px-4 md:px-6 rounded-lg bg-primary text-primary-foreground text-xs md:text-sm font-semibold hover:bg-primary/90 transition-all hover:shadow-[0_0_20px_rgba(0,200,200,0.2)] break-all"
+            aria-label={t.footer.heading + " — Email"}
+            className="inline-flex items-center justify-center gap-2.5 h-11 px-4 md:px-6 rounded-lg bg-primary text-primary-foreground text-[13px] md:text-sm font-semibold hover:bg-primary/90 transition-all hover:shadow-[0_0_20px_rgba(0,200,200,0.2)]"
           >
             <Mail className="w-4 h-4 shrink-0" />
-            <span className="truncate">gorkem.koroglu@hotmail.com</span>
+            <span>gorkem.koroglu@hotmail.com</span>
           </a>
           <a
             href="https://linkedin.com/in/gorkemmkoroglu"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center justify-center gap-2.5 h-11 px-4 md:px-6 rounded-lg border border-border bg-card text-xs md:text-sm font-semibold hover:border-primary/50 hover:text-primary transition-all break-all"
+            aria-label="LinkedIn"
+            className="inline-flex items-center justify-center gap-2.5 h-11 px-4 md:px-6 rounded-lg border border-border bg-card text-[13px] md:text-sm font-semibold hover:border-primary/50 hover:text-primary transition-all"
           >
             <Linkedin className="w-4 h-4 shrink-0" />
-            <span className="truncate">linkedin.com/in/gorkemmkoroglu</span>
+            <span>linkedin.com/in/gorkemmkoroglu</span>
           </a>
         </motion.div>
 

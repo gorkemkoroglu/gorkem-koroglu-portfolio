@@ -24,6 +24,7 @@ export function useTypewriter(words: string[], speed = 60, pause = 1800) {
       setDeleting(false);
       setWordIdx((i) => (i + 1) % words.length);
     }
+    return undefined;
   }, [charIdx, deleting, wordIdx, words, speed, pause]);
 
   useEffect(() => {

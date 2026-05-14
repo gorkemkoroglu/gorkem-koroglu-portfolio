@@ -98,9 +98,11 @@ export function Navbar() {
         </div>
 
         {/* Language Toggle */}
-        <div className="hidden md:flex items-center gap-1 bg-card border border-border/60 rounded-full p-1">
+        <div className="hidden md:flex items-center gap-1 bg-card border border-border/60 rounded-full p-1" role="group" aria-label={lang === "tr" ? "Dil seçimi" : "Language selection"}>
           <button
             onClick={() => setLang("tr")}
+            aria-pressed={lang === "tr"}
+            aria-label="Türkçe"
             className={`text-xs font-bold px-3 py-1 rounded-full transition-all duration-200 ${
               lang === "tr"
                 ? "bg-primary text-primary-foreground shadow-sm"
@@ -111,6 +113,8 @@ export function Navbar() {
           </button>
           <button
             onClick={() => setLang("en")}
+            aria-pressed={lang === "en"}
+            aria-label="English"
             className={`text-xs font-bold px-3 py-1 rounded-full transition-all duration-200 ${
               lang === "en"
                 ? "bg-primary text-primary-foreground shadow-sm"
@@ -125,6 +129,9 @@ export function Navbar() {
         <button
           className="lg:hidden text-foreground"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label={mobileMenuOpen ? (lang === "tr" ? "Menüyü kapat" : "Close menu") : (lang === "tr" ? "Menüyü aç" : "Open menu")}
+          aria-expanded={mobileMenuOpen}
+          aria-controls="mobile-nav"
         >
           {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
@@ -133,6 +140,7 @@ export function Navbar() {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
+            id="mobile-nav"
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
@@ -153,10 +161,12 @@ export function Navbar() {
                 </button>
               ))}
               <div className="flex items-center gap-2 px-3 pt-3 mt-2 border-t border-border/50">
-                <span className="text-xs text-muted-foreground">Language:</span>
-                <div className="flex items-center gap-1 bg-card border border-border/60 rounded-full p-0.5">
+                <span className="text-xs text-muted-foreground">{lang === "tr" ? "Dil:" : "Language:"}</span>
+                <div className="flex items-center gap-1 bg-card border border-border/60 rounded-full p-0.5" role="group" aria-label={lang === "tr" ? "Dil seçimi" : "Language selection"}>
                   <button
                     onClick={() => setLang("tr")}
+                    aria-pressed={lang === "tr"}
+                    aria-label="Türkçe"
                     className={`text-xs font-bold px-3 py-1 rounded-full transition-all ${
                       lang === "tr" ? "bg-primary text-primary-foreground" : "text-muted-foreground"
                     }`}
@@ -165,6 +175,8 @@ export function Navbar() {
                   </button>
                   <button
                     onClick={() => setLang("en")}
+                    aria-pressed={lang === "en"}
+                    aria-label="English"
                     className={`text-xs font-bold px-3 py-1 rounded-full transition-all ${
                       lang === "en" ? "bg-primary text-primary-foreground" : "text-muted-foreground"
                     }`}

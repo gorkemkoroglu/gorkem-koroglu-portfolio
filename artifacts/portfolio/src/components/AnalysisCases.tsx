@@ -32,7 +32,7 @@ export function AnalysisCases() {
           <p className="text-muted-foreground max-w-2xl text-[15px] md:text-sm leading-[1.65]">{subtitle}</p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-5">
+        <div className="flex md:grid md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-5 overflow-x-auto md:overflow-visible snap-x snap-mandatory -mx-4 px-4 md:mx-0 md:px-0 pb-4 md:pb-0 scrollbar-hide">
           {cases.map((c, idx) => {
             const content = lang === "tr" ? c.tr : c.en;
             return (
@@ -42,7 +42,7 @@ export function AnalysisCases() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.08 }}
-                className="bg-background border border-border/60 rounded-2xl p-5 md:p-6 flex flex-col hover:border-primary/40 hover:shadow-[0_0_28px_rgba(0,200,200,0.07)] transition-all duration-300 group cursor-pointer"
+                className="bg-background border border-border/60 rounded-2xl p-5 md:p-6 flex flex-col hover:border-primary/40 hover:shadow-[0_0_28px_rgba(0,200,200,0.07)] transition-all duration-300 group cursor-pointer min-w-[82%] sm:min-w-[55%] md:min-w-0 snap-start shrink-0 md:shrink"
                 onClick={() => navigate(`/cases/${c.id}`)}
               >
                 {/* Case number */}

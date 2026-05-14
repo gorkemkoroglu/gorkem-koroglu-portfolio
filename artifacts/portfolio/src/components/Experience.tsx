@@ -1,10 +1,10 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { Briefcase, Calendar, ChevronDown, ChevronRight, MapPin } from "lucide-react";
+import { Briefcase, Calendar, ChevronDown, MapPin } from "lucide-react";
 import { useState } from "react";
 import { useLang } from "@/lib/i18n";
 
 export function Experience() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const e = t.experience;
   const [openIdx, setOpenIdx] = useState<number>(-1);
 
@@ -16,14 +16,17 @@ export function Experience() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mb-10 md:mb-14"
+          className="mb-6 md:mb-10"
         >
           <p className="text-xs font-mono uppercase tracking-widest text-primary mb-3">Career</p>
           <h2 className="text-3xl md:text-4xl font-bold font-heading">{e.heading}</h2>
           <div className="mt-4 h-px w-16 bg-primary rounded-full" />
+          <p className="mt-4 text-xs md:text-sm text-muted-foreground/80">
+            {lang === "tr" ? "Detayları görmek için bir pozisyona tıklayın" : "Click a role to expand the details"}
+          </p>
         </motion.div>
 
-        <div className="space-y-3 md:space-y-6">
+        <div className="space-y-3">
           {e.jobs.map((exp, index) => {
             const isOpen = openIdx === index;
             return (
@@ -32,15 +35,20 @@ export function Experience() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group bg-card border border-border/60 rounded-2xl p-5 md:p-8 hover:border-primary/30 transition-all duration-300"
+                transition={{ duration: 0.4, delay: index * 0.06 }}
+                className={`bg-card border rounded-2xl transition-all duration-300 ${
+                  isOpen
+                    ? "border-primary/40 shadow-[0_0_28px_rgba(0,200,200,0.06)]"
+                    : "border-border/60 hover:border-primary/30"
+                }`}
               >
-                {/* Header — clickable on mobile to toggle */}
+                {/* Header — always clickable */}
                 <button
                   type="button"
                   onClick={() => setOpenIdx(isOpen ? -1 : index)}
-                  className="md:cursor-default w-full text-left flex flex-col md:flex-row md:items-start md:justify-between gap-3 md:gap-4 md:mb-5"
+                  className="w-full text-left p-5 md:p-6 flex flex-col md:flex-row md:items-start md:justify-between gap-3 md:gap-6"
                   aria-expanded={isOpen}
+                  aria-controls={`exp-panel-${index}`}
                 >
                   <div className="min-w-0 flex-1">
                     <div className="flex items-center gap-2 mb-1">
@@ -64,63 +72,46 @@ export function Experience() {
                       </span>
                     )}
                     <ChevronDown
-                      className={`md:hidden w-5 h-5 text-primary/70 ml-auto transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+                      className={`w-5 h-5 text-primary/70 ml-auto md:ml-0 md:mt-1 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
                     />
                   </div>
                 </button>
 
-                {/* Body — accordion on mobile, always visible on desktop */}
-                <div className="hidden md:block">
-                  <p className="text-sm text-foreground/70 mb-5 italic border-l-2 border-primary/40 pl-3 leading-[1.65]">{exp.summary}</p>
-                  <ul className="space-y-2 mb-6">
-                    {exp.items.map((item, i) => (
-                      <li key={i} className="flex items-start gap-2 text-sm text-foreground/80 leading-[1.65]">
-                        <ChevronRight className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                        <span className="flex-1">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="flex flex-wrap gap-2">
-                    {exp.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-2.5 py-1 rounded-md text-xs font-medium bg-primary/10 text-primary border border-primary/20"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
+                {/* Body — accordion on all viewports */}
                 <AnimatePresence initial={false}>
                   {isOpen && (
                     <motion.div
                       key="content"
+                      id={`exp-panel-${index}`}
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3, ease: "easeInOut" }}
-                      className="md:hidden overflow-hidden"
+                      className="overflow-hidden"
                     >
-                      <div className="pt-4">
-                        <p className="text-[15px] text-foreground/70 mb-4 italic border-l-2 border-primary/40 pl-3 leading-[1.65]">{exp.summary}</p>
-                        <ul className="space-y-3 mb-5">
-                          {exp.items.map((item, i) => (
-                            <li key={i} className="flex items-start gap-2 text-[15px] text-foreground/80 leading-[1.65]">
-                              <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary/70 shrink-0" />
-                              <span className="flex-1">{item}</span>
-                            </li>
-                          ))}
-                        </ul>
-                        <div className="flex flex-wrap gap-1.5">
-                          {exp.tags.map((tag) => (
-                            <span
-                              key={tag}
-                              className="px-2 py-1 rounded-md text-[11px] font-medium bg-primary/10 text-primary border border-primary/20"
-                            >
-                              {tag}
-                            </span>
-                          ))}
+                      <div className="px-5 md:px-6 pb-5 md:pb-6 pt-0">
+                        <div className="border-t border-border/40 pt-5">
+                          <p className="text-[15px] md:text-sm text-foreground/70 mb-5 italic border-l-2 border-primary/40 pl-3 leading-[1.65]">
+                            {exp.summary}
+                          </p>
+                          <ul className="space-y-2.5 mb-5">
+                            {exp.items.map((item, i) => (
+                              <li key={i} className="flex items-start gap-2.5 text-[15px] md:text-sm text-foreground/80 leading-[1.65]">
+                                <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary/70 shrink-0" />
+                                <span className="flex-1">{item}</span>
+                              </li>
+                            ))}
+                          </ul>
+                          <div className="flex flex-wrap gap-1.5 md:gap-2">
+                            {exp.tags.map((tag) => (
+                              <span
+                                key={tag}
+                                className="px-2.5 py-1 rounded-md text-[11px] md:text-xs font-medium bg-primary/10 text-primary border border-primary/20"
+                              >
+                                {tag}
+                              </span>
+                            ))}
+                          </div>
                         </div>
                       </div>
                     </motion.div>

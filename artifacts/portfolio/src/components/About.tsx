@@ -40,10 +40,10 @@ export function About() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.07 }}
-                  className="flex items-start gap-3 text-sm text-foreground/80"
+                  className="flex items-start gap-2.5 md:gap-3 text-[15px] md:text-sm text-foreground/80 leading-[1.6]"
                 >
-                  <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                  {b}
+                  <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-1" />
+                  <span className="flex-1">{b}</span>
                 </motion.li>
               ))}
             </ul>

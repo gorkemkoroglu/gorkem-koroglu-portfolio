@@ -37,9 +37,9 @@ export function WorkHighlights() {
                 <div className="w-8 h-8 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center text-xs font-bold font-mono text-primary shrink-0 group-hover:bg-primary/20 transition-colors">
                   {areaIcons[idx]}
                 </div>
-                <h3 className="font-semibold text-foreground text-sm leading-snug">{item.title}</h3>
+                <h3 className="font-semibold text-foreground text-[15px] md:text-sm leading-snug">{item.title}</h3>
               </div>
-              <p className="text-sm text-foreground/65 leading-relaxed">{item.text}</p>
+              <p className="text-[15px] md:text-sm text-foreground/70 md:text-foreground/65 leading-[1.65]">{item.text}</p>
             </motion.div>
           ))}
         </div>

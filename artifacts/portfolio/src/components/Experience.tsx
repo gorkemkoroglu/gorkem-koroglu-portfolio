@@ -56,13 +56,14 @@ export function Experience() {
                 </div>
               </div>
 
-              <p className="text-sm text-foreground/70 mb-4 md:mb-5 italic border-l-2 border-primary/40 pl-3 leading-relaxed">{exp.summary}</p>
+              <p className="text-[15px] md:text-sm text-foreground/70 mb-4 md:mb-5 italic border-l-2 border-primary/40 pl-3 leading-[1.65]">{exp.summary}</p>
 
-              <ul className="space-y-2 mb-5 md:mb-6">
+              <ul className="space-y-3 md:space-y-2 mb-5 md:mb-6">
                 {exp.items.map((item, i) => (
-                  <li key={i} className="flex items-start gap-2 text-sm text-foreground/80 leading-relaxed">
-                    <ChevronRight className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                    <span>{item}</span>
+                  <li key={i} className="flex items-start gap-2 text-[15px] md:text-sm text-foreground/80 leading-[1.65]">
+                    <span className="mt-2 md:mt-2 w-1.5 h-1.5 rounded-full bg-primary/70 shrink-0 md:hidden" />
+                    <ChevronRight className="hidden md:block w-4 h-4 text-primary shrink-0 mt-0.5" />
+                    <span className="flex-1">{item}</span>
                   </li>
                 ))}
               </ul>

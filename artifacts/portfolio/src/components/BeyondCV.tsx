@@ -243,12 +243,12 @@ export function BeyondCV() {
                 </div>
 
                 {/* Question */}
-                <h3 className="font-semibold text-foreground text-sm mb-3 leading-snug group-hover:text-primary/90 transition-colors">
+                <h3 className="font-semibold text-foreground text-[15px] md:text-sm mb-3 leading-snug group-hover:text-primary/90 transition-colors">
                   {item.question}
                 </h3>
 
                 {/* Answer */}
-                <p className="text-sm text-foreground/60 leading-relaxed">
+                <p className="text-[15px] md:text-sm text-foreground/65 md:text-foreground/60 leading-[1.65]">
                   {item.answer}
                 </p>
 

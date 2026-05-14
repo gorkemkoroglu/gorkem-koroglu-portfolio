@@ -51,7 +51,7 @@ export function Skills() {
                 {cat.skills.map((skill, i) => (
                   <span
                     key={i}
-                    className="px-2.5 py-1 rounded-md bg-card border border-border/50 text-xs text-muted-foreground hover:text-foreground hover:border-border transition-colors cursor-default"
+                    className="px-2.5 py-1 rounded-md bg-card border border-border/50 text-[13px] md:text-xs text-muted-foreground hover:text-foreground hover:border-border transition-colors cursor-default"
                   >
                     {skill}
                   </span>

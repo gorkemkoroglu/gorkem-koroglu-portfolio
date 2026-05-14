@@ -23,7 +23,7 @@ export function SampleWork() {
           <p className="text-xs font-mono uppercase tracking-widest text-primary mb-3">{s.label}</p>
           <h2 className="text-3xl md:text-4xl font-bold font-heading mb-3">{s.heading}</h2>
           <div className="h-px w-16 bg-primary rounded-full mb-4 md:mb-5" />
-          <p className="text-muted-foreground max-w-2xl text-sm leading-relaxed">{s.subtitle}</p>
+          <p className="text-muted-foreground max-w-2xl text-[15px] md:text-sm leading-[1.65]">{s.subtitle}</p>
         </motion.div>
 
         {/* ── Block 1: How I approach a problem ── */}
@@ -49,11 +49,11 @@ export function SampleWork() {
                   <span className="font-mono text-[11px] text-primary/60 mt-0.5 shrink-0 leading-none pt-px">
                     {String(idx + 1).padStart(2, "0")}
                   </span>
-                  <h4 className="text-sm font-semibold text-foreground leading-snug group-hover:text-primary transition-colors">
+                  <h4 className="text-[15px] md:text-sm font-semibold text-foreground leading-snug group-hover:text-primary transition-colors">
                     {p.title}
                   </h4>
                 </div>
-                <p className="text-xs text-muted-foreground leading-relaxed pl-6">{p.text}</p>
+                <p className="text-[13.5px] md:text-xs text-muted-foreground/90 md:text-muted-foreground leading-[1.65] pl-6">{p.text}</p>
               </motion.div>
             ))}
           </div>
@@ -92,12 +92,12 @@ export function SampleWork() {
                   </div>
 
                   {/* Intro */}
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-4">{p.intro}</p>
+                  <p className="text-[15px] md:text-sm text-muted-foreground leading-[1.65] mb-4">{p.intro}</p>
 
                   {/* Points */}
                   <ul className="space-y-2 mb-4">
                     {(p.points as string[]).map((pt: string, i: number) => (
-                      <li key={i} className="flex items-start gap-2.5 text-sm text-foreground/75">
+                      <li key={i} className="flex items-start gap-2.5 text-[15px] md:text-sm text-foreground/80 md:text-foreground/75 leading-[1.6]">
                         <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary/60 shrink-0" />
                         <span className="leading-relaxed">{pt}</span>
                       </li>
@@ -130,7 +130,7 @@ export function SampleWork() {
           className="border border-primary/20 bg-primary/5 rounded-xl px-6 py-5 flex items-start gap-4"
         >
           <div className="w-0.5 self-stretch bg-primary/50 rounded-full shrink-0" />
-          <p className="text-sm text-foreground/80 leading-relaxed italic">{s.closing}</p>
+          <p className="text-[15px] md:text-sm text-foreground/80 leading-[1.65] italic">{s.closing}</p>
         </motion.div>
 
       </div>

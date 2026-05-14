@@ -29,7 +29,7 @@ export function AnalysisCases() {
           <p className="text-xs font-mono uppercase tracking-widest text-primary mb-3">{label}</p>
           <h2 className="text-3xl md:text-4xl font-bold font-heading mb-3">{heading}</h2>
           <div className="h-px w-16 bg-primary rounded-full mb-4 md:mb-5" />
-          <p className="text-muted-foreground max-w-2xl text-sm leading-relaxed">{subtitle}</p>
+          <p className="text-muted-foreground max-w-2xl text-[15px] md:text-sm leading-[1.65]">{subtitle}</p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-5">
@@ -53,12 +53,12 @@ export function AnalysisCases() {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-sm font-semibold text-foreground leading-snug mb-3 group-hover:text-primary transition-colors">
+                <h3 className="text-[15px] md:text-sm font-semibold text-foreground leading-snug mb-3 group-hover:text-primary transition-colors">
                   {content.title}
                 </h3>
 
                 {/* Summary */}
-                <p className="text-xs text-muted-foreground leading-relaxed mb-5 flex-1">
+                <p className="text-[13.5px] md:text-xs text-muted-foreground/90 md:text-muted-foreground leading-[1.65] mb-5 flex-1">
                   {content.summary}
                 </p>
 

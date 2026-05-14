@@ -267,6 +267,33 @@
     scroll-margin-top: 5rem;
   }
 
+  /* Premium spotlight effect: cursor-following soft glow on cards
+     (auto-disabled on touch via @media hover, and on reduced motion) */
+  .spotlight-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    background: radial-gradient(
+      var(--spot-size, 320px) circle at var(--spot-x, 50%) var(--spot-y, 50%),
+      var(--spot-color, rgba(0, 210, 200, 0.1)),
+      transparent 70%
+    );
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .spotlight-card:hover::before {
+      opacity: 1;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .spotlight-card::before {
+      display: none;
+    }
+  }
+
   /* Consistent, visible focus ring for keyboard users (recruiter accessibility audits) */
   :focus-visible {
     outline: 2px solid hsl(var(--primary));

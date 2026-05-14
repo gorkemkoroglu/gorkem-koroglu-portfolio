@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useLang } from "@/lib/i18n";
+import { SpotlightCard } from "./SpotlightCard";
 
 const areaIcons = ["01", "02", "03", "04", "05", "06"];
 
@@ -38,15 +39,19 @@ export function WorkHighlights() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: idx * 0.07 }}
-              className="group bg-background border border-border/60 rounded-2xl p-5 md:p-6 hover:border-primary/30 hover:shadow-[0_0_24px_rgba(0,200,200,0.05)] transition-all duration-300 w-[calc(100vw-2rem)] sm:w-[calc(50vw-2rem)] md:w-auto shrink-0 md:shrink snap-center"
+              className="w-[calc(100vw-2rem)] sm:w-[calc(50vw-2rem)] md:w-auto shrink-0 md:shrink snap-center"
             >
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-8 h-8 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center text-xs font-bold font-mono text-primary shrink-0 group-hover:bg-primary/20 transition-colors">
-                  {areaIcons[idx]}
+              <SpotlightCard className="group h-full bg-background border border-border/60 rounded-2xl p-5 md:p-6 hover:border-primary/30 transition-colors duration-300 overflow-hidden">
+                <div className="relative z-10">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-8 h-8 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center text-xs font-bold font-mono text-primary shrink-0 group-hover:bg-primary/20 transition-colors">
+                      {areaIcons[idx]}
+                    </div>
+                    <h3 className="font-semibold text-foreground text-[15px] md:text-sm leading-snug">{item.title}</h3>
+                  </div>
+                  <p className="text-[15px] md:text-sm text-foreground/70 md:text-foreground/65 leading-[1.65]">{item.text}</p>
                 </div>
-                <h3 className="font-semibold text-foreground text-[15px] md:text-sm leading-snug">{item.title}</h3>
-              </div>
-              <p className="text-[15px] md:text-sm text-foreground/70 md:text-foreground/65 leading-[1.65]">{item.text}</p>
+              </SpotlightCard>
             </motion.div>
           ))}
         </div>

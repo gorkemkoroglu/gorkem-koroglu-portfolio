@@ -45,7 +45,7 @@ export function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: idx * 0.07 }}
-              className="bg-background border border-border/60 rounded-2xl p-5 md:p-6 hover:border-primary/40 hover:shadow-[0_0_24px_rgba(0,200,200,0.06)] transition-all duration-300 group w-[78%] sm:w-[55%] md:w-auto shrink-0 md:shrink snap-start"
+              className="bg-background border border-border/60 rounded-2xl p-5 md:p-6 hover:border-primary/40 hover:shadow-[0_0_24px_rgba(0,200,200,0.06)] transition-all duration-300 group w-[calc(100vw-2rem)] sm:w-[calc(50vw-2rem)] md:w-auto shrink-0 md:shrink snap-center"
             >
               <div className="flex items-center gap-3 mb-4 md:mb-5">
                 <div className="w-9 h-9 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center text-primary group-hover:bg-primary/20 transition-colors shrink-0">

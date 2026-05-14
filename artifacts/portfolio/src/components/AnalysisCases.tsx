@@ -47,7 +47,7 @@ export function AnalysisCases() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.08 }}
-                className="bg-background border border-border/60 rounded-2xl p-5 md:p-6 flex flex-col hover:border-primary/40 hover:shadow-[0_0_28px_rgba(0,200,200,0.07)] transition-all duration-300 group cursor-pointer w-[78%] sm:w-[55%] md:w-auto shrink-0 md:shrink snap-start"
+                className="bg-background border border-border/60 rounded-2xl p-5 md:p-6 flex flex-col hover:border-primary/40 hover:shadow-[0_0_28px_rgba(0,200,200,0.07)] transition-all duration-300 group cursor-pointer w-[calc(100vw-2rem)] sm:w-[calc(50vw-2rem)] md:w-auto shrink-0 md:shrink snap-center"
                 onClick={() => navigate(`/cases/${c.id}`)}
               >
                 {/* Case number */}

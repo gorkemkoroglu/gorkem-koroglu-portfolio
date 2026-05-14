@@ -11,6 +11,7 @@ import { BeyondCV } from "../components/BeyondCV";
 import { Footer } from "../components/Footer";
 import { CursorGlow } from "../components/CursorGlow";
 import { ScrollProgress } from "../components/ScrollProgress";
+import { FloatingActions } from "../components/FloatingActions";
 
 export default function Home() {
   return (
@@ -36,6 +37,7 @@ export default function Home() {
         <BeyondCV />
       </main>
       <Footer />
+      <FloatingActions />
     </div>
   );
 }

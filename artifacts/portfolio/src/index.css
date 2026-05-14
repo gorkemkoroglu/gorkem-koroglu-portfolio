@@ -261,6 +261,19 @@
     }
   }
 
+  /* Anchor jumps must clear the fixed navbar (h-16 = 4rem) */
+  section[id],
+  footer[id] {
+    scroll-margin-top: 5rem;
+  }
+
+  /* Consistent, visible focus ring for keyboard users (recruiter accessibility audits) */
+  :focus-visible {
+    outline: 2px solid hsl(var(--primary));
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
   /* Hide ugly search cancel button in Chrome until we can style it properly */
   input[type="search"]::-webkit-search-cancel-button {
     @apply hidden;

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Linkedin, Copy, Check } from "lucide-react";
+import { Mail, Linkedin, Copy, Check, Download } from "lucide-react";
 import { useLang } from "@/lib/i18n";
 
 const EMAIL = "gorkem.koroglu@hotmail.com";
@@ -86,6 +86,16 @@ export function Footer() {
           >
             <Linkedin className="w-4 h-4 shrink-0" />
             <span>linkedin.com/in/gorkemmkoroglu</span>
+          </a>
+
+          <a
+            href="/Gorkem_Koroglu_CV.pdf"
+            download="Gorkem_Koroglu_CV.pdf"
+            aria-label={lang === "tr" ? "CV'yi indir (PDF)" : "Download CV (PDF)"}
+            className="inline-flex items-center justify-center gap-2.5 h-11 px-4 md:px-6 rounded-lg border border-border bg-card text-[13px] md:text-sm font-semibold hover:border-primary/50 hover:text-primary transition-all"
+          >
+            <Download className="w-4 h-4 shrink-0" />
+            <span>{lang === "tr" ? "CV İndir (PDF)" : "Download CV (PDF)"}</span>
           </a>
         </motion.div>
 

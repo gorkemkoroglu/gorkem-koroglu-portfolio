@@ -94,7 +94,8 @@ export function ParticleCanvas() {
   return (
     <canvas
       ref={canvasRef}
-      className="absolute inset-0 w-full h-full pointer-events-none opacity-60"
+      aria-hidden="true"
+      className="hidden md:block absolute inset-0 w-full h-full pointer-events-none opacity-60"
     />
   );
 }

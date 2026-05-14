@@ -1,10 +1,31 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Linkedin } from "lucide-react";
+import { Mail, Linkedin, Copy, Check } from "lucide-react";
 import { useLang } from "@/lib/i18n";
 
+const EMAIL = "gorkem.koroglu@hotmail.com";
+
 export function Footer() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const f = t.footer;
+  const [copied, setCopied] = useState(false);
+
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(EMAIL);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      const ta = document.createElement("textarea");
+      ta.value = EMAIL;
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand("copy"); } catch { /* noop */ }
+      document.body.removeChild(ta);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }
+  };
 
   return (
     <footer id="contact" className="py-14 md:py-20 bg-background border-t border-border/50">
@@ -24,16 +45,38 @@ export function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="flex flex-col md:flex-row justify-center gap-3 md:gap-4 mb-10 md:mb-14"
+          className="flex flex-col md:flex-row justify-center items-stretch md:items-center gap-3 md:gap-4 mb-10 md:mb-14"
         >
-          <a
-            href="mailto:gorkem.koroglu@hotmail.com"
-            aria-label={t.footer.heading + " — Email"}
-            className="inline-flex items-center justify-center gap-2.5 h-11 px-4 md:px-6 rounded-lg bg-primary text-primary-foreground text-[13px] md:text-sm font-semibold hover:bg-primary/90 transition-all hover:shadow-[0_0_20px_rgba(0,200,200,0.2)]"
-          >
-            <Mail className="w-4 h-4 shrink-0" />
-            <span>gorkem.koroglu@hotmail.com</span>
-          </a>
+          {/* Email — split button: send + copy */}
+          <div className="inline-flex rounded-lg overflow-hidden shadow-[0_0_0_1px_hsl(var(--primary)/0.0)] hover:shadow-[0_0_20px_rgba(0,200,200,0.2)] transition-shadow">
+            <a
+              href={`mailto:${EMAIL}`}
+              aria-label={`${lang === "tr" ? "E-posta gönder" : "Send email"}: ${EMAIL}`}
+              className="inline-flex items-center justify-center gap-2.5 h-11 px-4 md:px-5 bg-primary text-primary-foreground text-[13px] md:text-sm font-semibold hover:bg-primary/90 transition-colors"
+            >
+              <Mail className="w-4 h-4 shrink-0" />
+              <span>{EMAIL}</span>
+            </a>
+            <button
+              type="button"
+              onClick={copyEmail}
+              aria-label={copied ? (lang === "tr" ? "Kopyalandı" : "Copied") : (lang === "tr" ? "E-postayı kopyala" : "Copy email")}
+              className="inline-flex items-center justify-center gap-1.5 h-11 px-3 md:px-4 bg-primary/85 hover:bg-primary/70 text-primary-foreground text-xs font-semibold border-l border-primary-foreground/15 transition-colors"
+            >
+              {copied ? (
+                <>
+                  <Check className="w-3.5 h-3.5" />
+                  <span>{lang === "tr" ? "Kopyalandı" : "Copied"}</span>
+                </>
+              ) : (
+                <>
+                  <Copy className="w-3.5 h-3.5" />
+                  <span className="hidden sm:inline">{lang === "tr" ? "Kopyala" : "Copy"}</span>
+                </>
+              )}
+            </button>
+          </div>
+
           <a
             href="https://linkedin.com/in/gorkemmkoroglu"
             target="_blank"

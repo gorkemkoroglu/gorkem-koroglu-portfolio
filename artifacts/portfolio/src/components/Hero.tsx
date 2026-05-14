@@ -50,8 +50,8 @@ export function Hero() {
         />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 w-full relative z-10 py-20">
-        <div className="grid lg:grid-cols-[1fr_auto] gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 w-full relative z-10 py-14 md:py-20">
+        <div className="grid lg:grid-cols-[1fr_auto] gap-10 lg:gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
@@ -62,71 +62,71 @@ export function Hero() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.1 }}
-              className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary mb-8"
+              className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 md:px-4 py-1 md:py-1.5 text-xs md:text-sm font-medium text-primary mb-5 md:mb-8"
             >
               <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
               {h.badge}
             </motion.div>
 
             {/* Name */}
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-heading tracking-tight text-foreground mb-4 leading-[1.05]">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold font-heading tracking-tight text-foreground mb-3 md:mb-4 leading-[1.05]">
               {h.name.split(" ")[0]}{" "}
               <span className="text-primary">{h.name.split(" ")[1]}</span>
             </h1>
 
             {/* Title */}
-            <div className="mb-4">
-              <span className="text-2xl md:text-3xl font-semibold text-foreground/90">{h.title}</span>
-              <span className="text-2xl md:text-3xl font-light text-muted-foreground"> · {h.subtitle}</span>
+            <div className="mb-3 md:mb-4">
+              <span className="text-xl sm:text-2xl md:text-3xl font-semibold text-foreground/90">{h.title}</span>
+              <span className="text-xl sm:text-2xl md:text-3xl font-light text-muted-foreground"> · {h.subtitle}</span>
             </div>
 
             {/* Typewriter line */}
-            <div className="mb-6 h-7 flex items-center gap-2">
-              <span className="text-sm font-mono text-muted-foreground/60 tracking-widest uppercase">
+            <div className="mb-5 md:mb-6 h-7 flex items-center gap-2 flex-wrap">
+              <span className="text-xs md:text-sm font-mono text-muted-foreground/60 tracking-widest uppercase">
                 {lang === "tr" ? "Alan:" : "Focus:"}
               </span>
-              <span className="text-base font-mono text-primary font-medium">
+              <span className="text-sm md:text-base font-mono text-primary font-medium">
                 {typed}
                 <span className="inline-block w-0.5 h-4 bg-primary ml-0.5 align-middle animate-pulse" />
               </span>
             </div>
 
             {/* Tagline */}
-            <p className="text-lg md:text-xl text-foreground/70 mb-10 max-w-2xl leading-relaxed border-l-2 border-primary/60 pl-4 font-light">
+            <p className="text-base md:text-xl text-foreground/70 mb-8 md:mb-10 max-w-2xl leading-relaxed border-l-2 border-primary/60 pl-3 md:pl-4 font-light">
               {h.tagline}
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-wrap gap-3 mb-10">
+            <div className="flex flex-col sm:flex-row sm:flex-wrap gap-2.5 sm:gap-3 mb-8 md:mb-10">
               <a
                 href="/Gorkem_Koroglu_CV.pdf"
                 download="Gorkem_Koroglu_CV.pdf"
-                className="inline-flex items-center justify-center h-11 px-6 rounded-lg bg-primary text-primary-foreground text-sm font-semibold transition-all hover:bg-primary/90 hover:shadow-[0_0_20px_rgba(0,200,200,0.25)] active:scale-[0.98]"
+                className="inline-flex items-center justify-center h-11 px-5 md:px-6 rounded-lg bg-primary text-primary-foreground text-sm font-semibold transition-all hover:bg-primary/90 hover:shadow-[0_0_20px_rgba(0,200,200,0.25)] active:scale-[0.98]"
               >
                 <Download className="mr-2 h-4 w-4" />
                 {h.downloadCV}
               </a>
               <button
                 onClick={() => document.querySelector("#showcase")?.scrollIntoView({ behavior: "smooth" })}
-                className="inline-flex items-center justify-center h-11 px-6 rounded-lg border border-border bg-card/60 text-sm font-semibold hover:border-primary/50 hover:text-primary transition-all active:scale-[0.98]"
+                className="inline-flex items-center justify-center h-11 px-5 md:px-6 rounded-lg border border-border bg-card/60 text-sm font-semibold hover:border-primary/50 hover:text-primary transition-all active:scale-[0.98]"
               >
                 {h.viewShowcase}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </button>
               <a
                 href="mailto:gorkem.koroglu@hotmail.com"
-                className="inline-flex items-center justify-center h-11 px-6 rounded-lg border border-border bg-transparent text-sm font-semibold text-muted-foreground hover:text-foreground hover:border-border/80 transition-all"
+                className="inline-flex items-center justify-center h-11 px-5 md:px-6 rounded-lg border border-border bg-transparent text-sm font-semibold text-muted-foreground hover:text-foreground hover:border-border/80 transition-all"
               >
                 {h.contact}
               </a>
             </div>
 
             {/* Skill chips */}
-            <div className="flex flex-wrap gap-2 mb-10">
+            <div className="flex flex-wrap gap-1.5 md:gap-2 mb-8 md:mb-10">
               {h.chips.map((chip) => (
                 <span
                   key={chip}
-                  className="px-3 py-1 rounded-full text-xs font-medium bg-card border border-border/60 text-muted-foreground hover:border-primary/40 hover:text-primary transition-colors cursor-default"
+                  className="px-2.5 md:px-3 py-1 rounded-full text-[11px] md:text-xs font-medium bg-card border border-border/60 text-muted-foreground hover:border-primary/40 hover:text-primary transition-colors cursor-default"
                 >
                   {chip}
                 </span>
@@ -134,22 +134,22 @@ export function Hero() {
             </div>
 
             {/* Contact info */}
-            <div className="flex flex-wrap gap-5 text-sm text-muted-foreground">
-              <a href="mailto:gorkem.koroglu@hotmail.com" className="flex items-center gap-2 hover:text-primary transition-colors">
-                <Mail className="h-4 w-4" />
+            <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-5 text-xs md:text-sm text-muted-foreground">
+              <a href="mailto:gorkem.koroglu@hotmail.com" className="flex items-center gap-2 hover:text-primary transition-colors break-all">
+                <Mail className="h-4 w-4 shrink-0" />
                 gorkem.koroglu@hotmail.com
               </a>
               <span className="flex items-center gap-2">
-                <MapPin className="h-4 w-4" />
+                <MapPin className="h-4 w-4 shrink-0" />
                 {h.location}
               </span>
               <a
                 href="https://linkedin.com/in/gorkemmkoroglu"
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-2 hover:text-primary transition-colors"
+                className="flex items-center gap-2 hover:text-primary transition-colors break-all"
               >
-                <Linkedin className="h-4 w-4" />
+                <Linkedin className="h-4 w-4 shrink-0" />
                 linkedin.com/in/gorkemmkoroglu
               </a>
             </div>

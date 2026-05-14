@@ -24,15 +24,15 @@ export function AnalysisCases() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mb-14"
+          className="mb-10 md:mb-14"
         >
           <p className="text-xs font-mono uppercase tracking-widest text-primary mb-3">{label}</p>
-          <h2 className="text-4xl font-bold font-heading mb-3">{heading}</h2>
-          <div className="h-px w-16 bg-primary rounded-full mb-5" />
+          <h2 className="text-3xl md:text-4xl font-bold font-heading mb-3">{heading}</h2>
+          <div className="h-px w-16 bg-primary rounded-full mb-4 md:mb-5" />
           <p className="text-muted-foreground max-w-2xl text-sm leading-relaxed">{subtitle}</p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-5">
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-5">
           {cases.map((c, idx) => {
             const content = lang === "tr" ? c.tr : c.en;
             return (
@@ -42,11 +42,11 @@ export function AnalysisCases() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.08 }}
-                className="bg-background border border-border/60 rounded-2xl p-6 flex flex-col hover:border-primary/40 hover:shadow-[0_0_28px_rgba(0,200,200,0.07)] transition-all duration-300 group cursor-pointer"
+                className="bg-background border border-border/60 rounded-2xl p-5 md:p-6 flex flex-col hover:border-primary/40 hover:shadow-[0_0_28px_rgba(0,200,200,0.07)] transition-all duration-300 group cursor-pointer"
                 onClick={() => navigate(`/cases/${c.id}`)}
               >
                 {/* Case number */}
-                <div className="flex items-center gap-2 mb-5">
+                <div className="flex items-center gap-2 mb-4 md:mb-5">
                   <span className="text-[10px] font-mono text-primary/50 uppercase tracking-widest">
                     {lang === "tr" ? "Vaka" : "Case"} — {String(c.number).padStart(2, "0")}
                   </span>

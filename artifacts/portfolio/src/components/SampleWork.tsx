@@ -9,8 +9,8 @@ export function SampleWork() {
   const s = t.showcase as any;
 
   return (
-    <section id="showcase" className="py-24 bg-card/20 border-y border-border/50">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="showcase" className="py-16 md:py-24 bg-card/20 border-y border-border/50">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
 
         {/* Section header */}
         <motion.div
@@ -18,11 +18,11 @@ export function SampleWork() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mb-14"
+          className="mb-10 md:mb-14"
         >
           <p className="text-xs font-mono uppercase tracking-widest text-primary mb-3">{s.label}</p>
-          <h2 className="text-4xl font-bold font-heading mb-3">{s.heading}</h2>
-          <div className="h-px w-16 bg-primary rounded-full mb-5" />
+          <h2 className="text-3xl md:text-4xl font-bold font-heading mb-3">{s.heading}</h2>
+          <div className="h-px w-16 bg-primary rounded-full mb-4 md:mb-5" />
           <p className="text-muted-foreground max-w-2xl text-sm leading-relaxed">{s.subtitle}</p>
         </motion.div>
 
@@ -32,10 +32,10 @@ export function SampleWork() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4 }}
-          className="mb-16"
+          className="mb-12 md:mb-16"
         >
-          <h3 className="text-lg font-semibold text-foreground mb-6">{s.principlesHeading}</h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <h3 className="text-base md:text-lg font-semibold text-foreground mb-5 md:mb-6">{s.principlesHeading}</h3>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
             {(s.principles as any[]).map((p: any, idx: number) => (
               <motion.div
                 key={idx}
@@ -43,7 +43,7 @@ export function SampleWork() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.35, delay: idx * 0.06 }}
-                className="bg-background border border-border/60 rounded-xl p-5 hover:border-primary/30 hover:shadow-[0_0_20px_rgba(0,200,200,0.05)] transition-all duration-300 group"
+                className="bg-background border border-border/60 rounded-xl p-4 md:p-5 hover:border-primary/30 hover:shadow-[0_0_20px_rgba(0,200,200,0.05)] transition-all duration-300 group"
               >
                 <div className="flex items-start gap-3 mb-3">
                   <span className="font-mono text-[11px] text-primary/60 mt-0.5 shrink-0 leading-none pt-px">
@@ -60,7 +60,7 @@ export function SampleWork() {
         </motion.div>
 
         {/* Divider */}
-        <div className="border-t border-border/40 mb-16" />
+        <div className="border-t border-border/40 mb-12 md:mb-16" />
 
         {/* ── Block 2: How this shows up in practice ── */}
         <motion.div
@@ -68,10 +68,10 @@ export function SampleWork() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4 }}
-          className="mb-12"
+          className="mb-10 md:mb-12"
         >
-          <h3 className="text-lg font-semibold text-foreground mb-6">{s.practiceHeading}</h3>
-          <div className="grid sm:grid-cols-2 gap-5">
+          <h3 className="text-base md:text-lg font-semibold text-foreground mb-5 md:mb-6">{s.practiceHeading}</h3>
+          <div className="grid sm:grid-cols-2 gap-4 md:gap-5">
             {(s.practices as any[]).map((p: any, idx: number) => {
               const Icon = practiceIcons[idx] ?? Search;
               return (
@@ -81,7 +81,7 @@ export function SampleWork() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.35, delay: idx * 0.07 }}
-                  className="bg-background border border-border/60 rounded-xl p-6 hover:border-primary/30 hover:shadow-[0_0_24px_rgba(0,200,200,0.06)] transition-all duration-300 group"
+                  className="bg-background border border-border/60 rounded-xl p-5 md:p-6 hover:border-primary/30 hover:shadow-[0_0_24px_rgba(0,200,200,0.06)] transition-all duration-300 group"
                 >
                   {/* Practice header */}
                   <div className="flex items-center gap-3 mb-3">

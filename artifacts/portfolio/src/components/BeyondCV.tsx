@@ -172,22 +172,22 @@ export function BeyondCV() {
   const subLabel = lang === "tr" ? "İK Sorularına Yanıtlar" : "HR Questions, Answered";
 
   return (
-    <section id="beyondcv" className="py-24 bg-background">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="beyondcv" className="py-16 md:py-24 bg-background">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mb-14"
+          className="mb-10 md:mb-14"
         >
           <p className="text-xs font-mono uppercase tracking-widest text-primary mb-3">{label}</p>
-          <h2 className="text-4xl font-bold font-heading mb-3">{heading}</h2>
+          <h2 className="text-3xl md:text-4xl font-bold font-heading mb-3">{heading}</h2>
           <div className="h-px w-16 bg-primary rounded-full mb-4" />
           <p className="text-muted-foreground text-sm font-medium">{subLabel}</p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-4">
+        <div className="grid md:grid-cols-2 gap-3 md:gap-4">
           {items.map((item, idx) => {
             const isActive = activeIdx === idx;
             const tagClass = TAG_COLORS[item.tag] ?? "bg-muted/10 text-muted-foreground border-border/30";
@@ -198,7 +198,7 @@ export function BeyondCV() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.06 }}
-                className={`group relative bg-card border rounded-2xl p-6 transition-all duration-300 ${
+                className={`group relative bg-card border rounded-2xl p-5 md:p-6 transition-all duration-300 ${
                   isActive
                     ? "border-primary/50 shadow-[0_0_30px_rgba(0,200,200,0.1)]"
                     : "border-border/60 hover:border-primary/25 hover:shadow-[0_0_20px_rgba(0,200,200,0.06)]"
@@ -254,7 +254,7 @@ export function BeyondCV() {
 
                 {/* Active speaking bar */}
                 {isActive && (
-                  <div className="absolute bottom-0 left-6 right-6 h-px overflow-hidden rounded-full">
+                  <div className="absolute bottom-0 left-5 right-5 md:left-6 md:right-6 h-px overflow-hidden rounded-full">
                     <motion.div
                       className="h-full bg-primary"
                       animate={{ x: ["-100%", "100%"] }}

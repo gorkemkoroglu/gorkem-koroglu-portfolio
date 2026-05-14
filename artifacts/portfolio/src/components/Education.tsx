@@ -8,27 +8,27 @@ export function Education() {
   const e = t.education;
 
   return (
-    <section id="education" className="py-24 bg-card/20 border-y border-border/50">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="education" className="py-16 md:py-24 bg-card/20 border-y border-border/50">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-14"
+          className="mb-10 md:mb-14"
         >
           <p className="text-xs font-mono uppercase tracking-widest text-primary mb-3">{e.label}</p>
-          <h2 className="text-4xl font-bold font-heading">{e.heading}</h2>
+          <h2 className="text-3xl md:text-4xl font-bold font-heading">{e.heading}</h2>
           <div className="mt-4 h-px w-16 bg-primary rounded-full" />
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16">
           {/* Degrees */}
           <div>
-            <div className="flex items-center gap-2 mb-8">
+            <div className="flex items-center gap-2 mb-6 md:mb-8">
               <GraduationCap className="w-5 h-5 text-primary" />
-              <h3 className="font-bold text-lg">{e.academicLabel}</h3>
+              <h3 className="font-bold text-base md:text-lg">{e.academicLabel}</h3>
             </div>
-            <div className="space-y-6">
+            <div className="space-y-5 md:space-y-6">
               {e.degrees.map((edu, idx) => (
                 <motion.div
                   key={idx}
@@ -58,9 +58,9 @@ export function Education() {
 
           {/* Certifications */}
           <div>
-            <div className="flex items-center gap-2 mb-8">
+            <div className="flex items-center gap-2 mb-6 md:mb-8">
               <Award className="w-5 h-5 text-primary" />
-              <h3 className="font-bold text-lg">{e.certsLabel}</h3>
+              <h3 className="font-bold text-base md:text-lg">{e.certsLabel}</h3>
             </div>
             <div className="grid gap-2.5">
               {e.certs.map((cert, idx) => (
@@ -70,12 +70,12 @@ export function Education() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.04 }}
-                  className="bg-background border border-border/60 rounded-xl px-4 py-3 flex items-start justify-between gap-3 hover:border-primary/30 transition-colors group"
+                  className="bg-background border border-border/60 rounded-xl px-3.5 md:px-4 py-3 flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-3 hover:border-primary/30 transition-colors group"
                 >
                   <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors leading-snug">
                     {cert.title}
                   </span>
-                  <span className="text-xs text-muted-foreground whitespace-nowrap shrink-0 mt-0.5">{cert.issuer}</span>
+                  <span className="text-xs text-muted-foreground sm:whitespace-nowrap shrink-0 sm:mt-0.5">{cert.issuer}</span>
                 </motion.div>
               ))}
             </div>

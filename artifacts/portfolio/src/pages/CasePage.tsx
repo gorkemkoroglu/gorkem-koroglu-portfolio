@@ -49,9 +49,9 @@ function BulletList({ items }: { items: string[] }) {
   return (
     <ul className="space-y-2">
       {items.map((item, i) => (
-        <li key={i} className="flex items-start gap-2.5 text-sm text-foreground/70">
+        <li key={i} className="flex items-start gap-2.5 text-sm text-foreground/80">
           <ChevronRight className="w-3.5 h-3.5 text-primary shrink-0 mt-0.5" />
-          <span className="leading-relaxed">{item}</span>
+          <span className="leading-[1.7]">{item}</span>
         </li>
       ))}
     </ul>
@@ -64,9 +64,9 @@ function IssueList({ items }: { items: { title: string; desc: string }[] }) {
       {items.map((item, i) => (
         <li key={i} className="flex items-start gap-3">
           <div className="w-1.5 h-1.5 rounded-full bg-amber-500/70 shrink-0 mt-2" />
-          <div>
-            <span className="text-sm font-medium text-foreground/85">{item.title} — </span>
-            <span className="text-sm text-foreground/60">{item.desc}</span>
+          <div className="leading-[1.7]">
+            <span className="text-sm font-medium text-foreground/90">{item.title} — </span>
+            <span className="text-sm text-foreground/75">{item.desc}</span>
           </div>
         </li>
       ))}
@@ -201,10 +201,10 @@ export default function CasePage() {
                 </div>
                 {c.outOfScope && (
                   <div>
-                    <p className="text-xs font-mono text-muted-foreground/50 uppercase tracking-widest mb-3">{L.outOfScope}</p>
+                    <p className="text-xs font-mono text-muted-foreground/70 uppercase tracking-widest mb-3">{L.outOfScope}</p>
                     <ul className="space-y-2">
                       {c.outOfScope.map((item, i) => (
-                        <li key={i} className="flex items-start gap-2.5 text-sm text-muted-foreground/60">
+                        <li key={i} className="flex items-start gap-2.5 text-sm text-muted-foreground/80">
                           <span className="w-3 h-px bg-border/60 shrink-0 mt-[0.6rem]" />
                           <span className="leading-relaxed">{item}</span>
                         </li>
@@ -292,7 +292,7 @@ export default function CasePage() {
                       </div>
                       <ul className="space-y-1.5">
                         {fw.items.map((item, j) => (
-                          <li key={j} className="flex items-start gap-2 text-xs text-foreground/60">
+                          <li key={j} className="flex items-start gap-2 text-xs text-foreground/75">
                             <span className="w-1 h-1 rounded-full bg-primary/50 shrink-0 mt-[0.45rem]" />
                             <span className="leading-relaxed">{item}</span>
                           </li>

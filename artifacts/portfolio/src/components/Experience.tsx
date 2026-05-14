@@ -6,8 +6,8 @@ import { useLang } from "@/lib/i18n";
 export function Experience() {
   const { t, lang } = useLang();
   const e = t.experience;
-  // Most recent role open by default so the section is never visually empty.
-  const [openIdx, setOpenIdx] = useState<number>(0);
+  // All roles closed by default — user prefers a clean collapsed list.
+  const [openIdx, setOpenIdx] = useState<number>(-1);
 
   return (
     <section id="experience" className="py-16 md:py-24">

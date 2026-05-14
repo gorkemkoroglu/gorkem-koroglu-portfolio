@@ -30,14 +30,14 @@ function SectionBlock({
   className?: string;
 }) {
   return (
-    <div className={`bg-background border border-border/60 rounded-xl p-6 ${className}`}>
-      <div className="flex items-start gap-3 mb-4">
-        <div className="w-8 h-8 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center text-primary shrink-0 mt-0.5">
-          <Icon className="w-4 h-4" />
+    <div className={`bg-background border border-border/60 rounded-xl p-4 md:p-6 ${className}`}>
+      <div className="flex items-start gap-2.5 md:gap-3 mb-3 md:mb-4">
+        <div className="w-7 h-7 md:w-8 md:h-8 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center text-primary shrink-0 mt-0.5">
+          <Icon className="w-3.5 h-3.5 md:w-4 md:h-4" />
         </div>
-        <div>
+        <div className="min-w-0">
           {num && <p className="text-[10px] font-mono text-primary/40 mb-0.5">{num}</p>}
-          <h3 className="text-base font-semibold text-foreground leading-tight">{title}</h3>
+          <h3 className="text-sm md:text-base font-semibold text-foreground leading-tight">{title}</h3>
         </div>
       </div>
       {children}
@@ -78,6 +78,10 @@ export default function CasePage() {
   const { id } = useParams<{ id: string }>();
   const [, navigate] = useLocation();
   const { lang } = useLang();
+
+  React.useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }, [id]);
 
   const caseData = cases.find((c) => c.id === id);
 
@@ -136,7 +140,7 @@ export default function CasePage() {
 
       {/* Top bar */}
       <div className="fixed top-0 w-full z-50 bg-background/90 backdrop-blur-md border-b border-border/60">
-        <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
+        <div className="max-w-5xl mx-auto px-4 md:px-6 h-14 flex items-center justify-between">
           <span
             className="font-heading font-bold text-lg text-primary cursor-pointer"
             onClick={() => navigate("/")}
@@ -155,17 +159,17 @@ export default function CasePage() {
 
       <div className="pt-14">
         {/* Case header */}
-        <div className="bg-card/20 border-b border-border/40 py-12 px-6">
+        <div className="bg-card/20 border-b border-border/40 py-8 md:py-12 px-4 md:px-6">
           <div className="max-w-5xl mx-auto">
             <motion.div {...fade(0)}>
-              <p className="text-[10px] font-mono uppercase tracking-widest text-primary mb-4">{L.caseLabel}</p>
-              <h1 className="text-2xl md:text-3xl font-bold font-heading leading-snug text-foreground mb-5 max-w-3xl">
+              <p className="text-[10px] font-mono uppercase tracking-widest text-primary mb-3 md:mb-4">{L.caseLabel}</p>
+              <h1 className="text-xl md:text-3xl font-bold font-heading leading-snug text-foreground mb-4 md:mb-5 max-w-3xl">
                 {c.title}
               </h1>
-              <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl mb-6">{c.summary}</p>
-              <div className="flex flex-wrap gap-2">
+              <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl mb-5 md:mb-6">{c.summary}</p>
+              <div className="flex flex-wrap gap-1.5 md:gap-2">
                 {c.meta.map((m) => (
-                  <span key={m} className="text-xs px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary font-medium">
+                  <span key={m} className="text-[11px] md:text-xs px-2.5 md:px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary font-medium">
                     {m}
                   </span>
                 ))}
@@ -174,7 +178,7 @@ export default function CasePage() {
           </div>
         </div>
 
-        <div className="max-w-5xl mx-auto px-6 py-12 space-y-5">
+        <div className="max-w-5xl mx-auto px-4 md:px-6 py-8 md:py-12 space-y-4 md:space-y-5">
 
           {/* 01 + 02: Business Problem & Analysis Goal */}
           <motion.div {...fade(0.04)} className="grid md:grid-cols-2 gap-5">

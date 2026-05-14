@@ -17,8 +17,8 @@ export function AnalysisCases() {
   const viewCase = lang === "tr" ? "Vakayı İncele" : "View Case";
 
   return (
-    <section id="cases" className="py-24 border-y border-border/50">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="cases" className="py-16 md:py-24 border-y border-border/50">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

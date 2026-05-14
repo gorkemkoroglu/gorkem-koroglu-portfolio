@@ -29,22 +29,29 @@ export function Hero() {
 
   return (
     <section className="relative min-h-[100dvh] flex items-center pt-20 overflow-hidden">
-      {/* Animated aurora background */}
+      {/* Animated aurora background — heavy blurs are expensive on mobile GPUs,
+          so animated orbs only render on md+ (mobile gets a static lightweight gradient). */}
       <div className="absolute inset-0 pointer-events-none">
         <ParticleCanvas />
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808010_1px,transparent_1px),linear-gradient(to_bottom,#80808010_1px,transparent_1px)] bg-[size:32px_32px]" />
+
+        {/* Mobile: static, no animation, smaller blur (cheap to composite) */}
+        <div className="md:hidden absolute top-1/3 left-1/4 w-72 h-72 rounded-full bg-primary/10 blur-[60px]" />
+        <div className="md:hidden absolute bottom-1/4 right-0 w-60 h-60 rounded-full bg-cyan-500/10 blur-[60px]" />
+
+        {/* Desktop: full animated aurora */}
         <motion.div
-          className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full bg-primary/10 blur-[130px]"
+          className="hidden md:block absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full bg-primary/10 blur-[130px]"
           animate={{ x: [0, 40, -20, 0], y: [0, -30, 20, 0], scale: [1, 1.1, 0.95, 1] }}
           transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-cyan-500/10 blur-[110px]"
+          className="hidden md:block absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-cyan-500/10 blur-[110px]"
           animate={{ x: [0, -30, 20, 0], y: [0, 25, -15, 0], scale: [1, 0.9, 1.1, 1] }}
           transition={{ duration: 14, repeat: Infinity, ease: "easeInOut", delay: 3 }}
         />
         <motion.div
-          className="absolute top-2/3 left-1/3 w-48 h-48 rounded-full bg-primary/8 blur-[80px]"
+          className="hidden md:block absolute top-2/3 left-1/3 w-48 h-48 rounded-full bg-primary/8 blur-[80px]"
           animate={{ x: [0, 20, -10, 0], y: [0, -20, 10, 0] }}
           transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 6 }}
         />

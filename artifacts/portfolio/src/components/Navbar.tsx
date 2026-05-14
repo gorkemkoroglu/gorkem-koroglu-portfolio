@@ -115,8 +115,8 @@ export function Navbar() {
           })}
         </div>
 
-        {/* Language Toggle */}
-        <div className="hidden md:flex items-center gap-1 bg-card border border-border/60 rounded-full p-1" role="group" aria-label={lang === "tr" ? "Dil seçimi" : "Language selection"}>
+        {/* Language Toggle — visible on all sizes (small footprint, sits next to hamburger on mobile) */}
+        <div className="flex items-center gap-1 bg-card border border-border/60 rounded-full p-1 ml-auto lg:ml-0" role="group" aria-label={lang === "tr" ? "Dil seçimi" : "Language selection"}>
           <button
             onClick={() => setLang("tr")}
             aria-pressed={lang === "tr"}

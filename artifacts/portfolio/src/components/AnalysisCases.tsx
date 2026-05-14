@@ -88,7 +88,7 @@ export function AnalysisCases() {
                     </h3>
 
                     {/* Summary */}
-                    <p className="text-[13.5px] md:text-xs text-muted-foreground/90 md:text-muted-foreground leading-[1.65] mb-5 flex-1">
+                    <p className="text-[13.5px] md:text-[13px] text-foreground/75 md:text-foreground/70 leading-[1.7] mb-5 flex-1">
                       {content.summary}
                     </p>
 
@@ -97,7 +97,7 @@ export function AnalysisCases() {
                       {content.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="text-[10px] px-2.5 py-0.5 rounded-full bg-primary/8 text-primary/70 border border-primary/15"
+                          className="text-[10px] px-2.5 py-0.5 rounded-full bg-primary/10 text-primary/90 border border-primary/25"
                         >
                           {tag}
                         </span>

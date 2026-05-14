@@ -55,7 +55,7 @@ export function Footer() {
               className="inline-flex items-center justify-center gap-2.5 h-11 px-4 md:px-5 bg-primary text-primary-foreground text-[13px] md:text-sm font-semibold hover:bg-primary/90 transition-colors"
             >
               <Mail className="w-4 h-4 shrink-0" />
-              <span>{EMAIL}</span>
+              <span className="truncate">{EMAIL}</span>
             </a>
             <button
               type="button"
@@ -85,7 +85,7 @@ export function Footer() {
             className="inline-flex items-center justify-center gap-2.5 h-11 px-4 md:px-6 rounded-lg border border-border bg-card text-[13px] md:text-sm font-semibold hover:border-primary/50 hover:text-primary transition-all"
           >
             <Linkedin className="w-4 h-4 shrink-0" />
-            <span>linkedin.com/in/gorkemmkoroglu</span>
+            <span className="truncate">linkedin.com/in/gorkemmkoroglu</span>
           </a>
 
           <a

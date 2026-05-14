@@ -49,7 +49,7 @@ export function WorkHighlights() {
                     </div>
                     <h3 className="font-semibold text-foreground text-[15px] md:text-sm leading-snug">{item.title}</h3>
                   </div>
-                  <p className="text-[15px] md:text-sm text-foreground/70 md:text-foreground/65 leading-[1.65]">{item.text}</p>
+                  <p className="text-[15px] md:text-sm text-foreground/80 md:text-foreground/75 leading-[1.7]">{item.text}</p>
                 </div>
               </SpotlightCard>
             </motion.div>

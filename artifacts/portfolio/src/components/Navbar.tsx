@@ -50,9 +50,27 @@ export function Navbar() {
 
   const scrollTo = (id: string) => {
     setMobileMenuOpen(false);
-    const el = document.querySelector(id);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
+    // Defer scroll until after the menu close animation has started, so the
+    // close + scroll don't fight on slow mobile devices and the next tap
+    // (e.g. re-opening the menu) registers cleanly.
+    requestAnimationFrame(() => {
+      const el = document.querySelector(id);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    });
   };
+
+  // Lock body scroll while mobile menu is open so background scroll doesn't
+  // intercept taps that should be hitting the menu / hamburger.
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      const prev = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
+      return () => {
+        document.body.style.overflow = prev;
+      };
+    }
+    return undefined;
+  }, [mobileMenuOpen]);
 
   return (
     <nav
@@ -125,10 +143,13 @@ export function Navbar() {
           </button>
         </div>
 
-        {/* Mobile toggle */}
+        {/* Mobile toggle — 44x44 tap target (Apple/Google guideline) + touch-action
+            for instant tap response on iOS Safari. */}
         <button
-          className="lg:hidden text-foreground"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          type="button"
+          className="lg:hidden text-foreground inline-flex items-center justify-center w-11 h-11 -mr-2 rounded-md hover:bg-card/60 active:bg-card/80 transition-colors"
+          style={{ touchAction: "manipulation" }}
+          onClick={() => setMobileMenuOpen((v) => !v)}
           aria-label={mobileMenuOpen ? (lang === "tr" ? "Menüyü kapat" : "Close menu") : (lang === "tr" ? "Menüyü aç" : "Open menu")}
           aria-expanded={mobileMenuOpen}
           aria-controls="mobile-nav"
@@ -139,11 +160,23 @@ export function Navbar() {
 
       <AnimatePresence>
         {mobileMenuOpen && (
+          <>
+            {/* Backdrop — taps outside the menu close it */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.15 }}
+              className="lg:hidden fixed inset-0 top-16 bg-background/40 backdrop-blur-[2px] z-[-1]"
+              onClick={() => setMobileMenuOpen(false)}
+              aria-hidden="true"
+            />
           <motion.div
             id="mobile-nav"
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.18 }}
             className="lg:hidden absolute top-16 left-0 w-full bg-background/95 backdrop-blur-md border-b border-border/60 shadow-lg"
           >
             <div className="flex flex-col p-4 gap-1">
@@ -187,6 +220,7 @@ export function Navbar() {
               </div>
             </div>
           </motion.div>
+          </>
         )}
       </AnimatePresence>
     </nav>

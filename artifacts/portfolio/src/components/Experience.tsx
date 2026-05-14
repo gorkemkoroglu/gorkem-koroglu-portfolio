@@ -6,7 +6,7 @@ import { useLang } from "@/lib/i18n";
 export function Experience() {
   const { t } = useLang();
   const e = t.experience;
-  const [openIdx, setOpenIdx] = useState<number>(0);
+  const [openIdx, setOpenIdx] = useState<number>(-1);
 
   return (
     <section id="experience" className="py-16 md:py-24">

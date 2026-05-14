@@ -1,11 +1,13 @@
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import { useLang } from "@/lib/i18n";
 
 const areaIcons = ["01", "02", "03", "04", "05", "06"];
 
 export function WorkHighlights() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const h = t.highlights;
+  const swipeHint = lang === "tr" ? "Kaydırın" : "Swipe";
 
   return (
     <section id="highlights" className="py-16 md:py-24 bg-card/20 border-y border-border/50">
@@ -21,9 +23,14 @@ export function WorkHighlights() {
           <h2 className="text-3xl md:text-4xl font-bold font-heading mb-5 md:mb-6">{h.heading}</h2>
           <div className="h-px w-16 bg-primary rounded-full mb-5 md:mb-6" />
           <p className="text-foreground/70 max-w-3xl leading-relaxed text-sm md:text-base">{h.intro}</p>
+          <div className="md:hidden flex items-center gap-1.5 mt-4 text-[11px] font-mono uppercase tracking-widest text-primary/70">
+            <span>{swipeHint}</span>
+            <ArrowRight className="w-3 h-3 animate-pulse" />
+            <span className="ml-1 text-muted-foreground/60 normal-case tracking-normal">{h.items.length}</span>
+          </div>
         </motion.div>
 
-        <div className="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 overflow-x-auto md:overflow-visible snap-x snap-mandatory -mx-4 px-4 md:mx-0 md:px-0 pb-4 md:pb-0 scrollbar-hide">
+        <div className="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-5 overflow-x-auto md:overflow-visible snap-x snap-mandatory -mx-4 px-4 md:mx-0 md:px-0 pb-4 md:pb-0 scrollbar-hide">
           {h.items.map((item, idx) => (
             <motion.div
               key={idx}
@@ -31,7 +38,7 @@ export function WorkHighlights() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: idx * 0.07 }}
-              className="group bg-background border border-border/60 rounded-2xl p-5 md:p-6 hover:border-primary/30 hover:shadow-[0_0_24px_rgba(0,200,200,0.05)] transition-all duration-300 min-w-[82%] sm:min-w-[55%] md:min-w-0 snap-start shrink-0 md:shrink"
+              className="group bg-background border border-border/60 rounded-2xl p-5 md:p-6 hover:border-primary/30 hover:shadow-[0_0_24px_rgba(0,200,200,0.05)] transition-all duration-300 w-[78%] sm:w-[55%] md:w-auto shrink-0 md:shrink snap-start"
             >
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-8 h-8 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center text-xs font-bold font-mono text-primary shrink-0 group-hover:bg-primary/20 transition-colors">

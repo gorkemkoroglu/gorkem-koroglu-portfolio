@@ -30,9 +30,14 @@ export function AnalysisCases() {
           <h2 className="text-3xl md:text-4xl font-bold font-heading mb-3">{heading}</h2>
           <div className="h-px w-16 bg-primary rounded-full mb-4 md:mb-5" />
           <p className="text-muted-foreground max-w-2xl text-[15px] md:text-sm leading-[1.65]">{subtitle}</p>
+          <div className="md:hidden flex items-center gap-1.5 mt-4 text-[11px] font-mono uppercase tracking-widest text-primary/70">
+            <span>{lang === "tr" ? "Kaydırın" : "Swipe"}</span>
+            <ArrowRight className="w-3 h-3 animate-pulse" />
+            <span className="ml-1 text-muted-foreground/60 normal-case tracking-normal">{cases.length}</span>
+          </div>
         </motion.div>
 
-        <div className="flex md:grid md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-5 overflow-x-auto md:overflow-visible snap-x snap-mandatory -mx-4 px-4 md:mx-0 md:px-0 pb-4 md:pb-0 scrollbar-hide">
+        <div className="flex md:grid md:grid-cols-2 xl:grid-cols-3 gap-3 md:gap-5 overflow-x-auto md:overflow-visible snap-x snap-mandatory -mx-4 px-4 md:mx-0 md:px-0 pb-4 md:pb-0 scrollbar-hide">
           {cases.map((c, idx) => {
             const content = lang === "tr" ? c.tr : c.en;
             return (
@@ -42,7 +47,7 @@ export function AnalysisCases() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.08 }}
-                className="bg-background border border-border/60 rounded-2xl p-5 md:p-6 flex flex-col hover:border-primary/40 hover:shadow-[0_0_28px_rgba(0,200,200,0.07)] transition-all duration-300 group cursor-pointer min-w-[82%] sm:min-w-[55%] md:min-w-0 snap-start shrink-0 md:shrink"
+                className="bg-background border border-border/60 rounded-2xl p-5 md:p-6 flex flex-col hover:border-primary/40 hover:shadow-[0_0_28px_rgba(0,200,200,0.07)] transition-all duration-300 group cursor-pointer w-[78%] sm:w-[55%] md:w-auto shrink-0 md:shrink snap-start"
                 onClick={() => navigate(`/cases/${c.id}`)}
               >
                 {/* Case number */}

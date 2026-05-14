@@ -10,11 +10,15 @@ export function AnalysisCases() {
   const [, navigate] = useLocation();
 
   const heading = lang === "tr" ? "Analiz Vakaları" : "Analysis Cases";
-  const label = lang === "tr" ? "Portfolyo çalışmaları" : "Portfolio work";
+  const label = lang === "tr" ? "Yaklaşım & metodoloji" : "Approach & methodology";
   const subtitle =
     lang === "tr"
       ? "Belirsizliği yapılandırma, sistem davranışını doğrulama ve teknik bulguları aksiyon alınabilir analiz çıktısına dönüştürme biçimimi gösteren seçili vaka çalışmaları."
       : "Selected case studies that show how I structure ambiguity, validate system behavior, and turn technical findings into actionable analysis outputs.";
+  const disclaimer =
+    lang === "tr"
+      ? "Not: Aşağıdaki vakalar, gerçek müşteri/proje verisi içermeyen, yaklaşımımı ve metodolojimi gösteren temsili senaryolardır. Aktif projelerin detayları KVKK ve banka gizlilik yükümlülükleri kapsamında paylaşılmamaktadır."
+      : "Note: The cases below are representative scenarios that illustrate my approach and methodology — they contain no real client or project data. Details of active engagements are withheld under KVKK (Turkish data protection law) and banking confidentiality obligations.";
   const viewCase = lang === "tr" ? "Vakayı İncele" : "View Case";
 
   return (
@@ -31,6 +35,14 @@ export function AnalysisCases() {
           <h2 className="text-3xl md:text-4xl font-bold font-heading mb-3">{heading}</h2>
           <div className="h-px w-16 bg-primary rounded-full mb-4 md:mb-5" />
           <p className="text-muted-foreground max-w-2xl text-[15px] md:text-sm leading-[1.65]">{subtitle}</p>
+
+          <div className="mt-5 md:mt-6 max-w-2xl rounded-lg border border-primary/20 bg-primary/5 px-4 py-3 flex gap-3">
+            <div className="text-primary/80 text-[11px] font-mono font-bold uppercase tracking-widest shrink-0 pt-0.5">
+              {lang === "tr" ? "KVKK" : "Privacy"}
+            </div>
+            <p className="text-[12.5px] md:text-[13px] text-foreground/70 leading-[1.6]">{disclaimer}</p>
+          </div>
+
           <div className="md:hidden flex items-center gap-1.5 mt-4 text-[11px] font-mono uppercase tracking-widest text-primary/70">
             <span>{lang === "tr" ? "Kaydırın" : "Swipe"}</span>
             <ArrowRight className="w-3 h-3 animate-pulse" />

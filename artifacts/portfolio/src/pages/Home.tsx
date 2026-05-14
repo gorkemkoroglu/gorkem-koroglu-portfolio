@@ -15,10 +15,16 @@ import { ScrollProgress } from "../components/ScrollProgress";
 export default function Home() {
   return (
     <div className="min-h-[100dvh] bg-background text-foreground flex flex-col">
+      <a
+        href="#about"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[9999] focus:px-4 focus:py-2 focus:rounded-md focus:bg-primary focus:text-primary-foreground focus:text-sm focus:font-semibold focus:shadow-lg"
+      >
+        Skip to content
+      </a>
       <CursorGlow />
       <ScrollProgress />
       <Navbar />
-      <main className="flex-1">
+      <main id="main" className="flex-1">
         <Hero />
         <About />
         <Experience />

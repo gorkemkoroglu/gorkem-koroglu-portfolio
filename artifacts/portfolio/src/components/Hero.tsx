@@ -51,7 +51,7 @@ export function Hero() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 md:px-6 w-full relative z-10 py-14 md:py-20">
-        <div className="grid lg:grid-cols-[1fr_auto] gap-10 lg:gap-12 items-center">
+        <div className="grid lg:grid-cols-[1fr_auto] gap-10 lg:gap-20 items-center">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}

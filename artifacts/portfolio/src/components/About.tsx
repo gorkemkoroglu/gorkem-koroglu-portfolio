@@ -29,10 +29,10 @@ export function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <p className="text-lg md:text-xl font-medium text-foreground leading-relaxed mb-4">{a.intro}</p>
-            <p className="text-sm md:text-base text-foreground/70 leading-relaxed mb-6 md:mb-8">{a.description}</p>
+            <p className="text-lg md:text-xl font-medium text-foreground leading-relaxed mb-4 max-w-prose">{a.intro}</p>
+            <p className="text-sm md:text-base text-foreground/75 leading-[1.7] mb-6 md:mb-8 max-w-prose">{a.description}</p>
 
-            <ul className="space-y-3">
+            <ul className="space-y-3 max-w-prose">
               {a.bullets.map((b, i) => (
                 <motion.li
                   key={i}

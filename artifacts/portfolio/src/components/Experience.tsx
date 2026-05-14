@@ -6,7 +6,8 @@ import { useLang } from "@/lib/i18n";
 export function Experience() {
   const { t, lang } = useLang();
   const e = t.experience;
-  const [openIdx, setOpenIdx] = useState<number>(-1);
+  // Most recent role open by default so the section is never visually empty.
+  const [openIdx, setOpenIdx] = useState<number>(0);
 
   return (
     <section id="experience" className="py-16 md:py-24">
@@ -91,17 +92,21 @@ export function Experience() {
                     >
                       <div className="px-5 md:px-6 pb-5 md:pb-6 pt-0">
                         <div className="border-t border-border/40 pt-5">
-                          <p className="text-[15px] md:text-sm text-foreground/70 mb-5 italic border-l-2 border-primary/40 pl-3 leading-[1.65]">
-                            {exp.summary}
-                          </p>
-                          <ul className="space-y-2.5 mb-5">
-                            {exp.items.map((item, i) => (
-                              <li key={i} className="flex items-start gap-2.5 text-[15px] md:text-sm text-foreground/80 leading-[1.65]">
-                                <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary/70 shrink-0" />
-                                <span className="flex-1">{item}</span>
-                              </li>
-                            ))}
-                          </ul>
+                          {/* max-w-3xl keeps line length at ~70-80 characters
+                              for comfortable reading on wide screens. */}
+                          <div className="max-w-3xl">
+                            <p className="text-[15px] md:text-[15px] text-foreground/75 mb-5 italic border-l-2 border-primary/40 pl-3 leading-[1.7]">
+                              {exp.summary}
+                            </p>
+                            <ul className="space-y-3 mb-5">
+                              {exp.items.map((item, i) => (
+                                <li key={i} className="flex items-start gap-2.5 text-[15px] md:text-[14.5px] text-foreground/85 leading-[1.7]">
+                                  <span className="mt-[9px] w-1.5 h-1.5 rounded-full bg-primary/70 shrink-0" />
+                                  <span className="flex-1">{item}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
                           <div className="flex flex-wrap gap-1.5 md:gap-2">
                             {exp.tags.map((tag) => (
                               <span

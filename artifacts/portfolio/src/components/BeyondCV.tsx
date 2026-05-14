@@ -247,8 +247,8 @@ export function BeyondCV() {
                   {item.question}
                 </h3>
 
-                {/* Answer */}
-                <p className="text-[15px] md:text-sm text-foreground/65 md:text-foreground/60 leading-[1.65]">
+                {/* Answer — slightly higher contrast for readability */}
+                <p className="text-[15px] md:text-sm text-foreground/75 md:text-foreground/70 leading-[1.7]">
                   {item.answer}
                 </p>
 

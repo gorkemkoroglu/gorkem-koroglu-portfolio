@@ -3,6 +3,7 @@ import { Mail, MapPin, Linkedin, Download, ArrowRight } from "lucide-react";
 import { useLang } from "@/lib/i18n";
 import { useTypewriter } from "@/hooks/useTypewriter";
 import { ParticleCanvas } from "@/components/ParticleCanvas";
+import profilePhoto from "@assets/1727552494622_1779016134383.jpeg";
 
 const EN_WORDS = [
   "Core Banking Systems",
@@ -64,12 +65,35 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            {/* Badge */}
+            {/* Mobile/tablet avatar row — small circular photo shown only when the
+                desktop JSON card is hidden (lg:hidden hides on large screens). */}
+            <div className="lg:hidden flex items-center gap-3 mb-5">
+              <div className="relative shrink-0">
+                <div className="absolute -inset-1 rounded-full bg-primary/20 blur-md" aria-hidden />
+                <img
+                  src={profilePhoto}
+                  alt="Görkem Köroğlu"
+                  loading="eager"
+                  className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover ring-2 ring-primary/40 ring-offset-2 ring-offset-background"
+                />
+              </div>
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.1 }}
+                className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-medium text-primary"
+              >
+                <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
+                {h.badge}
+              </motion.div>
+            </div>
+
+            {/* Desktop badge (mobile version is rendered above next to the avatar). */}
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.1 }}
-              className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 md:px-4 py-1 md:py-1.5 text-xs md:text-sm font-medium text-primary mb-5 md:mb-8"
+              className="hidden lg:inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary mb-8"
             >
               <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
               {h.badge}
@@ -167,11 +191,25 @@ export function Hero() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="hidden lg:block"
-            whileHover={{ rotateY: -6, rotateX: 4, scale: 1.03 }}
-            style={{ perspective: 800, transformStyle: "preserve-3d" }}
+            className="hidden lg:flex flex-col items-center gap-5"
+            style={{ perspective: 800 }}
           >
-            <div className="w-64 bg-card/60 border border-border/60 rounded-2xl p-6 backdrop-blur-sm space-y-4 hover:border-primary/30 hover:shadow-[0_8px_40px_rgba(0,200,200,0.08)] transition-shadow duration-300">
+            {/* Profile photo with subtle teal ring + glow */}
+            <div className="relative">
+              <div className="absolute -inset-2 rounded-full bg-primary/20 blur-xl" aria-hidden />
+              <img
+                src={profilePhoto}
+                alt="Görkem Köroğlu"
+                loading="eager"
+                className="relative w-36 h-36 xl:w-40 xl:h-40 rounded-full object-cover ring-2 ring-primary/50 ring-offset-4 ring-offset-background shadow-[0_8px_40px_rgba(0,200,200,0.15)]"
+              />
+            </div>
+
+            <motion.div
+              whileHover={{ rotateY: -6, rotateX: 4, scale: 1.03 }}
+              style={{ transformStyle: "preserve-3d" }}
+              className="w-64 bg-card/60 border border-border/60 rounded-2xl p-6 backdrop-blur-sm space-y-4 hover:border-primary/30 hover:shadow-[0_8px_40px_rgba(0,200,200,0.08)] transition-shadow duration-300"
+            >
               <div className="text-xs text-muted-foreground font-mono uppercase tracking-widest mb-4">profile.json</div>
               <div className="space-y-3 font-mono text-xs">
                 <div>
@@ -209,12 +247,19 @@ export function Hero() {
                   <span className="text-muted-foreground">]</span>
                 </div>
                 <div>
+                  <span className="text-primary">"experience"</span>
+                  <span className="text-muted-foreground">: </span>
+                  <span className="text-foreground/80">
+                    {lang === "tr" ? '"3+ yıl"' : '"3+ years"'}
+                  </span>
+                </div>
+                <div>
                   <span className="text-primary">"available"</span>
                   <span className="text-muted-foreground">: </span>
                   <span className="text-emerald-400">true</span>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </motion.div>
         </div>
       </div>

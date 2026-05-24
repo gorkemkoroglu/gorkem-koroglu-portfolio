@@ -78,7 +78,7 @@ function StepBox({
   const s = variantStyles[variant];
   return (
     <div
-      className={`relative rounded-lg border px-3 py-2.5 pl-7 text-[11px] md:text-xs leading-snug min-w-[140px] max-w-[170px] md:min-w-[160px] md:max-w-[190px] transition-colors ${s.stepBox}`}
+      className={`relative rounded-lg border px-2.5 py-2 pl-6 md:px-3 md:py-2.5 md:pl-7 text-[10.5px] md:text-xs leading-snug min-w-[124px] max-w-[150px] md:min-w-[160px] md:max-w-[190px] transition-colors ${s.stepBox}`}
     >
       <span
         className={`absolute top-1.5 left-1.5 w-4 h-4 rounded-full border flex items-center justify-center text-[9px] font-mono font-bold ${s.stepNum}`}
@@ -132,14 +132,14 @@ function Lane({
 
   return (
     <div
-      className={`grid grid-cols-[110px_1fr] md:grid-cols-[150px_1fr] border-b border-border/30 last:border-b-0 ${stripe}`}
+      className={`grid grid-cols-[88px_1fr] md:grid-cols-[150px_1fr] border-b border-border/30 last:border-b-0 ${stripe}`}
     >
       {/* Role sidebar */}
-      <div className="flex items-center gap-2 px-3 py-4 border-r border-border/40 bg-card/30">
-        <div className="w-7 h-7 rounded-md bg-background border border-border/60 flex items-center justify-center text-muted-foreground shrink-0">
-          <Icon className="w-3.5 h-3.5" />
+      <div className="flex flex-col md:flex-row items-center md:items-center gap-1 md:gap-2 px-1.5 md:px-3 py-3 md:py-4 border-r border-border/40 bg-card/30 text-center md:text-left">
+        <div className="w-6 h-6 md:w-7 md:h-7 rounded-md bg-background border border-border/60 flex items-center justify-center text-muted-foreground shrink-0">
+          <Icon className="w-3 h-3 md:w-3.5 md:h-3.5" />
         </div>
-        <span className="text-[11px] md:text-xs font-semibold text-foreground/90 leading-tight">
+        <span className="text-[10px] md:text-xs font-semibold text-foreground/90 leading-tight">
           {lane.role}
         </span>
       </div>

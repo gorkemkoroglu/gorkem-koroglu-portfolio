@@ -1,0 +1,98 @@
+Özellikle AS-IS / TO-BE süreç haritası kısmını, paylaştığım ekran görüntüsündeki mantığa benzer şekilde görsel bir process map olarak tasarla.
+
+Bu bölüm sadece metin kutularından oluşmasın. Gerçek bir Business Analyst / Technical Analyst portfolyosunda gösterilecek şekilde, yatay akış diyagramı gibi görünmeli.
+
+İstenen tasarım:
+
+1. Sayfada iki ayrı process map alanı olsun:
+   - AS-IS / Mevcut Süreç
+   - TO-BE / Hedef Süreç
+
+2. Her iki süreç haritası da yatay akış şeklinde gösterilsin:
+   - kutular
+   - oklar
+   - adım numaraları
+   - role/lane mantığı
+   - pain point ve improvement notları
+
+3. AS-IS tarafı daha karmaşık ve manuel süreç hissi versin:
+   - manuel kontroller
+   - e-posta ile onay
+   - tekrar veri girişi
+   - sınırlı statü görünürlüğü
+   - ekipler arası bekleme noktaları
+
+4. TO-BE tarafı daha sade, sistem destekli ve izlenebilir süreç hissi versin:
+   - sistem üzerinden talep oluşturma
+   - otomatik zorunlu alan kontrolleri
+   - platform içi onay akışı
+   - merkezi statü takibi
+   - tekrar veri girişinin azaltılması
+   - daha net operasyonel görünürlük
+
+5. Process map içinde örnek roller/lane’ler kullan:
+   - Requester / Talep Eden
+   - Manager / Yönetici
+   - Procurement / Satın Alma
+   - Finance / Finans
+
+6. AS-IS akış örneği:
+   Requester:
+   - Talep manuel oluşturulur
+   - Bilgiler e-posta veya form üzerinden iletilir
+
+   Manager:
+   - Talep manuel incelenir
+   - Onay e-posta ile verilir
+
+   Procurement:
+   - Tedarikçi uygunluğu manuel kontrol edilir
+   - Satın alma kaydı ayrı oluşturulur
+   - Tedarikçiye manuel dönüş yapılır
+
+   Finance:
+   - Finansal kayıt sonradan sisteme girilir
+   - Sürecin durumu merkezi olarak izlenemez
+
+7. TO-BE akış örneği:
+   Requester:
+   - Talep sistem üzerinden oluşturulur
+   - Zorunlu alanlar giriş sırasında doğrulanır
+
+   Manager:
+   - Onay görevi platform içinde yönlendirilir
+   - Karar ve tarih bilgisi kayıt altına alınır
+
+   Procurement:
+   - Tedarikçi kontrolü sistem destekli yapılır
+   - Satın alma kaydı aynı akıştan üretilir
+
+   Finance:
+   - Finansal kayıt merkezi süreç sonucuna göre oluşturulur
+   - Statü ve geçmiş bilgiler görünür hale gelir
+
+8. AS-IS bölümünde ayrı bir “Pain Points” kutusu olsun:
+   - Manual follow-up
+   - Approval delays
+   - Duplicate data entry
+   - Limited status visibility
+   - Unclear ownership
+
+9. TO-BE bölümünde ayrı bir “Improvements” kutusu olsun:
+   - Clear process ownership
+   - Reduced manual work
+   - Better status tracking
+   - Fewer repeated entries
+   - UAT-ready process structure
+
+10. Görsel tasarım:
+   - Mevcut sitenin dark theme tasarımını koru
+   - Yeşil/turkuaz accent rengini kullan
+   - AS-IS tarafında kırmızı/amber gibi hafif warning hissi veren border veya badge kullanılabilir
+   - TO-BE tarafında yeşil/turkuaz başarı/iyileştirme hissi kullanılabilir
+   - Mobilde bozulmasın; gerekirse process map yatay scroll yapılabilir
+   - Masaüstünde process map geniş, okunaklı ve profesyonel görünsün
+
+11. Bu bölüm LinkedIn’de paylaştığım görseldeki gibi “AS-IS vs TO-BE Process Map” mantığını taşımalı; ancak birebir kopya olmamalı. Benim portfolio tasarımıma uygun, daha premium ve Technical Analyst seviyesinde görünmeli.
+
+12. Lütfen bu alanı sadece normal kart listesi gibi yapma. Mutlaka görsel süreç akışı, oklar, adım kutuları, role/lane yapısı ve pain point/improvement kutuları içeren bir process map component olarak oluştur.

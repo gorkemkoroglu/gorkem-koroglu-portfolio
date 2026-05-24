@@ -8,6 +8,7 @@ import {
 import { useLang } from "@/lib/i18n";
 import { cases } from "@/lib/cases";
 import { ScrollProgress } from "@/components/ScrollProgress";
+import { ProcessMap } from "@/components/ProcessMap";
 
 const fade = (delay = 0) => ({
   initial: { opacity: 0, y: 14 },
@@ -126,6 +127,10 @@ export default function CasePage() {
     deliverables: lang === "tr" ? "Analist Deliverable'ları" : "Analyst Deliverables",
     expectedOutput: lang === "tr" ? "Beklenen İş Çıktısı" : "Expected Business Output",
     demonstrates: lang === "tr" ? "Bu Vaka Ne Gösteriyor?" : "What This Case Demonstrates",
+    processMapTitle: lang === "tr" ? "AS-IS / TO-BE Süreç Haritası" : "AS-IS / TO-BE Process Map",
+    processMapLead: lang === "tr"
+      ? "Mevcut sürecin manuel ve dağınık yapısı ile sistem destekli, izlenebilir hedef sürecin yan yana karşılaştırması."
+      : "Side-by-side comparison of the current manual, fragmented process and a system-supported, traceable target process.",
     ruleNo: lang === "tr" ? "Kural No" : "No",
     bizRule: lang === "tr" ? "İş Kuralı" : "Rule",
     rationale: lang === "tr" ? "Gerekçe" : "Rationale",
@@ -223,6 +228,31 @@ export default function CasePage() {
               {c.currentStateBullets && <BulletList items={c.currentStateBullets} />}
             </SectionBlock>
           </motion.div>
+
+          {/* Featured: AS-IS / TO-BE Process Map */}
+          {c.processMap && (
+            <motion.div {...fade(0.04)}>
+              <div className="rounded-xl border border-primary/25 bg-gradient-to-br from-primary/[0.06] via-background to-background p-4 md:p-6">
+                <div className="flex items-start gap-3 mb-5">
+                  <div className="w-8 h-8 rounded-lg bg-primary/15 border border-primary/25 flex items-center justify-center text-primary shrink-0">
+                    <GitBranch className="w-4 h-4" />
+                  </div>
+                  <div className="min-w-0">
+                    <p className="text-[10px] font-mono text-primary/50 uppercase tracking-widest mb-1">
+                      {lang === "tr" ? "Görsel Analiz" : "Visual Analysis"}
+                    </p>
+                    <h3 className="text-base md:text-lg font-semibold text-foreground leading-tight mb-2">
+                      {L.processMapTitle}
+                    </h3>
+                    <p className="text-xs md:text-sm text-muted-foreground leading-relaxed max-w-2xl">
+                      {L.processMapLead}
+                    </p>
+                  </div>
+                </div>
+                <ProcessMap data={c.processMap} />
+              </div>
+            </motion.div>
+          )}
 
           {/* 05: Key Issues */}
           <motion.div {...fade(0.04)}>

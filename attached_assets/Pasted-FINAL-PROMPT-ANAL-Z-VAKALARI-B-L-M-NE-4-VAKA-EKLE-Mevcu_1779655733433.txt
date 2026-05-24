@@ -1,0 +1,311 @@
+FINAL PROMPT — ANALİZ VAKALARI BÖLÜMÜNE 4. VAKA EKLE
+
+Mevcut portfolio sitesine, “Analiz Vakaları / Analysis Cases” bölümüne yeni bir 4. vaka ekle.
+
+Amaç:
+Bu vaka, bir Technical Analyst’in mevcut süreci nasıl analiz ettiğini, sorunları nasıl görünür hale getirdiğini ve daha iyi bir hedef süreç (TO-BE) tasarladığını gösterecek. Bu içerik gerçek müşteri/veri/proje bilgisi içermesin; tamamen temsili ama profesyonel ve gerçekçi bir analiz vakası gibi dursun.
+
+Bu yeni vaka, sitenin mevcut dark theme / yeşil accent / kart yapısı / TR-EN dil mimarisi ile tamamen uyumlu olsun.
+
+1) ANA SAYFADAKİ “ANALİZ VAKALARI” KARTI
+
+Analiz Vakaları bölümüne yeni bir kart ekle.
+
+Kart bilgileri:
+
+Vaka numarası:
+VAKA — 04
+
+Kart başlığı (TR):
+AS-IS / TO-BE Süreç Haritalama ve Operasyonel İyileştirme Analizi
+
+Kart başlığı (EN):
+AS-IS / TO-BE Process Mapping and Operational Improvement Analysis
+
+Kart kısa açıklama (TR):
+Mevcut operasyonel akışın manuel kontrol, tekrar veri girişi ve sınırlı durum görünürlüğü açısından analiz edilerek; daha sade, izlenebilir ve sistem destekli hedef sürecin tasarlanmasına odaklanan süreç analizi vakası.
+
+Kart kısa açıklama (EN):
+A process analysis case focused on examining an existing operational flow with manual checks, repeated data entry and limited status visibility, then designing a clearer, traceable and system-supported target process.
+
+Tag’ler (TR/EN uyumlu):
+
+Süreç Analizi / Process Analysis
+AS-IS / TO-BE
+Operasyonel İyileştirme / Operational Improvement
+İş Akışı / Workflow
+Analist Çıktıları / Analyst Deliverables
+
+CTA button:
+TR: Vakayı İncele
+EN: View Case
+
+Kart görünümü mevcut diğer vaka kartlarıyla tamamen aynı tasarım mantığında olsun.
+
+2) YENİ DETAY SAYFASI OLUŞTUR
+
+Yeni vaka için ayrı bir detail page oluştur.
+
+URL önerisi:
+
+/cases/as-is-to-be-process-analysis
+
+veya proje yapısına uygun mevcut routing yapısında benzer bir route.
+
+3) DETAY SAYFASI HERO / ÜST ALAN
+
+Detay sayfasının üst bölümünde şu alanlar olsun:
+
+Başlık (TR):
+
+AS-IS / TO-BE Süreç Haritalama ve Operasyonel İyileştirme Analizi
+
+Başlık (EN):
+
+AS-IS / TO-BE Process Mapping and Operational Improvement Analysis
+
+Alt açıklama (TR):
+
+Farklı ekipler arasında ilerleyen, manuel kontroller ve tekrar eden veri girişleri içeren operasyonel bir sürecin; mevcut durum analizi, sorun noktalarının ayrıştırılması ve daha net bir hedef süreç modeline dönüştürülmesini gösteren temsili analiz vakası.
+
+Alt açıklama (EN):
+
+A representative analysis case showing how an operational process involving multiple teams, manual checks and repeated data entry can be analyzed, broken down into pain points, and redesigned into a clearer target-state process.
+
+Üst tag alanı:
+Process Analysis
+AS-IS / TO-BE
+Workflow
+Operational Clarity
+UAT Readiness
+4) VAKA SENARYOSU — ÖRNEK KONU
+
+Bu vaka için gerçekçi ama genel bir senaryo kullan:
+
+Senaryo özeti:
+
+Bir şirket içinde satın alma talebi / purchase requisition süreci veya buna benzer ekipler arası ilerleyen operasyonel bir süreç ele alınsın.
+Bu süreçte:
+
+talep manuel başlıyor
+onaylar e-posta / dağınık kanallarla ilerliyor
+aynı bilgi birden fazla yerde tekrar giriliyor
+procurement / finance / manager gibi roller süreçte yer alıyor
+durum görünürlüğü sınırlı
+gecikmeler ve takip zorlukları oluşuyor
+
+Bu örnek, paylaştığım LinkedIn görseline benzer mantıkta olsun ama doğrudan kopya gibi değil, portfolyo için özgün ve profesyonel bir case olarak yazılsın.
+
+5) SAYFA BÖLÜMLERİ
+
+Detay sayfasını aşağıdaki bölümlerle oluştur.
+
+BÖLÜM 01 — İş Problemi / Business Problem
+
+TR içerik mantığı:
+Mevcut süreç çok sayıda manuel adım, rol bazlı kopukluk, tekrar veri girişi ve sınırlı statü görünürlüğü nedeniyle verimsizdir. Süreçte ilerleme bilgisi net değildir; bazı kontroller kişilere bağımlıdır; operasyon ekipleri gecikmenin nerede oluştuğunu hızlıca ayırt edemez.
+
+EN karşılığı da doğal ve profesyonel şekilde yazılsın.
+
+BÖLÜM 02 — Analiz Amacı / Analysis Objective
+
+Burada şu amaçları yaz:
+
+mevcut AS-IS sürecin görünür hale getirilmesi
+roller, karar noktaları ve bekleme alanlarının ayrıştırılması
+tekrar eden veya gereksiz adımların tespiti
+TO-BE süreç önerisinin hazırlanması
+daha net operasyonel görünürlük sağlanması
+test ve UAT açısından doğrulanabilir bir yapı kurulması
+BÖLÜM 03 — Kapsam / Scope
+
+Madde madde yaz:
+
+mevcut süreç adımlarının analizi
+rol bazlı görev akışının incelenmesi
+manuel ve tekrar eden işlerin tespiti
+pain point analizi
+hedef süreç (TO-BE) önerisi
+potansiyel sistem alanları / statü alanları / görünürlük ihtiyaçları
+UAT ve test etkilerinin değerlendirilmesi
+BÖLÜM 04 — Mevcut Durum / Current State Summary
+
+Mevcut süreci kısa ama profesyonel anlat:
+
+Requester talebi oluşturur
+Manager manuel veya e-posta üzerinden onay verir
+Procurement tedarikçi uygunluğunu kontrol eder
+Satın alma kaydı ayrıca oluşturulur
+Finance sürece son aşamada dahil olur
+Kayıt ve statü takibi sınırlıdır
+
+Bu bölüm kart veya info block şeklinde olabilir.
+
+BÖLÜM 05 — Pain Points / Temel Sorunlar
+
+Burada net maddeler olsun:
+
+birden fazla manuel takip noktası
+onaylarda gecikme
+tekrar eden veri girişi
+statü görünürlüğünün yetersizliği
+ekipler arası bilgi kopukluğu
+işlem nerede takıldı sorusuna hızlı cevap verilememesi
+süreç performansının ölçülmesinin zor olması
+
+Bu bölüm görsel olarak öne çıksın.
+
+6) SAYFANIN EN GÜÇLÜ KISMI — AS-IS vs TO-BE PROCESS MAP
+
+Burada görsel olarak çok güçlü bir bölüm oluştur.
+
+İstenen yapı:
+
+Aynı sayfa içinde iki ayrı yatay süreç haritası göster:
+
+A) AS-IS (Current State)
+B) TO-BE (Future State)
+
+Bu iki alan portfolyo içinde en dikkat çekici alanlardan biri olsun.
+
+Görsel kurgu:
+role/lane mantığı kullanılabilir
+örnek roller: Requester, Manager, Procurement, Finance
+süreç adımları kutularla birbirine bağlansın
+dark theme ile uyumlu ama okunaklı olsun
+AS-IS bölümünde daha dağınık / manuel / tekrar eden yapı hissedilsin
+TO-BE bölümünde daha sade / sistem destekli / net akış olsun
+AS-IS örnek adımlar:
+Purchase request manually created
+Request reviewed by manager
+Approval received by email
+Supplier availability checked manually
+Purchase order created separately
+Supplier contacted manually
+Confirmation received manually
+Finance records PO in system
+AS-IS pain points kutusu:
+multiple handoffs via email
+manual checks and follow-ups
+delays in approval communication
+duplicate data entry
+limited visibility into status
+TO-BE örnek adımlar:
+Request created in system
+Mandatory fields validated automatically
+Manager approval routed in platform
+Supplier availability checked via system-supported step
+Purchase order generated from same flow
+Status updated centrally
+Confirmation captured in flow
+Finance records process outcome automatically / centrally
+TO-BE improvements kutusu:
+end-to-end process visibility
+reduced cycle time
+less repeated data entry
+clearer ownership
+easier tracking and reporting
+more reliable downstream execution
+7) ANALİST YAKLAŞIMI / ANALYSIS APPROACH
+
+Bu bölümde Technical Analyst olarak nasıl yaklaştığımı göster.
+
+Maddeler:
+Mevcut süreci rol ve adım bazında haritaladım
+Karar noktalarını ve bekleme alanlarını ayrıştırdım
+Tekrar eden veri girişlerini ve manuel kontrolleri işaretledim
+Süreçte görünmeyen ama gecikmeye neden olan noktaları görünür hale getirdim
+Daha sade ve sistem destekli bir hedef süreç önerdim
+Hedef yapının test edilebilir ve iş açısından anlaşılır olmasına dikkat ettim
+
+Bu bölüm hem TR hem EN olsun.
+
+8) ANALYST DELIVERABLES / ANALİST ÇIKTILARI
+
+Bu bölüm çok önemli. Burada aşağıdaki deliverable’ları listele:
+
+AS-IS process map
+TO-BE process map
+pain point matrix
+improvement opportunities list
+role and responsibility view
+business rules / decision points
+screen/data visibility suggestions
+sample UAT focus points
+
+TR karşılıklarını da ver:
+
+AS-IS süreç haritası
+TO-BE süreç haritası
+sorun noktası matrisi
+iyileştirme alanları listesi
+rol ve sorumluluk görünümü
+iş kuralları / karar noktaları
+ekran ve alan önerileri
+örnek UAT odak noktaları
+9) BEKLENEN İŞ ÇIKTISI / EXPECTED BUSINESS OUTCOME
+
+Madde madde yaz:
+
+daha kısa işlem çevrim süresi
+daha az manuel takip
+daha düşük hata ve unutma riski
+daha iyi statü görünürlüğü
+ekipler arası daha net sorumluluk dağılımı
+daha kolay test ve doğrulama
+daha sürdürülebilir operasyonel yapı
+
+Bu bölüm outcome-oriented dursun.
+
+10) “BU VAKA NE GÖSTERİYOR?” / “WHAT THIS CASE DEMONSTRATES”
+
+En altta güçlü bir özet kutusu yap.
+
+Bu vaka ne gösteriyor:
+mevcut durum ile hedef durum arasında net analiz yapabildiğimi
+süreçleri yalnızca tarif etmek değil, iyileştirme mantığıyla ele aldığımı
+operasyonel görünürlük ve karar netliği üretebildiğimi
+analiz çıktısını görsel ve yapısal deliverable’a dönüştürebildiğimi
+iş ihtiyacı ile sistem davranışını aynı çerçevede okuyabildiğimi
+11) TASARIM VE UX KURALLARI
+mevcut sitenin dark theme yapısı bozulmasın
+mevcut yeşil/turkuaz accent rengi devam etsin
+kartlar, spacing, typography, border-radius mevcut sistemle uyumlu olsun
+sayfa profesyonel görünsün
+“AI generated generic content” hissi vermesin
+Türkçe metinler doğal, akıcı, profesyonel olsun
+İngilizce metinler de recruiter/hiring manager gözüyle doğal dursun
+devrik cümleler veya belirsiz ifadeler kullanma
+mevcut 3 vaka ile aynı kalite seviyesinde ama mümkünse biraz daha görsel olarak güçlü olsun
+12) DİL DESTEĞİ
+
+Bu vaka da mevcut site mantığına uygun şekilde
+TR / EN dil toggle ile çalışsın.
+
+Tüm başlıklar, kısa açıklamalar, detay içerikler ve buton metinleri iki dilde de hazırlanmalı.
+
+13) TEKNİK BEKLENTİ
+mevcut analysis cases listesine yeni case object ekle
+detail page route’unu bağla
+mevcut component yapısını mümkün olduğunca yeniden kullan
+gerekiyorsa yeni bir reusable “ProcessMap” veya “CaseDiagramSection” component oluştur
+sayfa responsive olsun
+mobilde de bozulmasın
+süreç haritası masaüstünde yatay, mobilde daha stack / scroll edilebilir olabilir
+14) ÖNEMLİ YAZIM KURALI
+
+Metinler çok genel pazarlama diliyle değil,
+gerçek bir Technical Analyst portfolyosunda yer alacak kadar profesyonel, somut ve deliverable odaklı yazılsın.
+
+Şu tarz cümlelerden kaçın:
+
+“I am passionate about…”
+“This amazing case shows…”
+“Innovative cutting-edge…”
+
+Bunun yerine:
+
+structured
+professional
+recruiter-friendly
+analyst-deliverable language kullan.

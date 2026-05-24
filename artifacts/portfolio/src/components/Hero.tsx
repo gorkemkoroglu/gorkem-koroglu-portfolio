@@ -250,7 +250,7 @@ export function Hero() {
                   <span className="text-primary">"experience"</span>
                   <span className="text-muted-foreground">: </span>
                   <span className="text-foreground/80">
-                    {lang === "tr" ? '"3+ yıl"' : '"3+ years"'}
+                    {lang === "tr" ? '"~4 yıl"' : '"~4 years"'}
                   </span>
                 </div>
                 <div>

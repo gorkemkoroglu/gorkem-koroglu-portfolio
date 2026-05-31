@@ -15,7 +15,6 @@ export function FloatingActions() {
   }, []);
 
   const goTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
-  const goContact = () => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
 
   return (
     <AnimatePresence>
@@ -30,9 +29,8 @@ export function FloatingActions() {
             bottom: "max(1rem, env(safe-area-inset-bottom))",
           }}
         >
-          <button
-            type="button"
-            onClick={goContact}
+          <a
+            href="mailto:gorkem.koroglu@hotmail.com"
             aria-label={lang === "tr" ? "İletişime geç" : "Get in touch"}
             className="group h-12 w-12 md:h-auto md:w-auto md:px-5 md:py-3 inline-flex items-center justify-center gap-2 rounded-full bg-primary text-primary-foreground shadow-lg shadow-primary/30 hover:shadow-primary/50 hover:scale-105 active:scale-95 transition-all"
           >
@@ -40,7 +38,7 @@ export function FloatingActions() {
             <span className="hidden md:inline text-sm font-semibold">
               {lang === "tr" ? "İletişim" : "Contact"}
             </span>
-          </button>
+          </a>
           <button
             type="button"
             onClick={goTop}
